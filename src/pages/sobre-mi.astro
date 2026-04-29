@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Sobre Mí | Pablo Ríos Peña">
+
+  <section class="py-16 md:py-24 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-7xl">
+      
+      <!-- BENTO GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-min">
+
+        <!-- 1. PERFIL & PROPÓSITO (Tarjeta grande) -->
+        <div class="md:col-span-8 bg-white border border-gray-200 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row gap-6 items-start">
+          <img 
+            src="/pablo-rios.jpeg" 
+            alt="Pablo Ríos Peña" 
+            class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover flex-shrink-0 shadow-sm" 
+          />
+          <div class="flex-1">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
+              Pablo Ríos Peña
+            </h1>
+            <p class="text-lg text-gray-500 mt-1 font-medium">
+              Head of Product · Consultor en IA & Product Strategy
+            </p>
+            <p class="mt-4 text-gray-600 leading-relaxed">
+              Mi propósito es <strong class="text-gray-900">conectar tecnología y personas</strong> para desbloquear el potencial y ganar velocidad. Ingeniero de Sistemas desde el 2012, liderando productos digitales en startups y entornos SaaS B2B/B2C.
+            </p>
+            <a 
+              href="https://linkedin.com/in/pabloriospena" 
+              target="_blank"
+              class="inline-flex items-center gap-2 mt-5 bg-gray-900 hover:bg-gray-800 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              Conectar en LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. DATOS RÁPIDOS (Stats) -->
+        <div class="md:col-span-4 bg-white border border-gray-200 rounded-2xl p-6 flex flex-col justify-center gap-3">
+          <div class="text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <p class="text-2xl font-bold text-gray-900">13+</p>
+            <p class="text-[11px] text-gray-500 uppercase tracking-wider mt-1">Años de experiencia</p>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <p class="text-2xl font-bold text-gray-900">5+</p>
+            <p class="text-[11px] text-gray-500 uppercase tracking-wider mt-1">Certificaciones</p>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <p class="text-2xl font-bold text-gray-900">B2B/SaaS</p>
+            <p class="text-[11px] text-gray-500 uppercase tracking-wider mt-1">Enfoque principal</p>
+          </div>
+        </div>
+
+        <!-- 3. PRINCIPIOS (Grid interno) -->
+        <div class="md:col-span-8 bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-5 flex items-center gap-2">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+            Principios: Product Management Sin Bullshit
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <h4 class="font-medium text-gray-900 text-sm">Acción &gt; Perfección</h4>
+              <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">Lanzar rápido, medir lo que importa y ajustar. El momento perfecto no existe.</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <h4 class="font-medium text-gray-900 text-sm">Métricas que importan</h4>
+              <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">MRR, retención, time-to-value. Datos para decidir, no para decorar reuniones.</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <h4 class="font-medium text-gray-900 text-sm">Tecnología al servicio de personas</h4>
+              <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">Si la herramienta no empodera al usuario, es un fracaso. Menos features, más impacto.</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <h4 class="font-medium text-gray-900 text-sm">Transparencia Radical</h4>
+              <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">Documento aciertos y errores en público. El aprendizaje colectivo acelera a todos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. TRAYECTORIA (Timeline compacto) -->
+        <div class="md:col-span-4 bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-5 flex items-center gap-2">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Trayectoria
+          </h3>
+          <div class="space-y-5 border-l-2 border-gray-200 pl-4 ml-1">
+            <div class="relative">
+              <span class="absolute -left-[21px] top-1 h-3 w-3 rounded-full bg-cyan-500 border-2 border-white"></span>
+              <p class="text-xs font-bold text-cyan-600 uppercase">2026 - Presente</p>
+              <p class="text-sm font-medium text-gray-900 mt-0.5">Head of Product @ SaludDrive & LuciRMe Ai</p>
+              <p class="text-xs text-gray-500 mt-1">Estrategia, mentoring y adopción de IA</p>
+            </div>
+            <div class="relative">
+              <span class="absolute -left-[21px] top-1 h-3 w-3 rounded-full bg-gray-300 border-2 border-white"></span>
+              <p class="text-xs font-bold text-gray-500 uppercase">2022 - 2026</p>
+              <p class="text-sm font-medium text-gray-900 mt-0.5">PM @ Alegra, Datup, Whale & Jaguar</p>
+              <p class="text-xs text-gray-500 mt-1">SaaS B2B, Growth y productos con IA</p>
+            </div>
+            <div class="relative">
+              <span class="absolute -left-[21px] top-1 h-3 w-3 rounded-full bg-gray-300 border-2 border-white"></span>
+              <p class="text-xs font-bold text-gray-500 uppercase">2012 - 2022</p>
+              <p class="text-sm font-medium text-gray-900 mt-0.5">Head of Tech, Scrum Master & Cofounder</p>
+              <p class="text-xs text-gray-500 mt-1">Workep, Vozy, Juju, Utravel SAS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. ESPECIALIDADES (Tag Cloud) -->
+        <div class="md:col-span-6 bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-5 flex items-center gap-2">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+            Especialidades
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Product Strategy</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Shape Up</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Scrum</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">IA & Automation</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Growth</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">B2B SaaS</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Design Thinking</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Amplitude</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Roadmapping</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Discovery</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">OKRs/KPIs</span>
+            <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">Product-Led Growth</span>
+          </div>
+        </div>
+
+        <!-- 6. FUERA DE PANTALLAS (Tarjeta oscura de contraste) -->
+        <div class="md:col-span-6 bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8 text-white flex flex-col justify-center">
+          <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            Fuera de pantallas
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4">
+            Cuando no estoy optimizando flujos o mentoriando, me encontrarás cocinando con mi esposa y mi hijo (de él nace <strong class="text-cyan-400">LuciRMe</strong>) o sacando a mi perro.
+          </p>
+          <blockquote class="text-xs text-gray-400 italic border-l-2 border-cyan-500 pl-3">
+            "La mejor tecnología es la que no se nota: la que te hace sentir más capaz y te da más tiempo para lo que realmente importa."
+          </blockquote>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

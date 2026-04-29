@@ -1,23 +1,23 @@
 ---
-// Header reutilizable con navegación
 ---
 
-<header class="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
+<header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur border-b border-gray-200 z-50">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="/" class="text-xl font-bold text-white">
-      LuciRMe <span class="text-cyan-400">Ai</span>
+    <a href="/" class="text-xl font-bold text-gray-900">
+      LuciRMe <span class="text-cyan-600">Ai</span>
     </a>
-
-    <!-- Nav Desktop -->
+    
     <nav class="hidden md:flex space-x-8">
-      <a href="#servicios" class="text-slate-300 hover:text-cyan-400 transition">Servicios</a>
-      <a href="#metodo" class="text-slate-300 hover:text-cyan-400 transition">Metodología</a>
-      <a href="/bitacora" class="text-slate-300 hover:text-cyan-400 transition">Bitácora</a>
-      <a href="#contacto" class="text-slate-300 hover:text-cyan-400 transition">Contacto</a>
+      <a href="#servicios" class="text-gray-600 hover:text-gray-900 transition text-sm font-medium">Servicios</a>
+      <a href="#sobre-mi" class="text-gray-600 hover:text-gray-900 transition text-sm font-medium">Sobre mí</a>
+      <a href="#contacto" class="text-gray-600 hover:text-gray-900 transition text-sm font-medium">Contacto</a>
     </nav>
 
-    <!-- Mobile Menu Button (placeholder) -->
-    <button class="md:hidden text-slate-300">☰</button>
+    <a href="#contacto" class="hidden md:inline-block bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+      Hablemos
+    </a>
   </div>
 </header>
+
+<!-- Espaciador para el header fijo -->
+<div class="h-20"></div>

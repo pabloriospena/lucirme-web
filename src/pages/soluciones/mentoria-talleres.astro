@@ -1,0 +1,323 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="Mentoría y Talleres | LuciRMe Ai">
+
+  <!-- BARRA DE NAVEGACIÓN SIMPLE -->
+  <div class="bg-white border-b border-gray-200 px-4 py-3">
+    <div class="container mx-auto max-w-6xl flex justify-between items-center">
+      <a href="/" class="flex items-center gap-2 text-sm font-bold text-gray-900 hover:text-cyan-600 transition">
+        ← Volver a LuciRMe Ai
+      </a>
+      <a href="#contacto" class="hidden md:inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+        Agendar Llamada
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- HERO                                         -->
+  <!-- ============================================ -->
+  <section class="py-16 md:py-24 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl text-center">
+      <span class="inline-block bg-orange-50 text-orange-700 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-orange-100 uppercase tracking-wide">
+        Para Profesionales, Equipos y Empresas
+      </span>
+      
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+        Acelera tu carrera o tu equipo con IA y Producto.
+      </h1>
+      
+      <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Mentoría personalizada o talleres grupales. Resultados concretos, productividad 5x y herramientas a medida. Sin teoría vacía, solo ejecución real.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg text-base font-medium transition shadow-lg">
+          Agendar Llamada de 15 min
+        </a>
+        <a href="#formatos" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-900 text-gray-700 hover:text-gray-900 px-8 py-4 rounded-lg text-base font-medium transition">
+          Ver formatos disponibles
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DOS RUTAS CLARAS                             -->
+  <!-- ============================================ -->
+  <section id="formatos" class="py-24 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-6xl">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Elige tu camino</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Dos formatos, un mismo objetivo: que ganes velocidad y autonomía con IA y estrategia de producto.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Ruta 1: Particulares / 1:1 -->
+        <div class="bg-white border-2 border-orange-200 rounded-2xl p-8 hover:shadow-xl hover:border-orange-300 transition">
+          <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 text-2xl">👤</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Mentoría 1:1</h3>
+          <p class="text-sm text-gray-500 mb-4 font-semibold">Para profesionales, freelancers y líderes individuales</p>
+          
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start gap-3">
+              <span class="text-orange-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Sesiones personalizadas enfocadas en tus objetivos</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-orange-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Construcción de tu Kit de Herramientas propio</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-orange-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Estrategia de carrera aplicada con métricas reales</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-orange-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Productividad 5x en tus tareas diarias</p>
+            </div>
+          </div>
+
+          <div class="bg-orange-50 p-4 rounded-lg border border-orange-100 mb-6">
+            <p class="text-sm font-semibold text-gray-900 mb-1">Ideal si:</p>
+            <p class="text-xs text-gray-600">Quieres acelerar tu carrera, optimizar tu flujo de trabajo o destacar en el mercado con skills reales de IA y Producto.</p>
+          </div>
+
+          <a href="#contacto" class="block text-center text-base font-semibold text-orange-600 hover:text-orange-700 py-3 border border-orange-200 rounded-lg hover:bg-orange-50 transition">
+            Agendar Mentoría 1:1 →
+          </a>
+        </div>
+
+        <!-- Ruta 2: Empresas / Talleres -->
+        <div class="bg-white border-2 border-cyan-200 rounded-2xl p-8 hover:shadow-xl hover:border-cyan-300 transition">
+          <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 mb-6 text-2xl">👥</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Talleres Grupales</h3>
+          <p class="text-sm text-gray-500 mb-4 font-semibold">Para equipos, áreas o grupos de interés que quieren acelerar su operación</p>
+          
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start gap-3">
+              <span class="text-cyan-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Talleres prácticos con casos reales de tu empresa</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-cyan-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Co-creación de automatizaciones en vivo</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-cyan-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Instalación de nuevos hábitos de trabajo</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-cyan-600 mt-1">✓</span>
+              <p class="text-sm text-gray-600">Equipos que recuperan 10h/semana</p>
+            </div>
+          </div>
+
+          <div class="bg-cyan-50 p-4 rounded-lg border border-cyan-100 mb-6">
+            <p class="text-sm font-semibold text-gray-900 mb-1">Ideal si:</p>
+            <p class="text-xs text-gray-600">Tienes un equipo que pierde tiempo en tareas manuales y quieres que sean más productivos sin depender de TI.</p>
+          </div>
+
+          <a href="#contacto" class="block text-center text-base font-semibold text-cyan-600 hover:text-cyan-700 py-3 border border-cyan-200 rounded-lg hover:bg-cyan-50 transition">
+            Cotizar Taller para mi Equipo →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- EL PROCESO                                   -->
+  <!-- ============================================ -->
+  <section class="py-24 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Cómo trabajamos</h2>
+        <p class="text-gray-600">Un proceso claro y práctico, adaptado a tus necesidades.</p>
+      </div>
+
+      <div class="space-y-12">
+        
+        <!-- Paso 1 -->
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Espacio de Conexión (15 min)</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Una llamada breve y sin compromiso. Entendemos tu situación actual, tus objetivos y confirmamos si hay <em>fit</em> para trabajar juntos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Paso 2: Diagnóstico -->
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+          <div class="flex-1 bg-gray-50 p-6 rounded-2xl border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Diagnóstico y Diseño del Plan</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Analizamos tu flujo de trabajo actual (si eres individual) o los procesos de tu equipo (si es empresa). Identificamos cuellos de botella, tareas repetitivas y oportunidades de automatización.
+            </p>
+            <div class="bg-white p-4 rounded-lg border border-gray-200">
+              <p class="text-sm text-gray-600">
+                <strong>Entregable:</strong> Roadmap personalizado con las herramientas y estrategias que implementaremos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 3: Construcción -->
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+          <div class="flex-1 bg-gray-50 p-6 rounded-2xl border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Construcción y Entrenamiento</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Sesiones prácticas donde aprendemos haciendo. Creamos tus prompts, GPTs, automatizaciones y flujos de trabajo. No es teoría: es aplicar IA a tus casos reales desde el día 1.
+            </p>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div class="bg-white p-3 rounded-lg border border-gray-200">
+                <p class="text-xs font-semibold text-gray-900 mb-1">Para Particulares:</p>
+                <p class="text-xs text-gray-600">Sesiones 1:1 + seguimiento asíncrono</p>
+              </div>
+              <div class="bg-white p-3 rounded-lg border border-gray-200">
+                <p class="text-xs font-semibold text-gray-900 mb-1">Para Equipos:</p>
+                <p class="text-xs text-gray-600">Talleres grupales + co-creación en vivo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 4: Autonomía -->
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+          <div class="flex-1 bg-gray-50 p-6 rounded-2xl border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Consolidación y Autonomía</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Refinamos soluciones, resolvemos dudas avanzadas y certificamos que puedas trabajar de forma independiente. Te llevas tu Kit de Herramientas completo.
+            </p>
+            <div class="bg-cyan-50 p-4 rounded-lg border border-cyan-100">
+              <p class="text-sm text-cyan-800 font-medium">
+                ✨ Resultado: Eres dueño de tus herramientas, flujos y bibliotecas de prompts. Sin dependencia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- LO QUE TE LLEVAS                               -->
+  <!-- ============================================ -->
+  <section class="py-20 px-4 bg-gray-50 border-y border-gray-100">
+    <div class="container mx-auto max-w-5xl">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Tu Kit de Herramientas</h2>
+        <p class="text-gray-600">No te vas con teoría. Te vas con herramientas que usas todos los días.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-4 text-xl">🧠</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Biblioteca de Prompts</h4>
+          <p class="text-sm text-gray-600">Tus mejores prompts maquetados y listos para usar en tu día a día.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 mb-4 text-xl">🤖</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Asistentes Virtuales</h4>
+          <p class="text-sm text-gray-600">Tus propios GPTs y Gemas configurados para tu nicho o equipo.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-4 text-xl">🗺️</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Roadmap Personal</h4>
+          <p class="text-sm text-gray-600">Estrategia clara para los próximos 6 meses de tu carrera o equipo.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4 text-xl">⚡</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Automatizaciones</h4>
+          <p class="text-sm text-gray-600">Flujos automatizados que te ahorran horas semanales de trabajo manual.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center text-yellow-600 mb-4 text-xl">📊</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Métricas de Impacto</h4>
+          <p class="text-sm text-gray-600">Sistema para medir tu productividad real y presentar resultados tangibles.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600 mb-4 text-xl">🔐</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Propiedad Total</h4>
+          <p class="text-sm text-gray-600">Todo es tuyo. Sin dependencia, sin suscripciones ocultas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SOBRE TU MENTOR                              -->
+  <!-- ============================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-3xl text-center">
+      <div class="w-20 h-20 rounded-full overflow-hidden bg-gray-200 mx-auto mb-4 shadow-md">
+        <img src="/pablo-rios.jpeg" alt="Pablo Ríos" class="w-full h-full object-cover" />
+      </div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">Sobre Pablo Ríos</h2>
+      <p class="text-gray-600 leading-relaxed">
+        Head of Product y fundador de LuciRMe Ai. +13 años escalando productos B2B, lanzando herramientas con IA en 3 semanas y optimizando operaciones reales. 
+        Ahora comparto esa misma estrategia de <strong>velocidad y enfoque</strong> contigo o con tu equipo, de forma personalizada.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CONTACTO                                     -->
+  <!-- ============================================ -->
+    <!-- ============================================ -->
+  <!--  Agendar Llamada                             -->
+  <!-- ============================================ -->
+ <section id="contacto" class="py-24 px-4 bg-white">
+  <div class="container mx-auto max-w-2xl text-center">
+    
+    <h2 class="text-2xl font-bold text-gray-900 mb-3">Agenda un Espacio para Hablar</h2>
+    <p class="text-gray-600 mb-8">
+      Selecciona el horario que mejor te funcione. Confirmación inmediata en tu correo y en el mío.
+    </p>
+
+    <!-- Botón directo a Google Calendar -->
+    <a 
+      href="https://calendar.app.google/k4iYmA42X9NNBb5t8" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-xl text-base font-medium transition shadow-lg w-full sm:w-auto"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      Reservar mi llamada de 15 min
+    </a>
+
+    <p class="text-xs text-gray-400 mt-4">
+      🔒 Sin spam · 📅 Confirmación instantánea · ⏱️ Respuesta en &lt;24h
+    </p>
+
+  </div>
+</section>
+
+  <!-- FOOTER SIMPLE -->
+  <footer class="bg-gray-50 border-t border-gray-200 py-8 px-4">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-gray-400">© 2026 LuciRMe Ai.</p>
+      <a href="/" class="text-sm text-gray-600 hover:text-gray-900">← Volver al Inicio</a>
+    </div>
+  </footer>
+
+</Layout>

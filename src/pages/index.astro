@@ -1,287 +1,397 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import ServiceCard from '../components/ServiceCard.astro'
 ---
 
-<Layout title="LuciRMe Ai | Product Management + IA">
+<Layout title="LuciRMe Ai | Acelera tu equipo con IA y Estrategia de Producto">
 
-  <!-- HERO SECTION -->
-  <section class="bg-slate-900 py-20 md:py-32 text-center px-4">
-    <div class="container mx-auto max-w-4xl">
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-        Product Management + IA <br class="hidden md:block" />
-        <span class="text-cyan-400">sin complicaciones</span>
-      </h1>
-      
-      <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-        Ayudo a equipos no técnicos, estudiantes y startups a implementar IA y metodologías ágiles (Shape Up) con resultados medibles. 
-        Sin teoría vacía. Sin código complejo. Construyendo en público.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-        <a href="#servicios" class="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold transition text-lg">
-          Explorar Servicios
-        </a>
-        <a href="/bitacora" class="border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-white px-8 py-4 rounded-lg font-semibold transition text-lg">
-          Leer mi Bitácora
-        </a>
-      </div>
-      
-      <p class="text-slate-400 text-sm">
-        ✓ Sin compromiso técnico &nbsp; ✓ Resultados en semanas &nbsp; ✓ 100% práctico
-      </p>
+ <!-- ============================================ -->
+<!-- NAVBAR (Alineado a la izquierda)             -->
+<!-- ============================================ -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+  <div class="container mx-auto px-4 py-3 flex items-center gap-6">
+    <!-- Logo en navbar (icono) -->
+    <a href="#inicio" class="flex items-center gap-2 flex-shrink-0">
+      <img src="/logo-lucirme.png" alt="LuciRMe Ai" class="h-8 w-auto" />
+    </a>
+    
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="#inicio" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Inicio</a>
+      <a href="#servicios" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Soluciones</a>
+      <a href="#metodologia" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Metodología</a>
+      <a href="#charlas" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Charlas</a>
+      <a href="#sobre-mi" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Sobre Mí</a>
+    </nav>
+
+    <a href="#contacto" class="hidden md:inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition ml-auto">
+      Hablemos
+    </a>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden ml-auto p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+    <nav class="px-4 py-3 space-y-3">
+      <a href="#inicio" class="block text-sm text-gray-600 hover:text-gray-900 font-medium">Inicio</a>
+      <a href="#servicios" class="block text-sm text-gray-600 hover:text-gray-900 font-medium">Soluciones</a>
+      <a href="#metodologia" class="block text-sm text-gray-600 hover:text-gray-900 font-medium">Metodología</a>
+      <a href="#charlas" class="block text-sm text-gray-600 hover:text-gray-900 font-medium">Charlas</a>
+      <a href="#sobre-mi" class="block text-sm text-gray-600 hover:text-gray-900 font-medium">Sobre Mí</a>
+      <a href="#contacto" class="block text-sm font-semibold text-gray-900">Hablemos →</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- ============================================ -->
+<!-- HERO (Con logo completo arriba)              -->
+<!-- ============================================ -->
+<section id="inicio" class="py-24 md:py-32 px-4 bg-white border-b border-gray-100">
+  <div class="container mx-auto max-w-4xl text-center">
+    
+    <!-- Logo completo centrado -->
+    <div class="mb-8">
+      <img 
+        src="/logo-lucirme-ai.png" 
+        alt="LuciRMe Ai" 
+        class="mx-auto h-12 md:h-16 w-auto"
+      />
     </div>
-  </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="bg-slate-800 py-20 px-4">
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+      Acelera tu carrera o tu equipo con <span class="text-cyan-600">IA</span> y estrategia de producto.
+    </h1>
+    
+    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Cero teoría. 100% implementación.<br>
+      IA y Estrategia de Producto para Startups, Equipos Operativos y Profesionales.<br>
+      <strong class="text-gray-900">Automatiza lo manual. Enfócate en lo que realmente genera valor.</strong>
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#servicios" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg text-base font-medium transition shadow-lg">
+        Ver Soluciones
+      </a>
+      <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-900 text-gray-700 hover:text-gray-900 px-8 py-4 rounded-lg text-base font-medium transition">
+        Agendar Llamada
+      </a>
+    </div>
+
+    <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+      <span class="flex items-center gap-2">✓ +13 años de experiencia</span>
+      <span class="flex items-center gap-2">✓ Head of Product @ SaludDrive</span>
+      <span class="flex items-center gap-2">✓ Autor de PM Sin Bullshit</span>
+    </div>
+  </div>
+</section>
+
+  <!-- ============================================ -->
+  <!-- SOLUCIONES (4 Tarjetas)                      -->
+  <!-- ============================================ -->
+  <section id="servicios" class="py-24 px-4 bg-gray-50">
     <div class="container mx-auto max-w-6xl">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿En qué puedo ayudarte?</h2>
-        <p class="text-slate-300 text-lg">
-          Tres verticales diseñadas para diferentes etapas y necesidades. Elige la tuya:
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Soluciones de Ejecución Real</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Elige la vía de aceleración para tu equipo. Sin teoría vacía: mentoría directa y construcción en vivo para resultados inmediatos.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Servicio 1: IA para No Técnicos -->
-        <ServiceCard
-          icon="🤖"
-          title="IA para Equipos No Técnicos"
-          tagline="Automatiza lo repetitivo. Potencia lo creativo."
-          description="La IA no es solo para ingenieros. Diseñado para equipos de Marketing, RRHH, Operaciones y Administración que quieren ahorrar horas semanales sin escribir una línea de código."
-          features={[
-            "Talleres prácticos de prompts: De básico a avanzado en 4 sesiones",
-            "Automatización de flujos: Conectamos tus herramientas (Make, Zapier, n8n)",
-            "Cultura de IA segura: Ética, privacidad y mejores prácticas",
-            "Casos reales aplicados: Tus procesos, tus datos, tus resultados"
-          ]}
-          result="Tu equipo ahorrará 5-10 horas semanales en tareas repetitivas en las primeras 4 semanas."
-          idealFor={["Equipos de 5-50 personas", "Procesos manuales repetitivos", "Empresas que quieren empezar con IA"]}
-          ctaText="Agendar diagnóstico (15 min)"
-          ctaLink="#contacto"
-        />
+        <!-- 1. Empresas No-Tech (Disponible) -->
+        <a href="/soluciones/empresas-no-tech" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-gray-300 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 mb-4 text-xl group-hover:bg-cyan-200 transition-colors">🏢</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Empresas No-Tech</h3>
+          <p class="text-xs text-gray-500 mb-3">Para gerentes y dueños de empresas tradicionales.</p>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
+            Impulsa a tu equipo operativo y administrativo con IA. Identificamos fugas de tiempo y construimos soluciones en vivo con tus archivos.
+          </p>
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 mb-4">
+            <p class="text-[11px] font-bold text-gray-900 uppercase mb-1">Formato</p>
+            <p class="text-[11px] text-gray-600">Taller de Inmersión (2h) + Entrenamiento PRP (8 semanas)</p>
+          </div>
+          <span class="text-sm font-semibold text-cyan-600 group-hover:text-cyan-700 inline-flex items-center gap-1">
+            Quiero automatizar mi equipo <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </span>
+        </a>
 
-        <!-- Servicio 2: IA para Estudiantes -->
-        <ServiceCard
-          icon="🎓"
-          title="IA para Estudiantes (<25)"
-          tagline="Domina las herramientas del futuro antes de graduarte."
-          description="Mientras otros aprenden lo básico, tú ya estarás creando proyectos profesionales con IA. Mentoría práctica para universitarios y bootcampers que quieren destacar."
-          features={[
-            "IA para estudio e investigación: Prompts para papers, resúmenes, análisis",
-            "Portafolio digital asistido por IA: Proyectos que impresionan en entrevistas",
-            "Productividad personal: Gestión del tiempo, notas, tareas con IA",
-            "Preparación laboral: Cómo vender tus skills de IA en entrevistas"
-          ]}
-          result="Crearás 3-5 proyectos profesionales con IA para tu portafolio en 8 semanas."
-          idealFor={["Universitarios (últimos 2 años)", "Bootcampers", "Jóvenes profesionales <25"]}
-          ctaText="Ver programa completo"
-          ctaLink="#contacto"
-        />
+        <!-- 2. Startups (Próximamente) -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 opacity-75 cursor-not-allowed relative overflow-hidden flex flex-col">
+          <div class="absolute inset-0 bg-gray-100/50 backdrop-blur-[1px] z-10 flex items-center justify-center">
+            <span class="bg-gray-900 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">Próximamente</span>
+          </div>
+          <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 mb-4 text-xl">🚀</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Startups</h3>
+          <p class="text-xs text-gray-500 mb-3">Para equipos de producto que necesitan acelerar.</p>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
+            Deja de construir features inútiles. Implementamos Shape Up, priorización basada en datos y métricas reales de negocio.
+          </p>
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 mb-4">
+            <p class="text-[11px] font-bold text-gray-900 uppercase mb-1">Formato</p>
+            <p class="text-[11px] text-gray-600">Charla de Alineación (2h) + Mentoría de Ejecución (8 semanas)</p>
+          </div>
+          <span class="text-sm font-semibold text-gray-500">
+            Acelerar mi startup <span>→</span>
+          </span>
+        </div>
 
-        <!-- Servicio 3: PM + IA para Startups -->
-        <ServiceCard
-          icon="📊"
-          title="Product Management para Startups"
-          tagline="Shape Up + IA = Menos caos, más impacto."
-          description="Deja de correr en círculos con Scrum infinito. Implemento Shape Up (ciclos de 6 semanas) potenciado con IA para priorización y discovery. Menos reuniones, más shipped."
-          features={[
-            "Shape Up implementation: Ciclos de 6 semanas, betting table, appetite",
-            "Discovery continuo con IA: Validación rápida, entrevistas asistidas",
-            "Roadmaps basados en IA: Predicción de tendencias, priorización data-driven",
-            "Métricas que importan: De vanity metrics a north star metrics"
-          ]}
-          result="Reducirás un 40% el tiempo de discovery y aumentarás un 30% la velocidad de shipped en 3 ciclos."
-          idealFor={["Startups en escala 0→1", "Founders técnicos", "Heads of Product sobrepasados"]}
-          ctaText="Agendar llamada de diagnóstico"
-          ctaLink="#contacto"
-        />
+        <!-- 3. Educación (Próximamente) -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 opacity-75 cursor-not-allowed relative overflow-hidden flex flex-col">
+          <div class="absolute inset-0 bg-gray-100/50 backdrop-blur-[1px] z-10 flex items-center justify-center">
+            <span class="bg-gray-900 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">Próximamente</span>
+          </div>
+          <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 mb-4 text-xl">🎓</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Educación</h3>
+          <p class="text-xs text-gray-500 mb-3">Para universidades, fundaciones y bootcamps.</p>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
+            Cierra la brecha academia-industria. Alumnos de cualquier profesión adquieren skills reales de IA para destacar.
+          </p>
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 mb-4">
+            <p class="text-[11px] font-bold text-gray-900 uppercase mb-1">Formato</p>
+            <p class="text-[11px] text-gray-600">Charla Introductoria + Programa de Seguimiento a medida</p>
+          </div>
+          <span class="text-sm font-semibold text-gray-500">
+            Propuesta para Alianzas <span>→</span>
+          </span>
+        </div>
+
+        <!-- 4. Mentoría y Talleres (Disponible) -->
+        <a href="/soluciones/mentoria-talleres" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-gray-300 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-4 text-xl group-hover:bg-orange-200 transition-colors">👥</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Mentoría y Talleres</h3>
+          <p class="text-xs text-gray-500 mb-3">Para profesionales, empresas y grupos.</p>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
+            Impulsa tus conocimientos en IA o Producto. Sesiones 1:1 o talleres grupales. Logra resultados concretos y acelera tu productividad 5x.
+          </p>
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 mb-4">
+            <p class="text-[11px] font-bold text-gray-900 uppercase mb-1">Formato</p>
+            <p class="text-[11px] text-gray-600">Sesiones personalizadas + Kit de herramientas propio</p>
+          </div>
+          <span class="text-sm font-semibold text-orange-600 group-hover:text-orange-700 inline-flex items-center gap-1">
+            Agendar Mentoría <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </span>
+        </a>
 
       </div>
     </div>
   </section>
 
-  <!-- DIFERENCIACIÓN -->
-  <section id="metodo" class="bg-slate-900 py-20 px-4">
-    <div class="container mx-auto max-w-6xl">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Por qué LuciRMe Ai?</h2>
-        <p class="text-slate-300 text-lg">
-          No soy otro consultor más de IA. Esto es lo que me diferencia:
-        </p>
+  <!-- ============================================ -->
+  <!-- METODOLOGÍA PRP (Propuesta D)                -->
+  <!-- ============================================ -->
+  <section id="metodologia" class="py-24 px-4 bg-white border-y border-gray-100">
+    <div class="container mx-auto max-w-5xl">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Metodología PRP</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Prácticas de Rendimiento Progresivo. Transformamos tu forma de trabajar en 3 pasos claros.</p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-6">
-        
-        <div class="text-center p-6">
-          <div class="text-4xl mb-4">🔓</div>
-          <h3 class="text-lg font-bold text-white mb-2">Build in Public</h3>
-          <p class="text-slate-300 text-sm">
-            Documento mis éxitos Y mis fallos en mi bitácora diaria. Transparencia total, no solo casos de éxito.
-          </p>
+      <!-- Antes vs Después -->
+      <div class="grid md:grid-cols-2 gap-8 mb-16 bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200">
+        <div>
+          <h3 class="text-lg font-bold text-gray-500 mb-4 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-red-400"></span> Antes
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Tareas manuales repetitivas</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> 8h+ semanales en reportes/admin</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Errores humanos frecuentes</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Sin tiempo para estrategia</li>
+          </ul>
         </div>
-
-        <div class="text-center p-6">
-          <div class="text-4xl mb-4">🎯</div>
-          <h3 class="text-lg font-bold text-white mb-2">Shape Up + IA</h3>
-          <p class="text-slate-300 text-sm">
-            Pocos hablan de Shape Up aplicado a IA. Yo lo implemento diariamente en startups reales.
-          </p>
+        <div>
+          <h3 class="text-lg font-bold text-cyan-600 mb-4 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-green-400"></span> Después
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-900 font-medium">
+            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Flujos 100% automatizados</li>
+            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Entrega en 30 min con IA</li>
+            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Precisión y calidad superior</li>
+            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Foco en decisiones de alto impacto</li>
+          </ul>
         </div>
-
-        <div class="text-center p-6">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="text-lg font-bold text-white mb-2">Automatización Práctica</h3>
-          <p class="text-slate-300 text-sm">
-            No solo prompts. Conecto herramientas (Make, n8n, APIs) para crear flujos que funcionan 24/7.
-          </p>
-        </div>
-
-        <div class="text-center p-6">
-          <div class="text-4xl mb-4">🎓💼🚀</div>
-          <h3 class="text-lg font-bold text-white mb-2">Tres Verticales Claras</h3>
-          <p class="text-slate-300 text-sm">
-            No soy generalista. Especializado en: No técnicos, Estudiantes y Startups.
-          </p>
-        </div>
-
       </div>
+
+      <!-- Pasos P-R-P -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-cyan-300 transition">
+          <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">P</div>
+          <h4 class="font-bold text-gray-900 mb-2">PROCESAR</h4>
+          <p class="text-sm text-gray-600">Analizamos → Automatizamos → Liberamos tiempo de valor</p>
+        </div>
+        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-cyan-300 transition">
+          <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">R</div>
+          <h4 class="font-bold text-gray-900 mb-2">RESULTAR</h4>
+          <p class="text-sm text-gray-600">Implementamos → Medimos → Multiplicamos la velocidad</p>
+        </div>
+        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-cyan-300 transition">
+          <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">P</div>
+          <h4 class="font-bold text-gray-900 mb-2">PROGRESAR</h4>
+          <p class="text-sm text-gray-600">Creamos GPTs → Documentamos → Escalamos sin dependencia</p>
+        </div>
+      </div>
+
+      <!-- Métricas Reales -->
+      <div class="bg-gray-900 text-white rounded-2xl p-6 md:p-8 text-center">
+        <h3 class="text-lg font-semibold mb-6 text-gray-300">Métricas Reales en Nuestros Clientes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <p class="text-3xl font-bold text-cyan-400 mb-1">↓ 20h</p>
+            <p class="text-sm text-gray-400">Semanales ahorradas en operación</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-cyan-400 mb-1">5x</p>
+            <p class="text-sm text-gray-400">Más rápido en entregas clave</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-cyan-400 mb-1">↓ 60%</p>
+            <p class="text-sm text-gray-400">Reducción de errores manuales</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- BITÁCORA PREVIEW -->
-  <section class="bg-slate-800 py-20 px-4">
+  <!-- ============================================ -->
+  <!-- CHARLAS REALIZADAS                           -->
+  <!-- ============================================ -->
+  <section id="charlas" class="py-20 px-4 bg-gray-50">
     <div class="container mx-auto max-w-4xl">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">LuciRMe Log</h2>
-        <p class="text-slate-300 text-lg">
-          Construyendo en público. Transparencia operativa. Lo que aprendí hoy.
-        </p>
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">Charlas y Capacitaciones</h2>
+        <p class="text-gray-600">Hemos llevado IA práctica a equipos reales. Estos son algunos de nuestros espacios.</p>
       </div>
 
-      <div class="space-y-4 mb-8">
-        
-        <!-- Post 1 -->
-        <article class="border border-slate-700 p-5 rounded-lg hover:border-cyan-500 transition">
-          <div class="flex flex-wrap gap-2 mb-3">
-            <span class="text-xs bg-slate-900 text-amber-400 px-2 py-1 rounded">#ShapeUp</span>
-            <span class="text-xs bg-slate-900 text-amber-400 px-2 py-1 rounded">#IA</span>
-            <time class="text-slate-500 text-xs ml-auto">29 Abril 2026</time>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Charla 1 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-xl flex-shrink-0">🎓</div>
+          <div>
+            <h4 class="font-semibold text-gray-900">La Chinca & Casa Universitaria</h4>
+            <p class="text-sm text-gray-500 mb-2">Capacitación de IA para educación y talento joven</p>
+            <span class="inline-block text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded">Educación</span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-2">
-            Implementé betting table con IA para priorización
-          </h3>
-          <p class="text-slate-300 text-sm">
-            ✅ Avance: GPT-4 analizando impacto vs esfuerzo. 💥 Fallo: La IA sobrevaloró features "cool". 📌 Lección: La IA sugiere, humanos deciden. Siempre.
-          </p>
-          <a href="/bitacora" class="inline-block mt-3 text-cyan-400 text-sm hover:underline">Leer entrada →</a>
-        </article>
+        </div>
 
-        <!-- Post 2 -->
-        <article class="border border-slate-700 p-5 rounded-lg hover:border-cyan-500 transition">
-          <div class="flex flex-wrap gap-2 mb-3">
-            <span class="text-xs bg-slate-900 text-amber-400 px-2 py-1 rounded">#Automatización</span>
-            <time class="text-slate-500 text-xs ml-auto">28 Abril 2026</time>
+        <!-- Charla 2 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 text-xl flex-shrink-0">🏢</div>
+          <div>
+            <h4 class="font-semibold text-gray-900">Asesorías Integrales</h4>
+            <p class="text-sm text-gray-500 mb-2">IA para empresas tradicionales y procesos operativos</p>
+            <span class="inline-block text-xs font-medium text-cyan-600 bg-cyan-50 px-2 py-1 rounded">Empresas No-Tech</span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-2">
-            -3h/semana en reporting con Make + Claude
-          </h3>
-          <p class="text-slate-300 text-sm">
-            ✅ Avance: Reporting automatizado. 💥 Fallo: Duplicación por timezone. 📌 Lección: Siempre normaliza fechas a UTC antes de automatizar.
-          </p>
-          <a href="/bitacora" class="inline-block mt-3 text-cyan-400 text-sm hover:underline">Leer entrada →</a>
-        </article>
-
-      </div>
-
-      <div class="text-center">
-        <a href="/bitacora" class="inline-block bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-semibold transition">
-          Ver todas las entradas →
-        </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="bg-slate-900 py-20 px-4">
-    <div class="container mx-auto max-w-2xl">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Hablemos de tu proyecto</h2>
-        <p class="text-slate-300 text-lg">
-          Sin compromiso. Sin venta agresiva. Solo una conversación para ver si puedo ayudarte.
-        </p>
+  <!-- ============================================ -->
+  <!-- TESTIMONIAL (Validación)                     -->
+  <!-- ============================================ -->
+  <section class="py-16 px-4 bg-white border-y border-gray-100">
+    <div class="container mx-auto max-w-3xl text-center">
+      <div class="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-4">
+        Feedback Real
       </div>
-
-      <form 
-        action="https://formsubmit.co/pabloriospena@gmail.com" 
-        method="POST" 
-        class="space-y-4 bg-slate-800 p-6 rounded-xl border border-slate-700"
-      >
-        <!-- Configuración FormSubmit -->
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://tudominio.com/gracias" />
-
-        <!-- Campos -->
-        <div>
-          <label class="block text-sm font-medium text-slate-300 mb-1">Nombre</label>
-          <input 
-            type="text" 
-            name="name" 
-            required 
-            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
-            placeholder="Tu nombre"
-          />
+      <blockquote class="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed mb-6">
+        "Un éxito la capacitación de inteligencia artificial, no he oído sino comentarios excelentes al respecto. Agradecerte toda esa visión que tienes para con las niñas de Casa Universitaria y Casa de La Chinca."
+      </blockquote>
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">O</div>
+        <div class="text-left">
+          <p class="text-sm font-semibold text-gray-900">Personal de La Chinca</p>
+          <p class="text-xs text-gray-500">La Chinca / Casa Universitaria</p>
         </div>
-
-        <div>
-          <label class="block text-sm font-medium text-slate-300 mb-1">Email</label>
-          <input 
-            type="email" 
-            name="email" 
-            required 
-            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
-            placeholder="tu@email.com"
-          />
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-slate-300 mb-1">Servicio de interés</label>
-          <select 
-            name="servicio" 
-            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-          >
-            <option value="">Selecciona una opción</option>
-            <option value="no-tecnicos">IA para Equipos No Técnicos</option>
-            <option value="estudiantes">IA para Estudiantes (&lt;25)</option>
-            <option value="startups">Product Management + IA para Startups</option>
-            <option value="duda">Aún no estoy seguro</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-slate-300 mb-1">Cuéntame brevemente</label>
-          <textarea 
-            name="message" 
-            rows="4" 
-            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
-            placeholder="¿En qué puedo ayudarte?"
-          ></textarea>
-        </div>
-
-        <button 
-          type="submit" 
-          class="w-full bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-4 rounded-lg font-semibold transition text-lg"
-        >
-          Enviar mensaje
-        </button>
-
-        <p class="text-slate-500 text-xs text-center">
-          ⏱️ Respuesta en &lt;24h &nbsp; 🔒 Sin spam. Solo yo veré tu mensaje.
-        </p>
-      </form>
+      </div>
     </div>
   </section>
+
+  <!-- ============================================ -->
+  <!-- SOBRE MÍ                                     -->
+  <!-- ============================================ -->
+  <section id="sobre-mi" class="py-20 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-3xl text-center">
+      <div class="w-24 h-24 rounded-full overflow-hidden bg-gray-200 mx-auto mb-6 shadow-md">
+        <img src="/pablo-rios.jpeg" alt="Pablo Ríos" class="w-full h-full object-cover" />
+      </div>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Sobre Pablo Ríos</h2>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        LuciRMe Ai nace con la experiencia de más de 13 años escalando productos, optimizando operaciones y liderando equipos en entornos SaaS B2B/B2C. 
+        He lanzado productos con IA en semanas, reducido soporte manual en un 40% y acompañado a empresas a pasar del caos a la ejecución. 
+        Mi objetivo es simple: que ganes velocidad y autonomía.
+      </p>
+      <a href="#contacto" class="text-cyan-600 font-semibold hover:underline">
+        ¿Hablamos de tu proyecto? →
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- LIBRO (Discreto)                             -->
+  <!-- ============================================ -->
+  <section class="py-12 px-4 bg-white border-t border-gray-100">
+    <div class="container mx-auto max-w-4xl">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-5">
+        <div class="w-16 h-24 bg-gray-200 rounded shadow-sm flex-shrink-0 overflow-hidden">
+          <img src="/images/portada-libro.jpg" alt="Product Management Sin Bullshit" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex-1 text-center sm:text-left">
+          <h3 class="text-base font-bold text-gray-900 mb-1">📚 Product Management Sin Bullshit</h3>
+          <p class="text-xs text-gray-600 mb-3">La guía práctica para PMs y C-levels. Estrategia real, métricas que importan y cómo lanzar sin miedo.</p>
+          <a href="https://pay.hotmart.com/D96093022S" target="_blank" class="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 text-xs font-semibold">
+            Obtener con 50% OFF <span class="bg-cyan-100 text-cyan-800 px-1.5 py-0.5 rounded">OFF50</span> →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============================================ -->
+  <!--  Agendar Llamada                             -->
+  <!-- ============================================ -->
+ <section id="contacto" class="py-24 px-4 bg-white">
+  <div class="container mx-auto max-w-2xl text-center">
+    
+    <h2 class="text-2xl font-bold text-gray-900 mb-3">Agenda un Espacio para Hablar</h2>
+    <p class="text-gray-600 mb-8">
+      Selecciona el horario que mejor te funcione. Confirmación inmediata en tu correo y en el mío.
+    </p>
+
+    <!-- Botón directo a Google Calendar -->
+    <a 
+      href="https://calendar.app.google/k4iYmA42X9NNBb5t8" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-xl text-base font-medium transition shadow-lg w-full sm:w-auto"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      Reservar mi llamada de 15 min
+    </a>
+
+    <p class="text-xs text-gray-400 mt-4">
+      🔒 Sin spam · 📅 Confirmación instantánea · ⏱️ Respuesta en &lt;24h
+    </p>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-gray-200 py-8 px-4">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-gray-400">© 2026 LuciRMe Ai. Todos los derechos reservados.</p>
+      <div class="flex gap-6 text-sm">
+        <a href="https://linkedin.com/in/pabloriospena" target="_blank" class="text-gray-500 hover:text-gray-900 transition">LinkedIn</a>
+        <a href="mailto:pabloriospena@gmail.com" class="text-gray-500 hover:text-gray-900 transition">Email</a>
+      </div>
+    </div>
+  </footer>
 
 </Layout>

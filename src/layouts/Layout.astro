@@ -1,12 +1,11 @@
 ---
 import '../styles/global.css'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
 
 interface Props {
   title?: string;
+  description?: string;
 }
-const { title = "LuciRMe Ai" } = Astro.props;
+const { title = "LuciRMe Ai", description = "Conectar tecnología y personas para desbloquear el potencial y ganar velocidad." } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,14 +13,13 @@ const { title = "LuciRMe Ai" } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
     <title>{title}</title>
-    <meta name="description" content="Product Management + IA sin complicaciones. Equipos no técnicos, estudiantes y startups." />
+    
+    <!-- Enlace al Favicon para que se vea en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="/favicon.svg" />
   </head>
-  <body class="bg-slate-900 text-slate-200 font-sans">
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body class="bg-white text-gray-900 font-sans antialiased">
+    <slot />
   </body>
 </html>
