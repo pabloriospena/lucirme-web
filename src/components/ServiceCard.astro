@@ -1,0 +1,61 @@
+---
+// Tarjeta reutilizable para servicios
+export interface Props {
+  icon: string;
+  title: string;
+  tagline: string;
+  description: string;
+  features: string[];
+  result: string;
+  idealFor: string[];
+  ctaText: string;
+  ctaLink: string;
+}
+const { icon, title, tagline, description, features, result, idealFor, ctaText, ctaLink } = Astro.props;
+---
+
+<div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition group">
+  <!-- Icono -->
+  <div class="text-3xl mb-4">{icon}</div>
+  
+  <!-- Título + Tagline -->
+  <h3 class="text-xl font-bold text-white mb-1">{title}</h3>
+  <p class="text-cyan-400 text-sm font-medium mb-3">{tagline}</p>
+  
+  <!-- Descripción -->
+  <p class="text-slate-300 text-sm mb-4">{description}</p>
+  
+  <!-- Features -->
+  <ul class="space-y-2 mb-4">
+    {features.map((feature) => (
+      <li class="flex items-start text-sm text-slate-300">
+        <span class="text-cyan-400 mr-2">✓</span>
+        {feature}
+      </li>
+    ))}
+  </ul>
+  
+  <!-- Resultado esperado -->
+  <div class="bg-slate-900 p-3 rounded-lg mb-4">
+    <p class="text-xs text-slate-400">Resultado esperado:</p>
+    <p class="text-sm text-white font-medium">{result}</p>
+  </div>
+  
+  <!-- Ideal para -->
+  <div class="mb-4">
+    <p class="text-xs text-slate-400 mb-2">Ideal para:</p>
+    <div class="flex flex-wrap gap-2">
+      {idealFor.map((item) => (
+        <span class="text-xs bg-slate-700 text-slate-200 px-2 py-1 rounded">{item}</span>
+      ))}
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <a 
+    href={ctaLink} 
+    class="inline-block w-full text-center bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-lg font-semibold transition text-sm"
+  >
+    {ctaText}
+  </a>
+</div>

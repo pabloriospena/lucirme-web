@@ -1,0 +1,287 @@
+---
+import Layout from '../layouts/Layout.astro'
+import ServiceCard from '../components/ServiceCard.astro'
+---
+
+<Layout title="LuciRMe Ai | Product Management + IA">
+
+  <!-- HERO SECTION -->
+  <section class="bg-slate-900 py-20 md:py-32 text-center px-4">
+    <div class="container mx-auto max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+        Product Management + IA <br class="hidden md:block" />
+        <span class="text-cyan-400">sin complicaciones</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
+        Ayudo a equipos no técnicos, estudiantes y startups a implementar IA y metodologías ágiles (Shape Up) con resultados medibles. 
+        Sin teoría vacía. Sin código complejo. Construyendo en público.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+        <a href="#servicios" class="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold transition text-lg">
+          Explorar Servicios
+        </a>
+        <a href="/bitacora" class="border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-white px-8 py-4 rounded-lg font-semibold transition text-lg">
+          Leer mi Bitácora
+        </a>
+      </div>
+      
+      <p class="text-slate-400 text-sm">
+        ✓ Sin compromiso técnico &nbsp; ✓ Resultados en semanas &nbsp; ✓ 100% práctico
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="bg-slate-800 py-20 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿En qué puedo ayudarte?</h2>
+        <p class="text-slate-300 text-lg">
+          Tres verticales diseñadas para diferentes etapas y necesidades. Elige la tuya:
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Servicio 1: IA para No Técnicos -->
+        <ServiceCard
+          icon="🤖"
+          title="IA para Equipos No Técnicos"
+          tagline="Automatiza lo repetitivo. Potencia lo creativo."
+          description="La IA no es solo para ingenieros. Diseñado para equipos de Marketing, RRHH, Operaciones y Administración que quieren ahorrar horas semanales sin escribir una línea de código."
+          features={[
+            "Talleres prácticos de prompts: De básico a avanzado en 4 sesiones",
+            "Automatización de flujos: Conectamos tus herramientas (Make, Zapier, n8n)",
+            "Cultura de IA segura: Ética, privacidad y mejores prácticas",
+            "Casos reales aplicados: Tus procesos, tus datos, tus resultados"
+          ]}
+          result="Tu equipo ahorrará 5-10 horas semanales en tareas repetitivas en las primeras 4 semanas."
+          idealFor={["Equipos de 5-50 personas", "Procesos manuales repetitivos", "Empresas que quieren empezar con IA"]}
+          ctaText="Agendar diagnóstico (15 min)"
+          ctaLink="#contacto"
+        />
+
+        <!-- Servicio 2: IA para Estudiantes -->
+        <ServiceCard
+          icon="🎓"
+          title="IA para Estudiantes (<25)"
+          tagline="Domina las herramientas del futuro antes de graduarte."
+          description="Mientras otros aprenden lo básico, tú ya estarás creando proyectos profesionales con IA. Mentoría práctica para universitarios y bootcampers que quieren destacar."
+          features={[
+            "IA para estudio e investigación: Prompts para papers, resúmenes, análisis",
+            "Portafolio digital asistido por IA: Proyectos que impresionan en entrevistas",
+            "Productividad personal: Gestión del tiempo, notas, tareas con IA",
+            "Preparación laboral: Cómo vender tus skills de IA en entrevistas"
+          ]}
+          result="Crearás 3-5 proyectos profesionales con IA para tu portafolio en 8 semanas."
+          idealFor={["Universitarios (últimos 2 años)", "Bootcampers", "Jóvenes profesionales <25"]}
+          ctaText="Ver programa completo"
+          ctaLink="#contacto"
+        />
+
+        <!-- Servicio 3: PM + IA para Startups -->
+        <ServiceCard
+          icon="📊"
+          title="Product Management para Startups"
+          tagline="Shape Up + IA = Menos caos, más impacto."
+          description="Deja de correr en círculos con Scrum infinito. Implemento Shape Up (ciclos de 6 semanas) potenciado con IA para priorización y discovery. Menos reuniones, más shipped."
+          features={[
+            "Shape Up implementation: Ciclos de 6 semanas, betting table, appetite",
+            "Discovery continuo con IA: Validación rápida, entrevistas asistidas",
+            "Roadmaps basados en IA: Predicción de tendencias, priorización data-driven",
+            "Métricas que importan: De vanity metrics a north star metrics"
+          ]}
+          result="Reducirás un 40% el tiempo de discovery y aumentarás un 30% la velocidad de shipped en 3 ciclos."
+          idealFor={["Startups en escala 0→1", "Founders técnicos", "Heads of Product sobrepasados"]}
+          ctaText="Agendar llamada de diagnóstico"
+          ctaLink="#contacto"
+        />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIACIÓN -->
+  <section id="metodo" class="bg-slate-900 py-20 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Por qué LuciRMe Ai?</h2>
+        <p class="text-slate-300 text-lg">
+          No soy otro consultor más de IA. Esto es lo que me diferencia:
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">🔓</div>
+          <h3 class="text-lg font-bold text-white mb-2">Build in Public</h3>
+          <p class="text-slate-300 text-sm">
+            Documento mis éxitos Y mis fallos en mi bitácora diaria. Transparencia total, no solo casos de éxito.
+          </p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-lg font-bold text-white mb-2">Shape Up + IA</h3>
+          <p class="text-slate-300 text-sm">
+            Pocos hablan de Shape Up aplicado a IA. Yo lo implemento diariamente en startups reales.
+          </p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-lg font-bold text-white mb-2">Automatización Práctica</h3>
+          <p class="text-slate-300 text-sm">
+            No solo prompts. Conecto herramientas (Make, n8n, APIs) para crear flujos que funcionan 24/7.
+          </p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">🎓💼🚀</div>
+          <h3 class="text-lg font-bold text-white mb-2">Tres Verticales Claras</h3>
+          <p class="text-slate-300 text-sm">
+            No soy generalista. Especializado en: No técnicos, Estudiantes y Startups.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BITÁCORA PREVIEW -->
+  <section class="bg-slate-800 py-20 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">LuciRMe Log</h2>
+        <p class="text-slate-300 text-lg">
+          Construyendo en público. Transparencia operativa. Lo que aprendí hoy.
+        </p>
+      </div>
+
+      <div class="space-y-4 mb-8">
+        
+        <!-- Post 1 -->
+        <article class="border border-slate-700 p-5 rounded-lg hover:border-cyan-500 transition">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="text-xs bg-slate-900 text-amber-400 px-2 py-1 rounded">#ShapeUp</span>
+            <span class="text-xs bg-slate-900 text-amber-400 px-2 py-1 rounded">#IA</span>
+            <time class="text-slate-500 text-xs ml-auto">29 Abril 2026</time>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">
+            Implementé betting table con IA para priorización
+          </h3>
+          <p class="text-slate-300 text-sm">
+            ✅ Avance: GPT-4 analizando impacto vs esfuerzo. 💥 Fallo: La IA sobrevaloró features "cool". 📌 Lección: La IA sugiere, humanos deciden. Siempre.
+          </p>
+          <a href="/bitacora" class="inline-block mt-3 text-cyan-400 text-sm hover:underline">Leer entrada →</a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="border border-slate-700 p-5 rounded-lg hover:border-cyan-500 transition">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="text-xs bg-slate-900 text-amber-400 px-2 py-1 rounded">#Automatización</span>
+            <time class="text-slate-500 text-xs ml-auto">28 Abril 2026</time>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">
+            -3h/semana en reporting con Make + Claude
+          </h3>
+          <p class="text-slate-300 text-sm">
+            ✅ Avance: Reporting automatizado. 💥 Fallo: Duplicación por timezone. 📌 Lección: Siempre normaliza fechas a UTC antes de automatizar.
+          </p>
+          <a href="/bitacora" class="inline-block mt-3 text-cyan-400 text-sm hover:underline">Leer entrada →</a>
+        </article>
+
+      </div>
+
+      <div class="text-center">
+        <a href="/bitacora" class="inline-block bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-semibold transition">
+          Ver todas las entradas →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-slate-900 py-20 px-4">
+    <div class="container mx-auto max-w-2xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Hablemos de tu proyecto</h2>
+        <p class="text-slate-300 text-lg">
+          Sin compromiso. Sin venta agresiva. Solo una conversación para ver si puedo ayudarte.
+        </p>
+      </div>
+
+      <form 
+        action="https://formsubmit.co/pabloriospena@gmail.com" 
+        method="POST" 
+        class="space-y-4 bg-slate-800 p-6 rounded-xl border border-slate-700"
+      >
+        <!-- Configuración FormSubmit -->
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://tudominio.com/gracias" />
+
+        <!-- Campos -->
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Nombre</label>
+          <input 
+            type="text" 
+            name="name" 
+            required 
+            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+            placeholder="Tu nombre"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            required 
+            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+            placeholder="tu@email.com"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Servicio de interés</label>
+          <select 
+            name="servicio" 
+            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+          >
+            <option value="">Selecciona una opción</option>
+            <option value="no-tecnicos">IA para Equipos No Técnicos</option>
+            <option value="estudiantes">IA para Estudiantes (&lt;25)</option>
+            <option value="startups">Product Management + IA para Startups</option>
+            <option value="duda">Aún no estoy seguro</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Cuéntame brevemente</label>
+          <textarea 
+            name="message" 
+            rows="4" 
+            class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+            placeholder="¿En qué puedo ayudarte?"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-4 rounded-lg font-semibold transition text-lg"
+        >
+          Enviar mensaje
+        </button>
+
+        <p class="text-slate-500 text-xs text-center">
+          ⏱️ Respuesta en &lt;24h &nbsp; 🔒 Sin spam. Solo yo veré tu mensaje.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</Layout>
