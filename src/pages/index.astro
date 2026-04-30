@@ -16,9 +16,9 @@ import Layout from '../layouts/Layout.astro'
     
     <nav class="hidden md:flex items-center space-x-6">
       <a href="#inicio" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Inicio</a>
-      <a href="#servicios" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Soluciones</a>
+      <a href="#servicios" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Mentorías</a>
       <a href="#metodologia" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Metodología</a>
-      <a href="#charlas" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Charlas</a>
+      <a href="#charlas" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Experiencias</a>
       <a href="#sobre-mi" class="text-sm text-gray-600 hover:text-gray-900 transition font-medium">Sobre Mí</a>
     </nav>
 
@@ -48,38 +48,37 @@ import Layout from '../layouts/Layout.astro'
   <!-- ============================================ -->
 <!-- HERO (Con logo completo arriba)              -->
 <!-- ============================================ -->
-<section id="inicio" class="py-24 md:py-32 px-4 bg-white border-b border-gray-100">
+<section id="inicio" class="py-16 md:py-10 px-4 bg-white border-b border-gray-100">
   <div class="container mx-auto max-w-4xl text-center">
-    
     <!-- Logo completo centrado -->
-    <div class="mb-8">
+    <div class="mb-4">
       <img 
         src="/logo-lucirme-ai.png" 
         alt="LuciRMe Ai" 
-        class="mx-auto h-12 md:h-16 w-auto"
+        class="mx-auto h-12 md:h-8 w-auto"
       />
     </div>
 
-    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
-      Acelera tu carrera o tu equipo con <span class="text-cyan-600">IA</span> y estrategia de producto.
+    <h1 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+      Acelera tu carrera o tu equipo con <span class="text-teal-600">IA</span> y <span class="text-teal-600">Estrategia de Producto.</span>
     </h1>
     
     <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-      Cero teoría. 100% implementación.<br>
-      IA y Estrategia de Producto para Startups, Equipos Operativos y Profesionales.<br>
-      <strong class="text-gray-900">Automatiza lo manual. Enfócate en lo que realmente genera valor.</strong>
+      Mentoría para personas y equipos que quieren trabajar mejor.<br>
+  ayudamos a reducir operatividad y errores manuales.<br>
+  <strong class="text-gray-900">Sin humo, sin dependencias. <br> Solo práctica que funciona desde el día uno.</strong>
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="#servicios" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg text-base font-medium transition shadow-lg">
-        Ver Soluciones
+        Ver Mentorías
       </a>
       <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-900 text-gray-700 hover:text-gray-900 px-8 py-4 rounded-lg text-base font-medium transition">
         Agendar Llamada
       </a>
     </div>
 
-    <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+    <div class="mt-12 flex flex-wrap justify-center gap-2 text-sm text-gray-500">
       <span class="flex items-center gap-2">✓ +13 años de experiencia</span>
       <span class="flex items-center gap-2">✓ Head of Product @ SaludDrive</span>
       <span class="flex items-center gap-2">✓ Autor de PM Sin Bullshit</span>
@@ -94,9 +93,9 @@ import Layout from '../layouts/Layout.astro'
     <div class="container mx-auto max-w-6xl">
       
       <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Soluciones de Ejecución Real</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Mentorías con Ejecución Real</h2>
         <p class="text-gray-600 max-w-2xl mx-auto">
-          Elige la vía de aceleración para tu equipo. Sin teoría vacía: mentoría directa y construcción en vivo para resultados inmediatos.
+          Elige la vía de aceleración para tu equipo o para ti. <br>Sin teoría vacía, hacemos mentoría directa y construcción en vivo para resultados inmediatos.
         </p>
       </div>
 
@@ -104,8 +103,8 @@ import Layout from '../layouts/Layout.astro'
         
         <!-- 1. Empresas No-Tech (Disponible) -->
         <a href="/soluciones/empresas-no-tech" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-gray-300 hover:-translate-y-1 transition-all duration-300 flex flex-col">
-          <div class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 mb-4 text-xl group-hover:bg-cyan-200 transition-colors">🏢</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Empresas No-Tech</h3>
+          <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center text-teal-600 mb-4 text-xl group-hover:bg-teal-200 transition-colors">🏢</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Empresas</h3>
           <p class="text-xs text-gray-500 mb-3">Para gerentes y dueños de empresas tradicionales.</p>
           <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
             Impulsa a tu equipo operativo y administrativo con IA. Identificamos fugas de tiempo y construimos soluciones en vivo con tus archivos.
@@ -114,7 +113,7 @@ import Layout from '../layouts/Layout.astro'
             <p class="text-[11px] font-bold text-gray-900 uppercase mb-1">Formato</p>
             <p class="text-[11px] text-gray-600">Taller de Inmersión (2h) + Entrenamiento PRP (8 semanas)</p>
           </div>
-          <span class="text-sm font-semibold text-cyan-600 group-hover:text-cyan-700 inline-flex items-center gap-1">
+          <span class="text-sm font-semibold text-teal-600 group-hover:text-teal-700 inline-flex items-center gap-1">
             Quiero automatizar mi equipo <span class="group-hover:translate-x-1 transition-transform">→</span>
           </span>
         </a>
@@ -191,65 +190,64 @@ import Layout from '../layouts/Layout.astro'
         <p class="text-gray-600 max-w-2xl mx-auto">Prácticas de Rendimiento Progresivo. Transformamos tu forma de trabajar en 3 pasos claros.</p>
       </div>
 
-      <!-- Antes vs Después -->
+      <!-- Pasos P-R-P -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-teal-300 transition">
+          <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">P</div>
+          <h4 class="font-bold text-gray-900 mb-2">PROCESAMIENTO</h4>
+          <p class="text-sm text-gray-600">Analizamos → Procesamos → Liberamos tiempo y reducimos errores manuales</p>
+        </div>
+        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-teal-300 transition">
+          <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">R</div>
+          <h4 class="font-bold text-gray-900 mb-2">RESULTADOS</h4>
+          <p class="text-sm text-gray-600">Construimos → Medimos → Multiplicamos la velocidad</p>
+        </div>
+        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-teal-300 transition">
+          <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">P</div>
+          <h4 class="font-bold text-gray-900 mb-2">PROGRESO</h4>
+          <p class="text-sm text-gray-600">Evolucionamos → Documentamos → Escalamos sin dependencia</p>
+        </div>
+      </div>
+
+        <!-- Antes vs Después -->
       <div class="grid md:grid-cols-2 gap-8 mb-16 bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200">
         <div>
           <h3 class="text-lg font-bold text-gray-500 mb-4 flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-red-400"></span> Antes
           </h3>
           <ul class="space-y-3 text-sm text-gray-600">
-            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Tareas manuales repetitivas</li>
-            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> 8h+ semanales en reportes/admin</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Tareas operativas que consumen mucho tiempo</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> 8h+ semanales en reportes y manualidad</li>
             <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Errores humanos frecuentes</li>
-            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Sin tiempo para estrategia</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> Sin tiempo para pensar en la estrategia</li>
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-bold text-cyan-600 mb-4 flex items-center gap-2">
+          <h3 class="text-lg font-bold text-teal-600 mb-4 flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-green-400"></span> Después
           </h3>
           <ul class="space-y-3 text-sm text-gray-900 font-medium">
-            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Flujos 100% automatizados</li>
-            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Entrega en 30 min con IA</li>
-            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Precisión y calidad superior</li>
-            <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">✓</span> Foco en decisiones de alto impacto</li>
+            <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Lo operativo se mueve mucho más rápido</li>
+            <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Entregas reportes y temas manuales en minutos</li>
+            <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> menos errores, menos reprocesos</li>
+            <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Foco en decisiones de alto impacto</li>
           </ul>
         </div>
       </div>
-
-      <!-- Pasos P-R-P -->
-      <div class="grid md:grid-cols-3 gap-6 mb-12">
-        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-cyan-300 transition">
-          <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">P</div>
-          <h4 class="font-bold text-gray-900 mb-2">PROCESAR</h4>
-          <p class="text-sm text-gray-600">Analizamos → Automatizamos → Liberamos tiempo de valor</p>
-        </div>
-        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-cyan-300 transition">
-          <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">R</div>
-          <h4 class="font-bold text-gray-900 mb-2">RESULTAR</h4>
-          <p class="text-sm text-gray-600">Implementamos → Medimos → Multiplicamos la velocidad</p>
-        </div>
-        <div class="text-center p-6 bg-white border border-gray-200 rounded-xl hover:border-cyan-300 transition">
-          <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">P</div>
-          <h4 class="font-bold text-gray-900 mb-2">PROGRESAR</h4>
-          <p class="text-sm text-gray-600">Creamos GPTs → Documentamos → Escalamos sin dependencia</p>
-        </div>
-      </div>
-
       <!-- Métricas Reales -->
       <div class="bg-gray-900 text-white rounded-2xl p-6 md:p-8 text-center">
-        <h3 class="text-lg font-semibold mb-6 text-gray-300">Métricas Reales en Nuestros Clientes</h3>
+        <h3 class="text-lg font-semibold mb-6 text-gray-300">Métricas con nuestra experiencia</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <p class="text-3xl font-bold text-cyan-400 mb-1">↓ 20h</p>
+            <p class="text-3xl font-bold text-teal-400 mb-1">↓ 20h</p>
             <p class="text-sm text-gray-400">Semanales ahorradas en operación</p>
           </div>
           <div>
-            <p class="text-3xl font-bold text-cyan-400 mb-1">5x</p>
+            <p class="text-3xl font-bold text-teal-400 mb-1">5x</p>
             <p class="text-sm text-gray-400">Más rápido en entregas clave</p>
           </div>
           <div>
-            <p class="text-3xl font-bold text-cyan-400 mb-1">↓ 60%</p>
+            <p class="text-3xl font-bold text-teal-400 mb-1">↓ 60%</p>
             <p class="text-sm text-gray-400">Reducción de errores manuales</p>
           </div>
         </div>
@@ -264,8 +262,8 @@ import Layout from '../layouts/Layout.astro'
   <section id="charlas" class="py-20 px-4 bg-gray-50">
     <div class="container mx-auto max-w-4xl">
       <div class="text-center mb-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-3">Charlas y Capacitaciones</h2>
-        <p class="text-gray-600">Hemos llevado IA práctica a equipos reales. Estos son algunos de nuestros espacios.</p>
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">Experiencias recientes</h2>
+        <p class="text-gray-600">Hemos llevado IA práctica a equipos reales. Estos han sido algunos de nuestros espacios.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -281,11 +279,11 @@ import Layout from '../layouts/Layout.astro'
 
         <!-- Charla 2 -->
         <div class="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 hover:shadow-md transition">
-          <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 text-xl flex-shrink-0">🏢</div>
+          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-600 text-xl flex-shrink-0">🏢</div>
           <div>
             <h4 class="font-semibold text-gray-900">Asesorías Integrales</h4>
             <p class="text-sm text-gray-500 mb-2">IA para empresas tradicionales y procesos operativos</p>
-            <span class="inline-block text-xs font-medium text-cyan-600 bg-cyan-50 px-2 py-1 rounded">Empresas No-Tech</span>
+            <span class="inline-block text-xs font-medium text-teal-600 bg-teal-50 px-2 py-1 rounded">Empresas</span>
           </div>
         </div>
       </div>
@@ -325,9 +323,9 @@ import Layout from '../layouts/Layout.astro'
       <p class="text-gray-600 leading-relaxed mb-6">
         LuciRMe Ai nace con la experiencia de más de 13 años escalando productos, optimizando operaciones y liderando equipos en entornos SaaS B2B/B2C. 
         He lanzado productos con IA en semanas, reducido soporte manual en un 40% y acompañado a empresas a pasar del caos a la ejecución. 
-        Mi objetivo es simple: que ganes velocidad y autonomía.
+        Mi objetivo es que ganes velocidad y autonomía.
       </p>
-      <a href="#contacto" class="text-cyan-600 font-semibold hover:underline">
+      <a href="#contacto" class="text-teal-600 font-semibold hover:underline">
         ¿Hablamos de tu proyecto? →
       </a>
     </div>
@@ -345,8 +343,8 @@ import Layout from '../layouts/Layout.astro'
         <div class="flex-1 text-center sm:text-left">
           <h3 class="text-base font-bold text-gray-900 mb-1">📚 Product Management Sin Bullshit</h3>
           <p class="text-xs text-gray-600 mb-3">La guía práctica para PMs y C-levels. Estrategia real, métricas que importan y cómo lanzar sin miedo.</p>
-          <a href="https://pay.hotmart.com/D96093022S" target="_blank" class="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 text-xs font-semibold">
-            Obtener con 50% OFF <span class="bg-cyan-100 text-cyan-800 px-1.5 py-0.5 rounded">OFF50</span> →
+          <a href="https://pay.hotmart.com/D96093022S" target="_blank" class="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 text-xs font-semibold">
+            Obtener con 50% OFF <span class="bg-teal-100 text-teal-800 px-1.5 py-0.5 rounded">OFF50</span> →
           </a>
         </div>
       </div>
