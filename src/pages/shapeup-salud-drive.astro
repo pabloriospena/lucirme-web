@@ -1,0 +1,457 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="ShapeUp Salud Drive | Guía Operativa">
+
+  <!-- NAVEGACIÓN STICKY -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200 px-4 py-3">
+    <div class="container mx-auto max-w-6xl flex flex-wrap justify-between items-center gap-3">
+      <a href="/" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition">← LuciRMe Ai</a>
+      <div class="flex gap-4 text-xs font-medium text-gray-600 overflow-x-auto pb-1 md:pb-0 whitespace-nowrap">
+        <a href="#que-es" class="hover:text-gray-900 transition">Qué es</a>
+        <a href="#que-no-es" class="hover:text-gray-900 transition">Qué no es</a>
+        <a href="#ciclo" class="hover:text-gray-900 transition">Ciclo</a>
+        <a href="#metricas" class="hover:text-gray-900 transition">Métricas</a>
+        <a href="#roles" class="hover:text-gray-900 transition">Roles</a>
+        <a href="#checklist" class="hover:text-gray-900 transition">Checklist</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="py-20 px-4 bg-gradient-to-b from-gray-50 to-white text-center">
+    <div class="container mx-auto max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+        De la reactividad al foco:<br>autonomía con límites claros.
+      </h1>
+      <blockquote class="text-xl text-gray-600 italic mb-10 max-w-2xl mx-auto border-l-4 border-teal-500 pl-4 text-left">
+        "No se trata de hacer más cosas. Se trata de hacer las cosas que importan, con foco, autonomía y métricas claras."
+      </blockquote>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://notebooklm.google.com/notebook/e88aadab-2a47-4ac5-be85-c98f0ad22ff2" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition shadow-sm">💬 Asistente IA</a>
+        <a href="#builder" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-900 text-gray-700 hover:text-gray-900 px-6 py-3 rounded-lg font-medium transition">🛠️ Constructor</a>
+        <a href="#glosario" class="inline-flex items-center justify-center gap-2 text-teal-700 hover:text-teal-800 font-medium transition"> Glosario ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- QUÉ ES UN SHAPE -->
+  <section id="que-es" class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 ¿Qué ES un Shape?</h2>
+      <p class="text-gray-600 mb-8 max-w-3xl">Un <strong>Shape</strong> es una apuesta estratégica que cumple con estos 5 criterios. Si no los cumple, no es un Shape.</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">🔹 Resuelve un dolor real</h3>
+          <p class="text-sm text-gray-600">No es una idea "bonita". Es un problema que duele hoy a usuarios, Soporte o el negocio.</p>
+          <p class="text-xs text-teal-700 mt-2 font-medium">Ej: "Soporte pierde 3h configurando manualmente cada cuenta nueva"</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">📏 Métrica de éxito clara</h3>
+          <p class="text-sm text-gray-600">Sabemos ANTES de empezar qué número debe cambiar para considerar que funcionó.</p>
+          <p class="text-xs text-teal-700 mt-2 font-medium">Ej: "Reducir tiempo de 3h → &lt;15 min por cuenta"</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">⏱️ Cabe en appetite fijo</h3>
+          <p class="text-sm text-gray-600">Se entrega valor concreto en 2 / 🟡4 / 🔴6 semanas. Si no cabe, se recorta.</p>
+          <p class="text-xs text-teal-700 mt-2 font-medium">Ej: "Configuración post-pago automática" cabe en 2 sem</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">🗝️ Genera autonomía</h3>
+          <p class="text-sm text-gray-600">El equipo integrado puede ejecutarlo sin aprobaciones constantes.</p>
+          <p class="text-xs text-teal-700 mt-2 font-medium">Ej: "Jerónimo decide la arquitectura sin permiso diario"</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">💎 Vale la pena apostar</h3>
+          <p class="text-sm text-gray-600">El impacto justifica el tiempo. C-Level aprueba con criterio, no por urgencia.</p>
+          <p class="text-xs text-teal-700 mt-2 font-medium">Ej: "Liberar 15h/semana en Soporte para validar valor"</p>
+        </div>
+      </div>
+
+      <div class="bg-teal-50 border-l-4 border-teal-500 p-4 rounded-r-lg">
+        <p class="text-teal-900 font-medium">💡 Un Shape no es una tarea. Es una promesa de valor con límites claros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ NO ES UN SHAPE -->
+  <section id="que-no-es" class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6"> ¿Qué NO es un Shape?</h2>
+      <p class="text-gray-600 mb-8">No nos distraemos. Si no cumple los 5 criterios, no entra en la Betting Table.</p>
+
+      <div class="overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm mb-8">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-gray-100 text-gray-900 font-semibold">
+            <tr>
+              <th class="px-6 py-3 border-b">No es un Shape</th>
+              <th class="px-6 py-3 border-b hidden md:table-cell">Por qué no aplica</th>
+              <th class="px-6 py-3 border-b">Qué hacemos con esto</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 font-medium text-red-700">❌ Una tarea pequeña (&lt; 2 semanas)</td>
+              <td class="px-6 py-4 text-gray-600 hidden md:table-cell">No justifica Shaping + Betting.</td>
+              <td class="px-6 py-4 text-gray-700">Se agrega al backlog operativo y se ejecuta en Build/Cooldown.</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 font-medium text-red-700">❌ Un bug o corrección</td>
+              <td class="px-6 py-4 text-gray-600 hidden md:table-cell">Es mantenimiento, no creación de valor.</td>
+              <td class="px-6 py-4 text-gray-700">Se prioriza en backlog de bugs o se atiende en Cooldown.</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 font-medium text-red-700">❌ Idea vaga sin métrica</td>
+              <td class="px-6 py-4 text-gray-600 hidden md:table-cell">No podemos apostar sin saber cómo medir éxito.</td>
+              <td class="px-6 py-4 text-gray-700">Vuelve a Shaping: definir problema + métrica primero.</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 font-medium text-red-700">❌ Urgencia reactiva</td>
+              <td class="px-6 py-4 text-gray-600 hidden md:table-cell">ShapeUp protege del "modo incendio".</td>
+              <td class="px-6 py-4 text-gray-700">¿Crítico? Circuit Breaker. ¿No? Se agenda.</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 font-medium text-red-700">❌ Proyecto eterno (&gt; 6 sem)</td>
+              <td class="px-6 py-4 text-gray-600 hidden md:table-cell">Rompe ciclos fijos y aprendizaje rápido.</td>
+              <td class="px-6 py-4 text-gray-700">Se divide en Shapes pequeños con entregables medibles.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+        <p class="text-amber-900 font-medium">💡 Regla de oro: Si no cumple los 5 criterios, no entra en Betting Table. No es rechazo, es foco.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL CICLO -->
+  <section id="ciclo" class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">🔄 El Ciclo ShapeUp: Qué hacemos en cada fase</h2>
+      <div class="flex flex-wrap justify-center gap-4 mb-12 text-sm font-medium text-gray-600">
+        <span class="flex items-center gap-2 bg-purple-50 px-3 py-1 rounded-full">🎨 Shaping</span>
+        <span class="text-gray-400">→</span>
+        <span class="flex items-center gap-2 bg-amber-50 px-3 py-1 rounded-full"> Betting</span>
+        <span class="text-gray-400">→</span>
+        <span class="flex items-center gap-2 bg-blue-50 px-3 py-1 rounded-full">🚀 Build</span>
+        <span class="text-gray-400">→</span>
+        <span class="flex items-center gap-2 bg-teal-50 px-3 py-1 rounded-full">🌊 Cooldown</span>
+      </div>
+
+      <!-- SHAPING -->
+      <div class="mb-12 bg-gray-50 p-6 rounded-xl border border-gray-200">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">1️⃣  SHAPING: Moldear la apuesta</h3>
+        <p class="text-gray-600 mb-4 text-sm"><strong>Propósito:</strong> Transformar una idea en una apuesta clara, con límites y métricas, ANTES de invertir tiempo en construir.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead class="bg-white border-b">
+              <tr><th class="py-2 px-3 font-semibold">Qué hacemos</th><th class="py-2 px-3 font-semibold">Quién</th><th class="py-2 px-3 font-semibold">Output</th></tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr><td class="py-2 px-3">Definir problema real + evidencia</td><td class="py-2 px-3">Pablo + Camilo</td><td class="py-2 px-3">Pitch 1 pág + Breadboard + Scope Hammering</td></tr>
+              <tr><td class="py-2 px-3">Diseñar solución mínima + flujo visual</td><td class="py-2 px-3">+ Valeria/Natalia</td><td class="py-2 px-3">Métrica de éxito + Circuit Breaker</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 bg-teal-50 border-l-4 border-teal-500 p-3 rounded-r-lg text-sm text-teal-900">
+          💡 En Salud Drive: "No moldeamos para tener un documento bonito. Moldeamos para saber EXACTAMENTE qué vamos a construir, para quién, y cómo sabremos que funcionó."
+        </div>
+      </div>
+
+      <!-- BETTING -->
+      <div class="mb-12 bg-gray-50 p-6 rounded-xl border border-gray-200">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">2️⃣ 🎲 BETTING TABLE: Apostar con criterio</h3>
+        <p class="text-gray-600 mb-4 text-sm"><strong>Propósito:</strong> Decidir estratégicamente en qué invertir tiempo limitado, evaluando valor, viabilidad y appetite.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead class="bg-white border-b">
+              <tr><th class="py-2 px-3 font-semibold">Qué hacemos</th><th class="py-2 px-3 font-semibold">Quién</th><th class="py-2 px-3 font-semibold">Output</th></tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr><td class="py-2 px-3">Presentar Pitch (3 min) + Scorecard</td><td class="py-2 px-3">David + Andrés (deciden)</td><td class="py-2 px-3">✅ Apostamos / ❌ No / ⚠️ Ajustes</td></tr>
+              <tr><td class="py-2 px-3">Validar técnica + impacto usuario</td><td class="py-2 px-3">Pablo presenta / Valeria valida</td><td class="py-2 px-3">Asignación al próximo ciclo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 bg-teal-50 border-l-4 border-teal-500 p-3 rounded-r-lg text-sm text-teal-900">
+          💡 En Salud Drive: "No decidimos por quien grita más fuerte. Decidimos con Scorecard: ¿esta apuesta genera el impacto que necesitamos, dentro del tiempo que podemos invertir?"
+        </div>
+      </div>
+
+      <!-- BUILD -->
+      <div class="mb-12 bg-gray-50 p-6 rounded-xl border border-gray-200">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">3️⃣  BUILD: Ejecutar con autonomía</h3>
+        <p class="text-gray-600 mb-4 text-sm"><strong>Propósito:</strong> Construir valor con foco total, sin interrupciones, dentro de los límites del Pitch.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead class="bg-white border-b">
+              <tr><th class="py-2 px-3 font-semibold">Qué hacemos</th><th class="py-2 px-3 font-semibold">Quién</th><th class="py-2 px-3 font-semibold">Reglas de oro</th></tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr><td class="py-2 px-3">Desarrollar solución del Pitch</td><td class="py-2 px-3">Camilo + Jerónimo/Daniel + QA</td><td class="py-2 px-3">🔹 El Pitch es contrato</td></tr>
+              <tr><td class="py-2 px-3">Validar temprano (sem 1-2)</td><td class="py-2 px-3">Valeria/Natalia</td><td class="py-2 px-3">🔹 Autonomía real en el CÓMO</td></tr>
+              <tr><td class="py-2 px-3">Medir progreso vs métrica</td><td class="py-2 px-3">Pablo facilita</td><td class="py-2 px-3"> Reporte por resultados, no actividad</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 bg-teal-50 border-l-4 border-teal-500 p-3 rounded-r-lg text-sm text-teal-900">
+          💡 En Salud Drive: "No construimos para cumplir tareas. Construimos para cambiar la métrica que definimos. Si en semana 3 no vamos en camino, paramos y aprendemos."
+        </div>
+      </div>
+
+      <!-- COOLDOWN -->
+      <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">4️ 🌊 COOLDOWN: Estabilizar con foco</h3>
+        <p class="text-gray-600 mb-4 text-sm"><strong>Propósito:</strong> Consolidar lo entregado, corregir bugs y preparar el terreno para el próximo ciclo.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold text-green-700 mb-2">✅ Qué hacemos</h4>
+            <ul class="text-sm text-gray-700 space-y-1 list-disc pl-4">
+              <li>🐛 Corregir bugs críticos post-lanzamiento</li>
+              <li>🔧 Deuda técnica: docs, automatizaciones, refactor</li>
+              <li> Prototipos pequeños para próximos Shapes</li>
+              <li>🔋 Descanso estratégico: menos reuniones, más flujo</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-red-700 mb-2"> Qué NO hacemos</h4>
+            <ul class="text-sm text-gray-700 space-y-1 list-disc pl-4">
+              <li>Nuevas features grandes</li>
+              <li>Reuniones de Shaping para otros Shapes</li>
+              <li>Soporte operativo diario (Valeria/Natalia asumen)</li>
+              <li>Reportes a C-Level (solo si Circuit Breaker)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 bg-teal-50 border-l-4 border-teal-500 p-3 rounded-r-lg text-sm text-teal-900">
+          💡 En Salud Drive: "Cooldown no es vacaciones. Es tiempo protegido para que lo que construimos sea estable, documentado y escalable. Sin esto, volvemos al ciclo de bugs eternos."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTRICAS -->
+  <section id="metricas" class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">📊 Las Métricas: El Corazón de Cada Pitch</h2>
+      <blockquote class="text-gray-600 italic mb-8 border-l-4 border-gray-400 pl-4">"Si no podemos medirlo, no podemos mejorarlo. Si no definimos éxito antes, no sabemos si ganamos."</blockquote>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+          <h3 class="font-bold text-red-700 mb-3">❌ Sin métrica clara</h3>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• "Creemos que funcionó" (opinión)</li>
+            <li>• Discusiones eternas sobre si vale la pena</li>
+            <li>• Equipo trabaja sin saber si impacta</li>
+            <li>• C-Level no puede priorizar con criterio</li>
+          </ul>
+        </div>
+        <div class="bg-white p-5 rounded-xl border border-green-200 shadow-sm">
+          <h3 class="font-bold text-green-700 mb-3">✅ Con métrica definida</h3>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• "La métrica cambió de X a Y" (dato)</li>
+            <li>• Decisión objetiva: ¿cumplimos el criterio?</li>
+            <li>• Equipo ve progreso y se motiva con resultados</li>
+            <li>• C-Level apuesta con base en impacto medible</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-gray-200 mb-8">
+        <h3 class="font-bold text-gray-900 mb-4">Cómo definir una buena métrica</h3>
+        <div class="grid md:grid-cols-2 gap-6 text-sm">
+          <div>
+            <h4 class="font-semibold text-green-700 mb-2">✅ BUENA MÉTRICA</h4>
+            <p class="text-gray-600 mb-2">Observable + Medible + Relevante</p>
+            <ul class="space-y-1 text-gray-700">
+              <li>• "Tiempo de configuración: de 3h → &lt;15 min"</li>
+              <li>• "Gestión de anulaciones: de 5h/sem → &lt;1h/sem"</li>
+              <li>• "Tasa de activación: +20% en primera semana"</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-red-700 mb-2">❌ MÉTRICA DÉBIL</h4>
+            <p class="text-gray-600 mb-2">Vaga, no observable o no accionable</p>
+            <ul class="space-y-1 text-gray-700">
+              <li>• "Mejorar la experiencia del usuario"</li>
+              <li>• "Hacer que sea más rápido"</li>
+              <li>• "Que los clientes estén felices"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-900 text-gray-100 p-6 rounded-xl font-mono text-sm overflow-x-auto">
+        <p class="text-teal-400 mb-2">## 📊 Criterios de Éxito (OBLIGATORIO)</p>
+        <p class="mb-1"><span class="text-gray-400">**Métrica observable**:</span> "[Número concreto que cambia si funciona]"</p>
+        <p class="mb-1"><span class="text-gray-400">**Validación cualitativa**:</span> "[Feedback de usuario que confirma valor]"</p>
+        <p><span class="text-gray-400">**Definición de Done**:</span> "[Qué debe estar técnicamente listo para cerrar el Shape]"</p>
+      </div>
+      <div class="mt-4 bg-teal-50 border-l-4 border-teal-500 p-3 rounded-r-lg text-sm text-teal-900">
+        💡 Consejo: Si no puedes definir una métrica observable en 1 frase, el Pitch no está listo para Betting Table. Vuelve a Shaping.
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES -->
+  <section id="roles" class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">🚀 Por qué emocionarse con ShapeUp</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Tech -->
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3">👨‍💻 Equipo Técnico</h3>
+          <ul class="text-sm text-gray-700 space-y-2 mb-4">
+            <li>🔹 No eres "ejecutor de tareas". Eres creador de valor.</li>
+            <li>🔹 No esperas aprobaciones. Decides el CÓMO con autonomía.</li>
+            <li>🔹 No trabajas en cosas que nunca se lanzan.</li>
+            <li>🔹 No apagas fuegos eternos. Tienes Cooldown protegido.</li>
+            <li>🔹 No construyes en la oscuridad. Sabes EXACTAMENTE la métrica.</li>
+          </ul>
+          <p class="text-xs text-teal-700 font-medium italic">"ShapeUp no te quita libertad. Te da foco para que tu talento impacte donde más importa."</p>
+        </div>
+        <!-- Validators -->
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3">👁️ Validadores</h3>
+          <ul class="text-sm text-gray-700 space-y-2 mb-4">
+            <li>🔹 No recibes features "sorpresa". Validas temprano.</li>
+            <li>🔹 No das feedback genérico. Validas contra la métrica.</li>
+            <li>🔹 No eres el "parche final". Eres la voz del usuario real.</li>
+            <li>🔹 No gestionas bugs eternos. Tienes Cooldown estable.</li>
+          </ul>
+          <p class="text-xs text-teal-700 font-medium italic">"Tu rol no es aprobar. Es asegurar que lo que construimos resuelve el dolor real."</p>
+        </div>
+        <!-- C-Level -->
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3">👑 C-Level</h3>
+          <ul class="text-sm text-gray-700 space-y-2 mb-4">
+            <li>🔹 No decides por urgencia. Apostas con Scorecard.</li>
+            <li> No micro-gestionas. Confías en el equipo y el Pitch.</li>
+            <li>🔹 No inviertes en ideas vagas. Solo Shapes con métrica.</li>
+            <li>🔹 No ves "proyectos eternos". Ves ciclos de 2/4/6 sem.</li>
+          </ul>
+          <p class="text-xs text-teal-700 font-medium italic">"Tu rol no es controlar. Es priorizar con foco y proteger la autonomía del equipo."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section id="checklist" class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">✅ Checklist: ¿Está listo mi Shape para Betting Table?</h2>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm mb-6">
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Problema concreto:</strong> Usuario + dolor + evidencia (no opinión)</span></li>
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Métrica observable:</strong> "De X a Y" en número medible</span></li>
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Solución mínima:</strong> Breadboard claro en 3-5 pasos máximo</span></li>
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Appetite definido:</strong> 🟢 Small (2) / 🟡 Medium (4) / 🔴 Large (6)</span></li>
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Scope Hammering:</strong> Recortes Nivel 1 y 2 pre-aprobados</span></li>
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Circuit Breaker:</strong> Condición de parada observable + proceso</span></li>
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Equipo integrado:</strong> Composición realista + autonomía definida</span></li>
+          <li class="flex gap-3 items-start"><input type="checkbox" class="mt-1 accent-teal-600"> <span><strong>Validadores identificados:</strong> Quién prueba temprano y cómo da feedback</span></li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm font-medium">
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">✅ Todas SÍ: Listo para Betting</span>
+        <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full">⚠️ 1-2 NO: Ajusta antes de presentar</span>
+        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">❌ 3+ NO: Vuelve a Shaping</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMOS PASOS & CIERRE -->
+  <section class="py-16 px-4 bg-white border-t border-gray-200">
+    <div class="container mx-auto max-w-3xl text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">🎯 Tu próximo paso (Hoy)</h2>
+      <ol class="text-left max-w-md mx-auto space-y-4 text-gray-700 mb-10">
+        <li class="flex gap-3"><span class="font-bold text-teal-600">1.</span> Piensa en un dolor real que ves diario en Salud Drive.</li>
+        <li class="flex gap-3"><span class="font-bold text-teal-600">2.</span> Pregúntate: "¿Esto merece un Shape?" (usa los 5 criterios).</li>
+        <li class="flex gap-3"><span class="font-bold text-teal-600">3.</span> Si sí: Agenda 30 min con Pablo para moldear el Pitch.</li>
+        <li class="flex gap-3"><span class="font-bold text-teal-600">4.</span> Define la métrica ANTES de escribir una línea de código.</li>
+        <li class="flex gap-3"><span class="font-bold text-teal-600">5.</span> Prepárate para apostar con criterio, no por urgencia.</li>
+      </ol>
+      <div class="bg-gray-900 text-white p-8 rounded-2xl shadow-lg text-left">
+        <p class="text-lg font-medium mb-4">🔥 Mensaje final</p>
+        <p class="text-gray-300 mb-4">ShapeUp no es una metodología más. Es un pacto:</p>
+        <ul class="space-y-2 text-gray-300 mb-6">
+          <li>🔹 Límites claros ANTES de empezar</li>
+          <li>🔹 Autonomía real DURANTE la ejecución</li>
+          <li>🔹 Métricas observables SIEMPRE para validar valor</li>
+        </ul>
+        <p class="text-gray-300 italic">No prometemos perfección. Prometemos aprendizaje rápido, entregas predecibles y menos ruido. El primer Shape empieza cuando tú decides que algo importa lo suficiente como para apostar por ello.</p>
+        <p class="mt-4 font-bold text-teal-400">¿Qué Shape vas a proponer hoy?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+<!-- GLOSARIO BÁSICO SHAPEUP                      -->
+<!-- ============================================ -->
+<section id="glosario" class="py-16 px-4 bg-gray-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">📖 Glosario Básico ShapeUp</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Appetite</h3>
+        <p class="text-sm text-gray-600">Límite de tiempo fijo para una apuesta (2, 4 o 6 semanas). No es una estimación técnica, es cuánto tiempo estratégico estamos dispuestos a invertir.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Pitch</h3>
+        <p class="text-sm text-gray-600">Documento de 1 página que presenta una apuesta: problema, solución, riesgos y recortes pre-aprobados. Es el "contrato" base para decidir.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Breadboard</h3>
+        <p class="text-sm text-gray-600">Diagrama funcional (cajas, flechas y texto) que muestra cómo fluye la solución. Sin diseño visual, solo lógica de pantallas y acciones.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Betting Table</h3>
+        <p class="text-sm text-gray-600">Reunión donde C-Level decide qué pitches se ejecutan en el próximo ciclo. Se decide con Scorecard, no por urgencia o volumen de voz.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Circuit Breaker</h3>
+        <p class="text-sm text-gray-600">Regla predefinida de parada. Si en una fecha X no se cumple un hito crítico, se pausa el trabajo para reevaluar y evitar proyectos eternos.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Scope Hammering</h3>
+        <p class="text-sm text-gray-600">Recortes de alcance pre-aprobados que se activan automáticamente si el tiempo se acaba. Sin pedir permiso, solo se aplica para salvar el valor central.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Integrated Team</h3>
+        <p class="text-sm text-gray-600">Equipo pequeño y autónomo que ejecuta un shape. Decide el "cómo" técnico dentro de los límites del pitch, sin aprobaciones diarias.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Cooldown</h3>
+        <p class="text-sm text-gray-600">Período posterior al Build donde solo el equipo que ejecutó arregla bugs, documenta y descansa. El resto del equipo opera con normalidad.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-teal-700 mb-2">Shaping</h3>
+        <p class="text-sm text-gray-600">Fase inicial donde se moldean ideas vagas en apuestas concretas. Se definen límites, métricas y riesgos ANTES de escribir código.</p>
+      </div>
+
+    </div>
+    <p class="mt-6 text-center text-xs text-gray-400 italic">¿Falta algún término clave? Avísanos y lo agregamos al glosario.</p>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-50 border-t border-gray-200 py-8 px-4">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>© 2026 LuciRMe Ai · ShapeUp Implementation Hub</p>
+      <a href="/" class="hover:text-gray-900 transition">← Volver al Inicio</a>
+    </div>
+  </footer>
+
+</Layout>
