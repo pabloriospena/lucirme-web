@@ -51,9 +51,7 @@ import Layout from '../layouts/Layout.astro'
     <div class="container mx-auto max-w-5xl flex justify-between items-center">
       <!-- LOGO PLACEHOLDER (Reemplazar con <img> real) -->
       <a href="#" class="flex items-center gap-3">
-        <div class="logo-placeholder w-10 h-10 text-xs">
-          Logo 40x40
-        </div>
+        <img src="/checktomate-logo40x40.png" alt="CheckTomate" class="h-16 w-auto" />
         <span class="font-bold text-gray-900 hidden sm:inline">CheckTomate</span>
       </a>
       
@@ -71,9 +69,7 @@ import Layout from '../layouts/Layout.astro'
       
       <!-- LOGO HERO (Reemplazar con <img> real) -->
       <div class="mb-6 flex justify-center">
-        <div class="logo-placeholder w-32 h-16 text-xs rounded-lg">
-          Logo CheckTomate<br/>(320x100px recomendado)
-        </div>
+        <img src="/checktomate-logo.png" alt="CheckTomate" class="h-16 w-auto" />
       </div>
 
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
@@ -108,34 +104,18 @@ import Layout from '../layouts/Layout.astro'
   <section id="demo" class="py-16 px-4 bg-white">
     <div class="container mx-auto max-w-5xl">
       <div class="text-center mb-10">
-        <h2 class="text-2xl font-bold text-gray-900 mb-3">Mira cómo funciona en 60 segundos</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">Mira cómo funciona en 40 segundos</h2>
         <p class="text-gray-600">Sin instalación. Sin configuraciones complejas. Solo WhatsApp + Google Sheet.</p>
       </div>
 
       <!-- VIDEO/GIF PLACEHOLDER (Reemplazar con <video> o <img> real) -->
-      <div class="video-placeholder mb-6 group cursor-pointer">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition">
-            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </div>
-          <p class="text-sm text-gray-600 font-medium">Demo: WhatsApp → Validación → Sheet</p>
-          <p class="text-xs text-gray-400 mt-1">Reemplazar con video.mp4 o demo.gif (1200x675px)</p>
-        </div>
-      </div>
+<video 
+  controls 
+  class="w-full md:w-[280px] mx-auto rounded-xl shadow-lg"
+>
+  <source src="/checktomate-demo.mp4" type="video/mp4">
+</video>
 
-      <!-- Guía de implementación -->
-      <div class="bg-gray-50 rounded-lg p-4 text-center text-xs text-gray-500">
-        <strong>Para implementar:</strong> Reemplaza el div ".video-placeholder" con:
-        <code class="block bg-white p-2 rounded mt-2 text-left">
-          &lt;video controls class="w-full rounded-xl shadow-lg"&gt;<br/>
-          &nbsp;&nbsp;&lt;source src="/checktomate-demo.mp4" type="video/mp4"&gt;<br/>
-          &lt;/video&gt;
-        </code>
-        <span class="block mt-2">O para GIF: <code>&lt;img src="/checktomate-demo.gif" alt="Demo" class="w-full rounded-xl shadow-lg" /&gt;</code></span>
-      </div>
-    </div>
   </section>
 
   <!-- ============================================ -->
