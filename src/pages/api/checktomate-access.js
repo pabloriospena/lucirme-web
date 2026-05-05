@@ -1,19 +1,20 @@
-export async function POST({ request }) {
+// src/pages/api/checktomate-access.js
+export const POST = async ({ request }) => {
   try {
-    const { name, email, whatsapp, business } = await request.json();
+    const body = await request.json();
+    const { name, email, whatsapp, business } = body;
     
-    // Obtener variables desde Vercel
     const apiKey = import.meta.env.MAILERLITE_API_KEY;
     const groupId = import.meta.env.MAILERLITE_CHECKTOMATE_GROUP_ID;
 
-    // Validar que existan las claves
     if (!apiKey || !groupId) {
-      console.error('❌ Faltan variables de entorno en el servidor');
-      return new Response('Error de configuración', { status: 500 });
+      return new Response(
+        JSON.stringify({ error: 'Configuración incompleta' }), 
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
-    // Enviar datos a MailerLite
-    const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+    const mailerLiteResponse = await fetch('https://connect.mailerlite.com/api/subscribers', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
@@ -32,17 +33,25 @@ export async function POST({ request }) {
       })
     });
 
-    if (!response.ok) {
-      const errorData = await response.text();
-      console.error('❌ Error MailerLite:', errorData);
-      throw new Error('Fallo al conectar con MailerLite');
+    if (!mailerLiteResponse.ok) {
+      const errorText = await mailerLiteResponse.text();
+      console.error('MailerLite Error:', errorText);
+      return new Response(
+        JSON.stringify({ error: 'Error al guardar en MailerLite' }), 
+        { status: mailerLiteResponse.status, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
-    console.log('✅ Lead guardado:', email);
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
+    return new Response(
+      JSON.stringify({ success: true, message: 'Lead guardado' }), 
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
 
   } catch (error) {
-    console.error('❌ Error en API:', error);
-    return new Response('Error interno', { status: 500 });
+    console.error('API Error:', error);
+    return new Response(
+      JSON.stringify({ error: 'Error interno del servidor' }), 
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
   }
-}
+};
