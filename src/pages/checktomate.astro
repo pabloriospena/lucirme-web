@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="CheckTomate · Valida transferencias en segundos | AiTomate">
+
+  <!-- Estilos específicos para CheckTomate -->
+  <style>
+    :root {
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
+      --alert-orange: #FF9800;
+      --alert-red: #F44336;
+      --bg-light: #FAFAFA;
+      --text-dark: #1A1A1A;
+    }
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+      transition: background 0.2s;
+    }
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+    }
+    .confidence-high { color: var(--whatsapp); font-weight: 600; }
+    .confidence-medium { color: var(--alert-orange); font-weight: 600; }
+    .confidence-low { color: var(--alert-red); font-weight: 600; }
+    .video-placeholder {
+      background: linear-gradient(135deg, #f0f9f4 0%, #e6f7ef 100%);
+      border: 2px dashed #25D366;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+    }
+    .logo-placeholder {
+      background: #f8f9fa;
+      border: 1px dashed #e2e8f0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.75rem;
+    }
+  </style>
+
+  <!-- NAV CON LOGO -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 py-3">
+    <div class="container mx-auto max-w-5xl flex justify-between items-center">
+      <!-- LOGO PLACEHOLDER (Reemplazar con <img> real) -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="logo-placeholder w-10 h-10 text-xs">
+          Logo 40x40
+        </div>
+        <span class="font-bold text-gray-900 hidden sm:inline">CheckTomate</span>
+      </a>
+      
+      <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="hidden md:inline-flex items-center gap-2 btn-whatsapp px-4 py-2 rounded-lg text-sm font-medium">
+        💬 Demo en WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION + LOGO PRINCIPAL                -->
+  <!-- ============================================ -->
+  <header class="py-16 md:py-20 px-4 bg-gradient-to-br from-green-50 to-white">
+    <div class="container mx-auto max-w-4xl text-center">
+      
+      <!-- LOGO HERO (Reemplazar con <img> real) -->
+      <div class="mb-6 flex justify-center">
+        <div class="logo-placeholder w-32 h-16 text-xs rounded-lg">
+          Logo CheckTomate<br/>(320x100px recomendado)
+        </div>
+      </div>
+
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+        Valida transferencias en menos de 10 segundos.<br>
+        <span class="text-green-700">Sin estafas. Sin hojas de cálculo manuales.</span>
+      </h1>
+      
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        CheckTomate recibe capturas por WhatsApp, verifica fecha, cuenta, duplicados y ediciones, y guarda todo automáticamente en tu Google Sheet. Configúralo en 3 minutos.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-6 py-3.5 rounded-lg font-medium text-base shadow-lg">
+          🟢 Probar 15 días gratis
+        </a>
+        <a href="#demo" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-900 text-gray-700 px-6 py-3.5 rounded-lg font-medium text-base transition">
+          ▶️ Ver demo en video
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+        <span class="flex items-center gap-1.5"><span class="text-green-600">✅</span> Validación en tiempo real</span>
+        <span class="flex items-center gap-1.5"><span class="text-green-600">🔒</span> 0 fraudes por comprobante falso</span>
+        <span class="flex items-center gap-1.5"><span class="text-green-600">📊</span> Reporte automático</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- VIDEO/GIF DEMO SECTION (NUEVO)               -->
+  <!-- ============================================ -->
+  <section id="demo" class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-5xl">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">Mira cómo funciona en 60 segundos</h2>
+        <p class="text-gray-600">Sin instalación. Sin configuraciones complejas. Solo WhatsApp + Google Sheet.</p>
+      </div>
+
+      <!-- VIDEO/GIF PLACEHOLDER (Reemplazar con <video> o <img> real) -->
+      <div class="video-placeholder mb-6 group cursor-pointer">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition">
+            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <p class="text-sm text-gray-600 font-medium">Demo: WhatsApp → Validación → Sheet</p>
+          <p class="text-xs text-gray-400 mt-1">Reemplazar con video.mp4 o demo.gif (1200x675px)</p>
+        </div>
+      </div>
+
+      <!-- Guía de implementación -->
+      <div class="bg-gray-50 rounded-lg p-4 text-center text-xs text-gray-500">
+        <strong>Para implementar:</strong> Reemplaza el div ".video-placeholder" con:
+        <code class="block bg-white p-2 rounded mt-2 text-left">
+          &lt;video controls class="w-full rounded-xl shadow-lg"&gt;<br/>
+          &nbsp;&nbsp;&lt;source src="/checktomate-demo.mp4" type="video/mp4"&gt;<br/>
+          &lt;/video&gt;
+        </code>
+        <span class="block mt-2">O para GIF: <code>&lt;img src="/checktomate-demo.gif" alt="Demo" class="w-full rounded-xl shadow-lg" /&gt;</code></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- D.R.A.M.A. SECTION                           -->
+  <!-- ============================================ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">¿No sabes cuánto vendiste hoy por transferencias?</h2>
+      
+      <div class="space-y-8">
+        <!-- Dolor -->
+        <div class="bg-red-50 border-l-4 border-red-400 p-5 rounded-r-lg">
+          <p class="text-gray-700 leading-relaxed">
+            Pierdes horas revisando capturas una por una, mientras te arriesgas a estafas con comprobantes editados o pagos que nunca llegaron a tu cuenta.
+          </p>
+        </div>
+
+        <!-- Realidad -->
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">La realidad de hoy</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Dependes de la revisión a ojo de tu cajero, cometes errores manuales y terminas perdiendo más tiempo pasando datos a una hoja de cálculo tipo Excel que cerrando caja o atendiendo nuevos clientes.
+          </p>
+        </div>
+
+        <!-- Automatización -->
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+          <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <span class="text-2xl">🤖</span> La automatización que necesitas
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            Con CheckTomate, tu operador solo envía la captura por WhatsApp. En menos de 10 segundos validamos fecha, cuenta destino, duplicados y posibles ediciones. Si hay alerta, el bot pregunta en el chat. Todo se guarda automáticamente en tu Google Sheet, sin copiar ni pegar.
+          </p>
+        </div>
+
+        <!-- Métrica -->
+        <div class="bg-gray-900 text-white rounded-xl p-6">
+          <h3 class="font-semibold mb-3 flex items-center gap-2">
+            <span class="text-2xl">📊</span> La métrica que importa
+          </h3>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5">✓</span> Ahorra <strong>+10 horas semanales</strong> en conciliación</li>
+            <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5">✓</span> <strong>0 errores</strong> de validación</li>
+            <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5">✓</span> <strong>100% de trazabilidad</strong> por pago</li>
+          </ul>
+          <p class="text-sm text-gray-400 mt-4 italic">Tu caja cierra en minutos, con confianza real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CÓMO FUNCIONA (3 Pasos)                      -->
+  <!-- ============================================ -->
+  <section id="como-funciona" class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">De la captura al Sheet en 3 pasos simples</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Paso 1 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 text-center relative">
+          <!-- Placeholder para screenshot paso 1 -->
+          <div class="logo-placeholder w-full h-32 mb-4 text-[10px]">
+            Screenshot WhatsApp<br/>(400x200px)
+          </div>
+          <div class="w-14 h-14 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-semibold text-gray-900 mb-2">📸 Envía la captura</h3>
+          <p class="text-sm text-gray-600">Tu operador comparte la foto del comprobante por WhatsApp. Sin apps extra, sin logins.</p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 text-center relative">
+          <!-- Placeholder para screenshot paso 2 -->
+          <div class="logo-placeholder w-full h-32 mb-4 text-[10px]">
+            Screenshot Validación<br/>(400x200px)
+          </div>
+          <div class="w-14 h-14 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-semibold text-gray-900 mb-2">🤖 Validación en &lt;10s</h3>
+          <p class="text-sm text-gray-600">CheckTomate analiza automáticamente: fecha, cuenta destino, código de referencia, legibilidad y posibles ediciones.</p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 text-center relative">
+          <!-- Placeholder para screenshot paso 3 -->
+          <div class="logo-placeholder w-full h-32 mb-4 text-[10px]">
+            Screenshot Google Sheet<br/>(400x200px)
+          </div>
+          <div class="w-14 h-14 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-semibold text-gray-900 mb-2">📊 Decisión y registro</h3>
+          <p class="text-sm text-gray-600">Si todo coincide → ✅ Validado. Si hay alerta → tu operador aprueba o rechaza en el chat. Todo en tu Google Sheet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- QUÉ DETECTA (5 Alertas + Confianza)          -->
+  <!-- ============================================ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Protección inteligente contra fraudes y errores</h2>
+      <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+        Cada transacción recibe un <strong>% de Confianza</strong>. Si el bot detecta una anomalía, te alerta al instante y tu operador decide en el momento.
+      </p>
+
+      <div class="overflow-x-auto rounded-xl border border-gray-200">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-white text-gray-900 font-semibold">
+            <tr>
+              <th class="px-6 py-3 border-b">Alerta</th>
+              <th class="px-6 py-3 border-b">Qué significa</th>
+              <th class="px-6 py-3 border-b text-right">Impacto en Confianza</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-white">
+              <td class="px-6 py-4 font-medium text-gray-900">📅 Fecha no coincide</td>
+              <td class="px-6 py-4 text-gray-600">El comprobante no es de hoy</td>
+              <td class="px-6 py-4 text-right confidence-medium">-60%</td>
+            </tr>
+            <tr class="hover:bg-white">
+              <td class="px-6 py-4 font-medium text-gray-900">🏦 Cuenta no registrada</td>
+              <td class="px-6 py-4 text-gray-600">El pago no fue a tu cuenta oficial</td>
+              <td class="px-6 py-4 text-right confidence-low">-80%</td>
+            </tr>
+            <tr class="hover:bg-white">
+              <td class="px-6 py-4 font-medium text-gray-900">🔁 Código duplicado</td>
+              <td class="px-6 py-4 text-gray-600">Misma referencia usada antes</td>
+              <td class="px-6 py-4 text-right confidence-low">-80%</td>
+            </tr>
+            <tr class="hover:bg-white">
+              <td class="px-6 py-4 font-medium text-gray-900">🖼️ Imagen ilegible</td>
+              <td class="px-6 py-4 text-gray-600">No se pueden extraer los datos clave</td>
+              <td class="px-6 py-4 text-right confidence-medium">-25%</td>
+            </tr>
+            <tr class="hover:bg-white">
+              <td class="px-6 py-4 font-medium text-gray-900">✏️ Posible edición</td>
+              <td class="px-6 py-4 text-gray-600">Metadatos o estructura manipulada</td>
+              <td class="px-6 py-4 text-right confidence-low">-90%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-center text-xs text-gray-500 mt-6">
+        💡 <strong>Validación automática</strong> = 100% confianza | <strong>Aprobación manual</strong> = confianza reducida según alerta | <strong>Rechazado</strong> = 0%
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- POR QUÉ ELEGIR CHECKTOMATE                   -->
+  <!-- ============================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Diseñado para negocios que venden por WhatsApp</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900 mb-2">✅ Sin fricción para tu equipo</h3>
+          <p class="text-sm text-gray-600">Tus operadores ya usan WhatsApp. CheckTomate se integra en su flujo natural, sin nuevas plataformas.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900 mb-2">✅ Google Sheet siempre actualizado</h3>
+          <p class="text-sm text-gray-600">Olvídate de copiar y pegar. Cada validación se registra automáticamente con fecha, operador, monto y estado.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900 mb-2">✅ Auditoría sin esfuerzo</h3>
+          <p class="text-sm text-gray-600">Filtra por confianza, motivo de alerta o estado. Si algo falla, sabes exactamente quién, cuándo y por qué.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900 mb-2">✅ Configuración en 3 minutos</h3>
+          <p class="text-sm text-gray-600">Solo necesitas tu código de acceso, el email de Google del admin y tus cuentas destino. Listo.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900 mb-2">✅ Soporte multi-banco</h3>
+          <p class="text-sm text-gray-600">Valida cualquier comprobante digital de Bancolombia, Nequi, Daviplata y más.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- OFERTA / PRICING                             -->
+  <!-- ============================================ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-3xl text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Prueba CheckTomate 15 días gratis</h2>
+      <p class="text-gray-600 mb-8">Sin tarjeta. Sin compromiso. Sin letra pequeña.</p>
+      
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8 text-left">
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li class="flex items-start gap-3"><span class="text-green-600 text-lg">🟢</span> <strong>Acceso completo</strong> a validación, alertas, Sheet automático y soporte por WhatsApp.</li>
+          <li class="flex items-start gap-3"><span class="text-green-600 text-lg">🟢</span> <strong>Hasta 3 operadores</strong> incluidos en el período de prueba.</li>
+          <li class="flex items-start gap-3"><span class="text-green-600 text-lg">🟢</span> <strong>Configuración guiada</strong> paso a paso en menos de 3 minutos.</li>
+        </ul>
+      </div>
+
+      <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-8 py-4 rounded-lg font-medium text-base shadow-lg mb-6">
+        🚀 Activar prueba gratis
+      </a>
+
+      <p class="text-xs text-gray-500">*Después de los 15 días, elige el plan que se adapte a tu volumen de transacciones.</p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FAQ                                          -->
+  <!-- ============================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">¿Tienes dudas? Aquí las respuestas rápidas</h2>
+      
+      <div class="space-y-4">
+        <details class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <summary class="font-medium text-gray-900 cursor-pointer">¿Qué pasa si el comprobante es falso o editado?</summary>
+          <p class="text-sm text-gray-600 mt-3">CheckTomate analiza metadatos y estructura visual. Si detecta manipulación, alerta al instante con un -90% en confianza. Tu operador debe verificar en su app bancaria antes de aprobar.</p>
+        </details>
+        <details class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <summary class="font-medium text-gray-900 cursor-pointer">¿Necesito conocimientos técnicos para configurarlo?</summary>
+          <p class="text-sm text-gray-600 mt-3">No. Te entregamos un código de acceso, ingresas tu email de Google y tus cuentas destino. El resto es automático.</p>
+        </details>
+        <details class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <summary class="font-medium text-gray-900 cursor-pointer">¿Cómo accedo a los reportes de ventas?</summary>
+          <p class="text-sm text-gray-600 mt-3">Todos los pagos validados, aprobados o rechazados se guardan automáticamente en un Google Sheet que compartimos contigo. Filtra, exporta o conecta a tu ERP cuando quieras.</p>
+        </details>
+        <details class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <summary class="font-medium text-gray-900 cursor-pointer">¿Qué pasa si mi operador no responde a una alerta?</summary>
+          <p class="text-sm text-gray-600 mt-3">Si no hay decisión en 2 minutos, la transacción se marca como <code class="bg-gray-100 px-1 rounded">⏳ Pendiente</code> y se bloquea en WhatsApp. Solo el admin puede resolverla desde el Sheet.</p>
+        </details>
+        <details class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <summary class="font-medium text-gray-900 cursor-pointer">¿Funciona con Nequi, Daviplata y otros bancos?</summary>
+          <p class="text-sm text-gray-600 mt-3">Sí. Validamos la estructura del comprobante (fecha, cuenta, código, monto), no la marca del banco. Compatible con cualquier app bancaria o billetera digital.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA FINAL                                    -->
+  <!-- ============================================ -->
+  <section class="py-20 px-4 bg-gray-900 text-white">
+    <div class="container mx-auto max-w-3xl text-center">
+      <h2 class="text-2xl font-bold mb-6">Deja de perder ventas por no validar a tiempo</h2>
+      <p class="text-gray-300 mb-8">Activa tu validación inteligente hoy. Configura en 3 minutos. Prueba gratis 15 días.</p>
+      
+      <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-8 py-4 rounded-lg font-medium text-base shadow-lg mb-6">
+        📲 Escribe TOMATE en WhatsApp
+      </a>
+      
+      <p class="text-sm text-gray-400">*Respuesta inmediata. Sin llamadas. Sin esperas.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-gray-200 py-8 px-4">
+    <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <div class="flex items-center gap-3">
+        <!-- Logo footer placeholder -->
+        <div class="logo-placeholder w-8 h-8 text-[8px] rounded">Logo</div>
+        <span><strong>CheckTomate</strong> | Un producto de AiTomate</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="mailto:contacto@aitomate.com" class="hover:text-gray-900">📧 contacto@aitomate.com</a>
+        <a href="https://aitomate.com" target="_blank" class="hover:text-gray-900">🌐 aitomate.com</a>
+        <span>📍 Colombia</span>
+      </div>
+    </div>
+    <p class="text-center text-xs text-gray-400 mt-4">© 2026 AiTomate. Todos los derechos reservados.</p>
+  </footer>
+
+</Layout>
