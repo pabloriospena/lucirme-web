@@ -55,9 +55,9 @@ import Layout from '../layouts/Layout.astro'
         <span class="font-bold text-gray-900 hidden sm:inline">CheckTomate</span>
       </a>
       
-      <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="hidden md:inline-flex items-center gap-2 btn-whatsapp px-4 py-2 rounded-lg text-sm font-medium">
-        💬 Demo en WhatsApp
-      </a>
+      <button onclick="openCheckTomateModal()" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-6 py-3.5 rounded-lg font-medium text-base shadow-lg">
+  🟢 Probar 15 días gratis
+</button>
     </div>
   </nav>
 
@@ -82,9 +82,9 @@ import Layout from '../layouts/Layout.astro'
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-        <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-6 py-3.5 rounded-lg font-medium text-base shadow-lg">
-          🟢 Probar 15 días gratis
-        </a>
+        <button onclick="openCheckTomateModal()" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-6 py-3.5 rounded-lg font-medium text-base shadow-lg">
+  🟢 Probar 15 días gratis
+</button>
         <a href="#demo" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-900 text-gray-700 px-6 py-3.5 rounded-lg font-medium text-base transition">
           ▶️ Ver demo en video
         </a>
@@ -314,9 +314,9 @@ import Layout from '../layouts/Layout.astro'
         </ul>
       </div>
 
-      <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-8 py-4 rounded-lg font-medium text-base shadow-lg mb-6">
-        🚀 Activar prueba gratis
-      </a>
+      <button onclick="openCheckTomateModal()" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-6 py-3.5 rounded-lg font-medium text-base shadow-lg">
+  🟢 Activa tu prueba gratis
+</button>
 
       <p class="text-xs text-gray-500">*Después de los 15 días, elige el plan que se adapte a tu volumen de transacciones.</p>
     </div>
@@ -362,11 +362,11 @@ import Layout from '../layouts/Layout.astro'
       <h2 class="text-2xl font-bold mb-6">Deja de perder ventas por no validar a tiempo</h2>
       <p class="text-gray-300 mb-8">Activa tu validación inteligente hoy. Configura en 3 minutos. Prueba gratis 15 días.</p>
       
-      <a href="https://wa.me/573000000000?text=TOMATE" target="_blank" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-8 py-4 rounded-lg font-medium text-base shadow-lg mb-6">
-        📲 Escribe TOMATE en WhatsApp
-      </a>
+      <button onclick="openCheckTomateModal()" class="inline-flex items-center justify-center gap-2 btn-whatsapp px-6 py-3.5 rounded-lg font-medium text-base shadow-lg">
+  🟢 Probar 15 días gratis
+</button>
       
-      <p class="text-sm text-gray-400">*Respuesta inmediata. Sin llamadas. Sin esperas.</p>
+      <p class="text-sm text-gray-400">*Sin llamadas. Sin esperas.</p>
     </div>
   </section>
 
@@ -386,5 +386,86 @@ import Layout from '../layouts/Layout.astro'
     </div>
     <p class="text-center text-xs text-gray-400 mt-4">© 2026 AiTomate. Todos los derechos reservados.</p>
   </footer>
+
+    <!-- ============================================ -->
+  <!-- MODAL: FORMULARIO DE ACCESO (MailerLite)     -->
+  <!-- ============================================ -->
+  <div id="checktomate-modal" class="fixed inset-0 z-[100] hidden" aria-hidden="true">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeCheckTomateModal()"></div>
+    
+    <!-- Modal Content -->
+    <div class="relative mx-auto mt-24 w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 transform transition-all">
+      <button onclick="closeCheckTomateModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition">✕</button>
+      
+      <div class="text-center mb-5">
+        <div class="text-3xl mb-2">🍅</div>
+        <h3 class="text-xl font-bold text-gray-900">Activa tu prueba de 15 días</h3>
+        <p class="text-sm text-gray-600 mt-1">Recibe tu código de acceso y guía de configuración al instante.</p>
+      </div>
+
+      <form id="checktomate-form" class="space-y-3" onsubmit="handleCheckTomateSubmit(event)">
+        <input type="text" name="name" required placeholder="Nombre completo" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-sm bg-white" />
+        <input type="email" name="email" required placeholder="correo@negocio.com" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-sm bg-white" />
+        <input type="tel" name="whatsapp" required placeholder="+57 300 000 0000" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-sm bg-white" />
+        <input type="text" name="business" placeholder="Nombre del negocio (opcional)" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-sm bg-white" />
+        
+        <button type="submit" id="submit-btn" class="w-full btn-whatsapp py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition">
+          🚀 Solicitar acceso
+        </button>
+      </form>
+
+      <div id="form-status" class="hidden mt-3 text-center text-sm font-medium"></div>
+      <p class="text-[10px] text-gray-400 text-center mt-3">🔒 Tus datos están seguros. Solo se usan para enviarte tu acceso.</p>
+    </div>
+  </div>
+
+  <script is:inline>
+    function openCheckTomateModal() {
+      document.getElementById('checktomate-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCheckTomateModal() {
+      document.getElementById('checktomate-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    async function handleCheckTomateSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      const data = Object.fromEntries(new FormData(form));
+
+      btn.disabled = true;
+      btn.innerHTML = '⏳ Enviando...';
+      status.classList.add('hidden');
+
+      try {
+        const res = await fetch('/api/checktomate-access', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = '✅ ¡Listo! Revisa tu correo y WhatsApp en minutos.';
+          status.className = 'mt-3 text-center text-sm font-medium text-green-700';
+          status.classList.remove('hidden');
+          setTimeout(closeCheckTomateModal, 3000);
+        } else {
+          throw new Error('Error en el servidor');
+        }
+      } catch (err) {
+        status.textContent = '⚠️ Hubo un error. Intenta de nuevo o escríbenos por WhatsApp.';
+        status.className = 'mt-3 text-center text-sm font-medium text-red-600';
+        status.classList.remove('hidden');
+        btn.disabled = false;
+        btn.innerHTML = '🔄 Intentar de nuevo';
+      }
+    }
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCheckTomateModal(); });
+  </script>
 
 </Layout>
