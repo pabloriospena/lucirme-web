@@ -402,14 +402,7 @@ import Layout from '../layouts/Layout.astro'
 <h3 id="modal-title" class="text-xl font-bold text-gray-900 mb-1">Activa tu prueba de 15 días</h3>        <p class="text-sm text-gray-600 mt-1">Recibe tu código de acceso y guía de configuración al instante.</p>
       </div>
 
-<form 
-  action="https://formspree.io/f/xkoybbve" 
-  method="POST" 
-  class="space-y-3"
->
-  <input type="hidden" name="_subject" value="Nuevo acceso CheckTomate" />
-  <input type="hidden" name="_next" value="https://lucirme-web.vercel.app/checktomate?gracias=1" />
-  
+<form id="checktomate-form" class="space-y-3" onsubmit="handleCheckTomateSubmit(event)">
   <input type="text" name="name" required placeholder="Nombre completo" 
          class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition bg-white text-sm" />
   
@@ -422,30 +415,83 @@ import Layout from '../layouts/Layout.astro'
   <input type="text" name="business" placeholder="Nombre del negocio (opcional)" 
          class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition bg-white text-sm" />
   
-  <button type="submit" class="w-full btn-whatsapp py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition">
+  <button type="submit" id="submit-btn" class="w-full btn-whatsapp py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition">
     🚀 Solicitar acceso
   </button>
 </form>
+
+<div id="form-status" class="hidden mt-3 text-center text-sm font-medium"></div>
       <p class="text-[10px] text-gray-400 text-center mt-3">🔒 Tus datos están seguros. Solo se usan para enviarte tu acceso.</p>
     </div>
   </div>
 
   <script is:inline>
-function openCheckTomateModal() {
-  const modal = document.getElementById('checktomate-modal');
-  modal.classList.remove('hidden');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
+    // Abrir/Cerrar Modal
+    function openCheckTomateModal() {
+      const modal = document.getElementById('checktomate-modal');
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => modal.querySelector('input')?.focus(), 100);
+    }
 
-function closeCheckTomateModal() {
-  const modal = document.getElementById('checktomate-modal');
-  modal.classList.add('hidden');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
-    // Cerrar con ESC
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCheckTomateModal(); });
+    function closeCheckTomateModal() {
+      const modal = document.getElementById('checktomate-modal');
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => { 
+      if (e.key === 'Escape') closeCheckTomateModal(); 
+    });
+
+    // Enviar formulario a TU API (ya no usa Formspree)
+    async function handleCheckTomateSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      
+      btn.disabled = true;
+      btn.textContent = '⏳ Enviando...';
+      status.classList.add('hidden');
+
+      try {
+        const data = Object.fromEntries(new FormData(form));
+        const res = await fetch('/api/checktomate-access', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = '✅ ¡Listo! Revisa tu correo en minutos.';
+          status.className = 'mt-3 text-center text-sm font-medium text-green-700';
+          status.classList.remove('hidden');
+          
+          setTimeout(() => {
+            closeCheckTomateModal();
+            form.reset();
+            status.classList.add('hidden');
+            btn.disabled = false;
+            btn.textContent = '🚀 Solicitar acceso';
+          }, 3000);
+        } else {
+          throw new Error(result.error || 'Error en el servidor');
+        }
+      } catch (err) {
+        status.textContent = '⚠️ ' + err.message;
+        status.className = 'mt-3 text-center text-sm font-medium text-red-600';
+        status.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = '🔄 Intentar de nuevo';
+      }
+    }
   </script>
 
 </Layout>
