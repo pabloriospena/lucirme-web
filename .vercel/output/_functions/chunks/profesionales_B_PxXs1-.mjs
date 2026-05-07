@@ -1,0 +1,248 @@
+import { c as createComponent } from './astro-component_DfT2BnYK.mjs';
+import 'piccolore';
+import { l as renderComponent, r as renderTemplate, m as maybeRenderHead } from './entrypoint_CzXS2ogM.mjs';
+import { $ as $$Layout } from './Layout_BcPqUcuC.mjs';
+
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
+var _a;
+const $$Profesionales = createComponent(async ($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "IA para Profesionales | LuciRMe Ai" }, { "default": async ($$result2) => renderTemplate(_a || (_a = __template(["  ", `<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200 px-4 py-3"> <div class="container mx-auto max-w-6xl flex justify-between items-center"> <a href="/" class="text-sm text-gray-600 hover:text-gray-900 transition">← Volver a LuciRMe Ai</a> <a href="#cta" class="hidden md:inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition">
+Agendemos un café estratégico
+</a> </div> </nav>    <header class="py-20 px-4 bg-white border-b border-gray-100"> <div class="container mx-auto max-w-3xl text-center"> <span class="inline-block bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-md mb-6">
+Para profesionales que usan IA
+</span> <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug mb-6">
+Deja de perder tiempo en tareas operativas.
+</h1> <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+Trabajamos de la mano para que te enfoques en lo que realmente importa <br>tu crecimiento y tus resultados.
+</p> <div class="flex flex-col sm:flex-row gap-3 justify-center"> <a href="https://calendar.app.google/k4iYmA42X9NNBb5t8" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md text-sm font-medium transition">
+Agendemos un café estratégico →
+</a> <a href="#metodo" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-md text-sm transition">
+Ver Metodología
+</a> </div> </div> </header>    <section id="problema" class="py-20 px-4 bg-gray-50"> <div class="container mx-auto max-w-4xl"> <h2 class="text-2xl font-semibold text-gray-900 mb-8 text-center">Sabes que podrías hacer más, pero algo te frena.</h2> <div class="grid md:grid-cols-2 gap-8 items-start"> <!-- Lista de dolores --> <div class="space-y-4"> <div class="flex gap-3 items-start"> <span class="text-gray-400 text-lg mt-0.5">•</span> <div> <strong class="text-gray-900">Repites lo mismo:</strong> <span class="text-gray-600">Tareas manuales que consumen tu agenda y tu energía.</span> </div> </div> <div class="flex gap-3 items-start"> <span class="text-gray-400 text-lg mt-0.5">•</span> <div> <strong class="text-gray-900">Pruebas herramientas, nada se queda:</strong> <span class="text-gray-600">Abres tutoriales, guardas prompts, pero sigues haciendo lo mismo a mano.</span> </div> </div> <div class="flex gap-3 items-start"> <span class="text-gray-400 text-lg mt-0.5">•</span> <div> <strong class="text-gray-900">Ideas para crecer, sin horas:</strong> <span class="text-gray-600">Tu operativa te deja agotado y lo estratégico pasa a "después".</span> </div> </div> </div> <!-- Callout destacado --> <div class="bg-gray-100 border-l-4 border-teal-500 p-5 rounded-r-lg h-full flex items-center"> <p class="text-sm text-gray-700 leading-relaxed"> <strong class="text-gray-900 block mb-2">La verdad:</strong>
+No es que la IA no funcione. Es que intentarla solo, con teoría genérica, rara vez funciona. Aquí trabajamos con lo que YA tienes.
+</p> </div> </div> </div> </section>    <section class="py-20 px-4 bg-white"> <div class="container mx-auto max-w-4xl"> <!-- Título destacado --> <div class="mb-12 pl-4 border-l-4 border-gray-900"> <h2 class="text-2xl font-bold text-gray-900 leading-tight mb-2">No es un curso.</h2> <p class="text-lg text-gray-600">Es tu sistema operativo personal para trabajar mejor.</p> </div> <!-- Lista de beneficios --> <div class="grid md:grid-cols-2 gap-x-12 gap-y-8"> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Recuperas tiempo</h3> <p class="text-sm text-gray-600">Olvida la teoría. Aplicamos IA a tus procesos reales para devolverte horas perdidas en lo manual.</p> </div> </div> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Sin quedarte atrás</h3> <p class="text-sm text-gray-600">Trabajamos tus desafíos actuales en vivo. Te mantienes relevante sin depender de tutoriales eternos.</p> </div> </div> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Resultados reales</h3> <p class="text-sm text-gray-600">Sales de cada sesión con tareas resueltas y pasos exactos para mañana. Claridad operativa total.</p> </div> </div> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Espacio para lo importante</h3> <p class="text-sm text-gray-600">Menos ruido, más tiempo libre. El objetivo es que te enfoques en tu vida y tu crecimiento.</p> </div> </div> </div> </div> </section>    <section class="py-20 px-4 bg-gray-50"> <div class="container mx-auto max-w-4xl"> <div class="flex flex-col md:flex-row items-center gap-8"> <!-- Foto de Pablo --> <div class="w-24 h-24 rounded-full overflow-hidden bg-gray-200 flex-shrink-0"> <img src="/pablo-rios.jpeg" alt="Pablo Ríos" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class='w-full h-full flex items-center justify-center text-gray-500'>PR</div>'"> </div> <!-- Historia empática --> <div> <h2 class="text-xl font-semibold text-gray-900 mb-3">Hola, soy Pablo</h2> <div class="space-y-3 text-sm text-gray-600 leading-relaxed"> <p> <strong class="text-gray-900">Sé exactamente cómo te sientes.</strong> Pasé años viendo cómo profesionales brillantes perdían su energía en tareas operativas que los dejaban agotados.
+</p> <p>
+Intenté todo: cursos interminables y herramientas "mágicas". El resultado era siempre el mismo: <em>más información, menos acción</em>. Por eso creé <strong>LuciRMe Ai</strong>.
+</p> <p> <strong class="text-gray-900">Mi promesa:</strong> No te voy a vender humo ni software. Vamos a trabajar juntos hasta que recuperes tu tiempo.
+</p> </div> <div class="mt-4 flex gap-4 text-xs text-gray-500"> <a href="https://linkedin.com/in/pabloriospena" target="_blank" class="hover:text-gray-900">🔗 LinkedIn</a> <a href="mailto:pabloriospena@gmail.com" class="hover:text-gray-900">✉️ Email</a> </div> </div> </div> </div> </section>    <section id="precios" class="py-20 px-4 bg-white"> <div class="container mx-auto max-w-4xl"> <div class="text-center mb-10"> <h2 class="text-2xl font-semibold text-gray-900 mb-3">Elige cómo quieres trabajar</h2> <p class="text-sm text-gray-600">Precios accesibles para empezar. Cupos limitados este mes.</p> </div> <!-- Early Adopters Badge --> <div class="flex justify-center mb-10"> <div class="inline-flex items-center gap-2 bg-teal-50 text-teal-800 px-4 py-2 rounded-full text-xs font-medium border border-teal-100"> <span>✨ Lanzamiento:</span> <span>Los primeros 20 profesionales reciben precio especial y acompañamiento extendido.</span> </div> </div> <!-- Pricing Cards --> <div class="grid md:grid-cols-2 gap-6 mb-10"> <!-- Card 1: Sesión Express --> <div class="bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <div class="mb-4"> <h3 class="font-medium text-gray-900 text-lg">Sesión Express</h3> <p class="text-xs text-gray-500">Solución inmediata (1h)</p> </div> <div class="flex justify-between items-end mb-6 pb-4 border-b border-gray-100"> <div> <p class="text-[10px] text-gray-400 uppercase tracking-wide">Individual 1:1</p> <p class="text-2xl font-semibold text-gray-900">$116.000</p> </div> <div class="text-right"> <p class="text-[10px] text-teal-600 font-medium">GRUPO</p> <p class="text-lg font-bold text-teal-700">$44.000 <span class="text-xs font-normal text-gray-400">/c.u.</span></p> </div> </div> <ul class="space-y-2.5 text-sm text-gray-600 mb-6 flex-grow"> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Identificamos tu mayor fuga de tiempo y la atacamos en 1 hora.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Sales con un flujo funcional listo para usar hoy, no "para después".</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Sin compromiso: si ves valor, continuamos. Si no, cerramos sin preguntas.</li> </ul> </div> <!-- Card 2: Ciclo PRP --> <div class="bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <div class="mb-4"> <h3 class="font-medium text-gray-900 text-lg">Ciclo PRP</h3> <p class="text-xs text-gray-500">4 sesiones para: Protocolos (orden) → Refinamiento (IA) → Potencial (autonomía)</p> </div> <div class="flex justify-between items-end mb-6 pb-4 border-b border-gray-100"> <div> <p class="text-[10px] text-gray-400 uppercase tracking-wide">Individual 1:1</p> <p class="text-2xl font-semibold text-gray-900">$350.000</p> </div> <div class="text-right"> <p class="text-[10px] text-teal-600 font-medium">GRUPO</p> <p class="text-lg font-bold text-teal-700">$170.000 <span class="text-xs font-normal text-gray-400">/c.u.</span></p> </div> </div> <ul class="space-y-2.5 text-sm text-gray-600 mb-6 flex-grow"> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Transformas hábitos manuales en flujos con IA: una tarea real por sesión.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Conocimiento aplicado, no teoría: trabajamos con tus archivos y procesos reales.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Acompañamiento humano entre sesiones: si algo no funciona, yo te ayudo a ajustarlo.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Recuperas tiempo progresivamente: al finalizar, tienes claridad y autonomía para seguir escalando.</li> </ul> </div> </div> <!-- CTA ÚNICO --> <div class="text-center mb-6"> <a href="https://calendar.app.google/k4iYmA42X9NNBb5t8" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-3.5 rounded-md text-sm font-medium transition shadow-sm">
+Agendemos un café estratégico (30 min) →
+</a> <p class="text-xs text-gray-500 mt-3">
+✨ Sin compromiso. Si en 15 min ya hay claridad, cerramos antes.
+</p> </div> <!-- ============================================ --> <!-- LEAD MAGNET SECTION (Después de Precios) --> <!-- ============================================ --> <section class="py-16 px-4 bg-gradient-to-br from-teal-50 to-white border-y border-teal-100"> <div class="container mx-auto max-w-3xl text-center"> <div class="mb-6"> <span class="inline-block bg-teal-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">🎁 Gratis</span> <h3 class="text-2xl font-bold text-gray-900 mb-2">¿Pierdes horas compilando reportes manuales?</h3> <p class="text-gray-600 mb-6">
+"De notas a reportes: tu guía con NotebookLM"<br>
+Convierte transcripciones y datos sueltos en decisiones claras. Sin herramientas complejas.
+</p> </div> <!-- BOTÓN DEL LEAD MAGNET --> <button onclick="openLeadMagnetModal()" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-teal-50 text-teal-700 border-2 border-teal-600 px-8 py-3.5 rounded-lg font-semibold text-sm transition shadow-md hover:shadow-lg">
+📊 Descargar guía gratis
+</button> <p class="text-xs text-gray-500 mt-4">🔒 Sin spam. Solo contenido práctico.</p> </div> </section> <!-- ============================================ --> <!-- 6. METODOLOGÍA PRP (EL "CÓMO")               --> <!-- ============================================ --> <section id="metodo" class="py-20 px-4 bg-gray-50"> <div class="container mx-auto max-w-5xl"> <div class="text-center mb-12"> <h2 class="text-2xl font-semibold text-gray-900 mb-3">Método PRP</h2> <p class="text-sm text-gray-600">Tu hoja de ruta en 3 fases. Sin teoría. Sin humo.</p> </div> <!-- Contenedor Horizontal --> <div class="relative flex flex-col md:flex-row gap-8 md:gap-0"> <!-- Línea conectora (Desktop) --> <!-- top-5 asegura que la línea pase por el centro de los círculos de 40px (w-10) --> <div class="hidden md:block absolute top-5 left-0 right-0 h-0.5 bg-gray-200"></div> <!-- Paso 1 --> <div class="relative flex-1 flex flex-col items-center px-2"> <!-- Número centrado --> <div class="w-10 h-10 bg-white border-2 border-gray-300 text-gray-500 rounded-full flex items-center justify-center text-sm font-bold mb-5 relative z-10 shadow-sm">1</div> <!-- Tarjeta (h-full para igualar altura) --> <div class="w-full h-full bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <h4 class="font-bold text-gray-900 mb-2 text-base">Protocolos <span class="text-gray-400 font-normal text-sm ml-1">(Orden)</span></h4> <p class="text-sm text-gray-600 leading-relaxed flex-grow">Identificamos tus fugas de tiempo y mapeamos tu gestión actual. Detectamos dónde está el cuello de botella real.</p> </div> </div> <!-- Paso 2 --> <div class="relative flex-1 flex flex-col items-center px-2"> <!-- Número centrado --> <div class="w-10 h-10 bg-white border-2 border-gray-300 text-gray-500 rounded-full flex items-center justify-center text-sm font-bold mb-5 relative z-10 shadow-sm">2</div> <!-- Tarjeta --> <div class="w-full h-full bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <h4 class="font-bold text-gray-900 mb-2 text-base">Refinamiento <span class="text-gray-400 font-normal text-sm ml-1">(IA)</span></h4> <p class="text-sm text-gray-600 leading-relaxed flex-grow">Aplicamos IA práctica para que la ejecución sea rápida, precisa y sin errores humanos.</p> </div> </div> <!-- Paso 3 (Meta) --> <div class="relative flex-1 flex flex-col items-center px-2"> <!-- Número centrado (Teal) --> <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold mb-5 relative z-10 shadow-sm">3</div> <!-- Tarjeta Destacada --> <div class="w-full h-full bg-white p-6 rounded-lg border-2 border-teal-600 shadow-md flex flex-col"> <h4 class="font-bold text-gray-900 mb-2 text-base">Potencial <span class="text-teal-600 font-normal text-sm ml-1">(Autonomía)</span></h4> <p class="text-sm text-gray-600 leading-relaxed flex-grow">Entregamos autonomía total. Escalas tus resultados sin depender de nosotros.</p> </div> </div> </div> </div> </section> <!-- ============================================ --> <!-- 7. CIERRE Y GARANTÍA (ACCIÓN)                --> <!-- ============================================ --> <section id="cta" class="py-20 px-4 bg-white border-t border-gray-100"> <div class="container mx-auto max-w-xl text-center"> <h2 class="text-2xl font-semibold text-gray-900 mb-3">¿Listo para trabajar mejor?</h2> <p class="text-sm text-gray-600 mb-8">
+No necesitas tener todo claro hoy. Solo necesitas dar el primer paso.
+</p> <!-- Garantía estilo Notion callout --> <div class="bg-gray-100 border-l-4 border-teal-500 p-4 rounded-r-lg mb-8 text-left max-w-md mx-auto"> <p class="text-xs text-gray-700"> <strong class="text-gray-900">Garantía de satisfacción:</strong> Pago flexible · Sin permanencia. Si en la primera sesión sientes que no es para ti, cerramos sin preguntas.
+</p> </div> <a href="https://calendar.app.google/k4iYmA42X9NNBb5t8" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md text-sm font-medium transition w-full sm:w-auto">
+Reservar mi Café de Estrategia →
+</a> <p class="mt-6 text-xs text-gray-500">
+Pablo Ríos · Fundador, LuciRMe Ai<br>
+✉️ pabloriospena@gmail.com · 🔗 linkedin.com/in/pabloriospena
+</p> </div> </section> <!-- FOOTER --> <footer class="bg-gray-50 border-t border-gray-200 py-10 px-4"> <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6"> <p class="text-[10px] text-gray-400">© 2026 LuciRMe Ai · IA práctica para profesionales</p> <div class="flex gap-6 text-xs"> <a href="https://linkedin.com/in/pabloriospena" target="_blank" class="text-gray-500 hover:text-gray-900">LinkedIn</a> <a href="mailto:pabloriospena@gmail.com" class="text-gray-500 hover:text-gray-900">Email</a> </div> </div> </footer> <!-- ============================================ --> <!-- TRIGGER BUTTON (El botón que abre el modal) --> <!-- ============================================ --> <div class="text-center"> <button onclick="openLeadMagnetModal()" class="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md text-sm font-medium transition shadow-sm">
+🎁 Descargar checklist gratis
+</button> </div> <!-- ============================================ --> <!-- MODAL LEAD MAGNET (Estructura completa) --> <!-- ============================================ --> <div id="leadmagnet-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm" aria-hidden="true" role="dialog"> <div class="relative mx-auto w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 transform transition-all"> <button onclick="closeLeadMagnetModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition" aria-label="Cerrar">✕</button> <div class="text-center mb-5"> <div class="text-3xl mb-2">📋</div> <h3 class="text-xl font-bold text-gray-900 mb-1">Descarga tu checklist gratis</h3> <p class="text-sm text-gray-600 mt-1">"5 tareas que puedes automatizar HOY con IA". Recibe el PDF al instante.</p> </div> <!-- ✅ Formulario simplificado: solo nombre + email --> <form id="leadmagnet-form" class="space-y-3" onsubmit="handleLeadMagnetSubmit(event)"> <input type="text" name="name" required placeholder="Nombre completo" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white text-sm"> <input type="email" name="email" required placeholder="tu@email.com" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white text-sm"> <button type="submit" id="leadmagnet-submit-btn" class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition">
+📥 Descargar ahora
+</button> </form> <div id="leadmagnet-status" class="hidden mt-3 text-center text-sm font-medium"></div> <p class="text-[10px] text-gray-400 text-center mt-3">🔒 Sin spam. Solo contenido práctico.</p> </div> </div> <!-- ============================================ --> <!-- LÓGICA JAVASCRIPT (Igual que CheckTomate) --> <!-- ============================================ --> <script>
+    // Abrir/Cerrar Modal Lead Magnet
+    function openLeadMagnetModal() {
+      const modal = document.getElementById('leadmagnet-modal');
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => modal.querySelector('input')?.focus(), 100);
+    }
+
+    function closeLeadMagnetModal() {
+      const modal = document.getElementById('leadmagnet-modal');
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => { 
+      if (e.key === 'Escape') closeLeadMagnetModal(); 
+    });
+
+    // ✅ Enviar formulario - MISMO PATRÓN QUE CHECKTOMATE
+    async function handleLeadMagnetSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('leadmagnet-submit-btn');
+      const status = document.getElementById('leadmagnet-status');
+      
+      btn.disabled = true;
+      btn.textContent = '⏳ Enviando...';
+      status.classList.add('hidden');
+
+      try {
+        const data = Object.fromEntries(new FormData(form));
+        
+        // ✅ Endpoint separado (no interfiere con CheckTomate)
+        const res = await fetch('/api/leadmagnet-access', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = '✅ ¡Listo! Revisa tu correo en minutos.';
+          status.className = 'mt-3 text-center text-sm font-medium text-teal-700';
+          status.classList.remove('hidden');
+          
+          setTimeout(() => {
+            closeLeadMagnetModal();
+            form.reset();
+            status.classList.add('hidden');
+            btn.disabled = false;
+            btn.textContent = '📥 Descargar ahora';
+          }, 3000);
+        } else {
+          throw new Error(result.error || 'Error en el servidor');
+        }
+      } catch (err) {
+        status.textContent = '⚠️ ' + err.message;
+        status.className = 'mt-3 text-center text-sm font-medium text-red-600';
+        status.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = '🔄 Intentar de nuevo';
+      }
+    }
+  <\/script> <!-- STICKY BAR (siempre visible) --> <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-4"> <div class="container mx-auto max-w-4xl flex flex-col sm:flex-row items-center justify-between gap-3"> <div class="text-sm"> <span class="font-semibold text-gray-900">🎁 ¿Pierdes horas compilando reportes manuales?</span> <span class="text-gray-600 ml-1">"De notas a reportes: tu guía con NotebookLM"<br>
+Convierte transcripciones y datos sueltos en decisiones claras. Sin herramientas complejas.</span> </div> <button onclick="openLeadMagnetModal()" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-md text-sm font-medium transition whitespace-nowrap">
+Descargar guía gratis
+</button> </div> </div> </div></section>`], ["  ", `<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200 px-4 py-3"> <div class="container mx-auto max-w-6xl flex justify-between items-center"> <a href="/" class="text-sm text-gray-600 hover:text-gray-900 transition">← Volver a LuciRMe Ai</a> <a href="#cta" class="hidden md:inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition">
+Agendemos un café estratégico
+</a> </div> </nav>    <header class="py-20 px-4 bg-white border-b border-gray-100"> <div class="container mx-auto max-w-3xl text-center"> <span class="inline-block bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-md mb-6">
+Para profesionales que usan IA
+</span> <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug mb-6">
+Deja de perder tiempo en tareas operativas.
+</h1> <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+Trabajamos de la mano para que te enfoques en lo que realmente importa <br>tu crecimiento y tus resultados.
+</p> <div class="flex flex-col sm:flex-row gap-3 justify-center"> <a href="https://calendar.app.google/k4iYmA42X9NNBb5t8" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md text-sm font-medium transition">
+Agendemos un café estratégico →
+</a> <a href="#metodo" class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-md text-sm transition">
+Ver Metodología
+</a> </div> </div> </header>    <section id="problema" class="py-20 px-4 bg-gray-50"> <div class="container mx-auto max-w-4xl"> <h2 class="text-2xl font-semibold text-gray-900 mb-8 text-center">Sabes que podrías hacer más, pero algo te frena.</h2> <div class="grid md:grid-cols-2 gap-8 items-start"> <!-- Lista de dolores --> <div class="space-y-4"> <div class="flex gap-3 items-start"> <span class="text-gray-400 text-lg mt-0.5">•</span> <div> <strong class="text-gray-900">Repites lo mismo:</strong> <span class="text-gray-600">Tareas manuales que consumen tu agenda y tu energía.</span> </div> </div> <div class="flex gap-3 items-start"> <span class="text-gray-400 text-lg mt-0.5">•</span> <div> <strong class="text-gray-900">Pruebas herramientas, nada se queda:</strong> <span class="text-gray-600">Abres tutoriales, guardas prompts, pero sigues haciendo lo mismo a mano.</span> </div> </div> <div class="flex gap-3 items-start"> <span class="text-gray-400 text-lg mt-0.5">•</span> <div> <strong class="text-gray-900">Ideas para crecer, sin horas:</strong> <span class="text-gray-600">Tu operativa te deja agotado y lo estratégico pasa a "después".</span> </div> </div> </div> <!-- Callout destacado --> <div class="bg-gray-100 border-l-4 border-teal-500 p-5 rounded-r-lg h-full flex items-center"> <p class="text-sm text-gray-700 leading-relaxed"> <strong class="text-gray-900 block mb-2">La verdad:</strong>
+No es que la IA no funcione. Es que intentarla solo, con teoría genérica, rara vez funciona. Aquí trabajamos con lo que YA tienes.
+</p> </div> </div> </div> </section>    <section class="py-20 px-4 bg-white"> <div class="container mx-auto max-w-4xl"> <!-- Título destacado --> <div class="mb-12 pl-4 border-l-4 border-gray-900"> <h2 class="text-2xl font-bold text-gray-900 leading-tight mb-2">No es un curso.</h2> <p class="text-lg text-gray-600">Es tu sistema operativo personal para trabajar mejor.</p> </div> <!-- Lista de beneficios --> <div class="grid md:grid-cols-2 gap-x-12 gap-y-8"> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Recuperas tiempo</h3> <p class="text-sm text-gray-600">Olvida la teoría. Aplicamos IA a tus procesos reales para devolverte horas perdidas en lo manual.</p> </div> </div> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Sin quedarte atrás</h3> <p class="text-sm text-gray-600">Trabajamos tus desafíos actuales en vivo. Te mantienes relevante sin depender de tutoriales eternos.</p> </div> </div> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Resultados reales</h3> <p class="text-sm text-gray-600">Sales de cada sesión con tareas resueltas y pasos exactos para mañana. Claridad operativa total.</p> </div> </div> <div class="flex gap-4 items-start"> <span class="mt-1 text-teal-600 font-bold text-lg">✓</span> <div> <h3 class="font-medium text-gray-900 mb-1">Espacio para lo importante</h3> <p class="text-sm text-gray-600">Menos ruido, más tiempo libre. El objetivo es que te enfoques en tu vida y tu crecimiento.</p> </div> </div> </div> </div> </section>    <section class="py-20 px-4 bg-gray-50"> <div class="container mx-auto max-w-4xl"> <div class="flex flex-col md:flex-row items-center gap-8"> <!-- Foto de Pablo --> <div class="w-24 h-24 rounded-full overflow-hidden bg-gray-200 flex-shrink-0"> <img src="/pablo-rios.jpeg" alt="Pablo Ríos" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center text-gray-500\\'>PR</div>'"> </div> <!-- Historia empática --> <div> <h2 class="text-xl font-semibold text-gray-900 mb-3">Hola, soy Pablo</h2> <div class="space-y-3 text-sm text-gray-600 leading-relaxed"> <p> <strong class="text-gray-900">Sé exactamente cómo te sientes.</strong> Pasé años viendo cómo profesionales brillantes perdían su energía en tareas operativas que los dejaban agotados.
+</p> <p>
+Intenté todo: cursos interminables y herramientas "mágicas". El resultado era siempre el mismo: <em>más información, menos acción</em>. Por eso creé <strong>LuciRMe Ai</strong>.
+</p> <p> <strong class="text-gray-900">Mi promesa:</strong> No te voy a vender humo ni software. Vamos a trabajar juntos hasta que recuperes tu tiempo.
+</p> </div> <div class="mt-4 flex gap-4 text-xs text-gray-500"> <a href="https://linkedin.com/in/pabloriospena" target="_blank" class="hover:text-gray-900">🔗 LinkedIn</a> <a href="mailto:pabloriospena@gmail.com" class="hover:text-gray-900">✉️ Email</a> </div> </div> </div> </div> </section>    <section id="precios" class="py-20 px-4 bg-white"> <div class="container mx-auto max-w-4xl"> <div class="text-center mb-10"> <h2 class="text-2xl font-semibold text-gray-900 mb-3">Elige cómo quieres trabajar</h2> <p class="text-sm text-gray-600">Precios accesibles para empezar. Cupos limitados este mes.</p> </div> <!-- Early Adopters Badge --> <div class="flex justify-center mb-10"> <div class="inline-flex items-center gap-2 bg-teal-50 text-teal-800 px-4 py-2 rounded-full text-xs font-medium border border-teal-100"> <span>✨ Lanzamiento:</span> <span>Los primeros 20 profesionales reciben precio especial y acompañamiento extendido.</span> </div> </div> <!-- Pricing Cards --> <div class="grid md:grid-cols-2 gap-6 mb-10"> <!-- Card 1: Sesión Express --> <div class="bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <div class="mb-4"> <h3 class="font-medium text-gray-900 text-lg">Sesión Express</h3> <p class="text-xs text-gray-500">Solución inmediata (1h)</p> </div> <div class="flex justify-between items-end mb-6 pb-4 border-b border-gray-100"> <div> <p class="text-[10px] text-gray-400 uppercase tracking-wide">Individual 1:1</p> <p class="text-2xl font-semibold text-gray-900">$116.000</p> </div> <div class="text-right"> <p class="text-[10px] text-teal-600 font-medium">GRUPO</p> <p class="text-lg font-bold text-teal-700">$44.000 <span class="text-xs font-normal text-gray-400">/c.u.</span></p> </div> </div> <ul class="space-y-2.5 text-sm text-gray-600 mb-6 flex-grow"> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Identificamos tu mayor fuga de tiempo y la atacamos en 1 hora.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Sales con un flujo funcional listo para usar hoy, no "para después".</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Sin compromiso: si ves valor, continuamos. Si no, cerramos sin preguntas.</li> </ul> </div> <!-- Card 2: Ciclo PRP --> <div class="bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <div class="mb-4"> <h3 class="font-medium text-gray-900 text-lg">Ciclo PRP</h3> <p class="text-xs text-gray-500">4 sesiones para: Protocolos (orden) → Refinamiento (IA) → Potencial (autonomía)</p> </div> <div class="flex justify-between items-end mb-6 pb-4 border-b border-gray-100"> <div> <p class="text-[10px] text-gray-400 uppercase tracking-wide">Individual 1:1</p> <p class="text-2xl font-semibold text-gray-900">$350.000</p> </div> <div class="text-right"> <p class="text-[10px] text-teal-600 font-medium">GRUPO</p> <p class="text-lg font-bold text-teal-700">$170.000 <span class="text-xs font-normal text-gray-400">/c.u.</span></p> </div> </div> <ul class="space-y-2.5 text-sm text-gray-600 mb-6 flex-grow"> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Transformas hábitos manuales en flujos con IA: una tarea real por sesión.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Conocimiento aplicado, no teoría: trabajamos con tus archivos y procesos reales.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Acompañamiento humano entre sesiones: si algo no funciona, yo te ayudo a ajustarlo.</li> <li class="flex items-start gap-2"><span class="text-teal-600 mt-0.5">✓</span> Recuperas tiempo progresivamente: al finalizar, tienes claridad y autonomía para seguir escalando.</li> </ul> </div> </div> <!-- CTA ÚNICO --> <div class="text-center mb-6"> <a href="https://calendar.app.google/k4iYmA42X9NNBb5t8" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-3.5 rounded-md text-sm font-medium transition shadow-sm">
+Agendemos un café estratégico (30 min) →
+</a> <p class="text-xs text-gray-500 mt-3">
+✨ Sin compromiso. Si en 15 min ya hay claridad, cerramos antes.
+</p> </div> <!-- ============================================ --> <!-- LEAD MAGNET SECTION (Después de Precios) --> <!-- ============================================ --> <section class="py-16 px-4 bg-gradient-to-br from-teal-50 to-white border-y border-teal-100"> <div class="container mx-auto max-w-3xl text-center"> <div class="mb-6"> <span class="inline-block bg-teal-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">🎁 Gratis</span> <h3 class="text-2xl font-bold text-gray-900 mb-2">¿Pierdes horas compilando reportes manuales?</h3> <p class="text-gray-600 mb-6">
+"De notas a reportes: tu guía con NotebookLM"<br>
+Convierte transcripciones y datos sueltos en decisiones claras. Sin herramientas complejas.
+</p> </div> <!-- BOTÓN DEL LEAD MAGNET --> <button onclick="openLeadMagnetModal()" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-teal-50 text-teal-700 border-2 border-teal-600 px-8 py-3.5 rounded-lg font-semibold text-sm transition shadow-md hover:shadow-lg">
+📊 Descargar guía gratis
+</button> <p class="text-xs text-gray-500 mt-4">🔒 Sin spam. Solo contenido práctico.</p> </div> </section> <!-- ============================================ --> <!-- 6. METODOLOGÍA PRP (EL "CÓMO")               --> <!-- ============================================ --> <section id="metodo" class="py-20 px-4 bg-gray-50"> <div class="container mx-auto max-w-5xl"> <div class="text-center mb-12"> <h2 class="text-2xl font-semibold text-gray-900 mb-3">Método PRP</h2> <p class="text-sm text-gray-600">Tu hoja de ruta en 3 fases. Sin teoría. Sin humo.</p> </div> <!-- Contenedor Horizontal --> <div class="relative flex flex-col md:flex-row gap-8 md:gap-0"> <!-- Línea conectora (Desktop) --> <!-- top-5 asegura que la línea pase por el centro de los círculos de 40px (w-10) --> <div class="hidden md:block absolute top-5 left-0 right-0 h-0.5 bg-gray-200"></div> <!-- Paso 1 --> <div class="relative flex-1 flex flex-col items-center px-2"> <!-- Número centrado --> <div class="w-10 h-10 bg-white border-2 border-gray-300 text-gray-500 rounded-full flex items-center justify-center text-sm font-bold mb-5 relative z-10 shadow-sm">1</div> <!-- Tarjeta (h-full para igualar altura) --> <div class="w-full h-full bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <h4 class="font-bold text-gray-900 mb-2 text-base">Protocolos <span class="text-gray-400 font-normal text-sm ml-1">(Orden)</span></h4> <p class="text-sm text-gray-600 leading-relaxed flex-grow">Identificamos tus fugas de tiempo y mapeamos tu gestión actual. Detectamos dónde está el cuello de botella real.</p> </div> </div> <!-- Paso 2 --> <div class="relative flex-1 flex flex-col items-center px-2"> <!-- Número centrado --> <div class="w-10 h-10 bg-white border-2 border-gray-300 text-gray-500 rounded-full flex items-center justify-center text-sm font-bold mb-5 relative z-10 shadow-sm">2</div> <!-- Tarjeta --> <div class="w-full h-full bg-white p-6 rounded-lg border border-gray-200 flex flex-col"> <h4 class="font-bold text-gray-900 mb-2 text-base">Refinamiento <span class="text-gray-400 font-normal text-sm ml-1">(IA)</span></h4> <p class="text-sm text-gray-600 leading-relaxed flex-grow">Aplicamos IA práctica para que la ejecución sea rápida, precisa y sin errores humanos.</p> </div> </div> <!-- Paso 3 (Meta) --> <div class="relative flex-1 flex flex-col items-center px-2"> <!-- Número centrado (Teal) --> <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold mb-5 relative z-10 shadow-sm">3</div> <!-- Tarjeta Destacada --> <div class="w-full h-full bg-white p-6 rounded-lg border-2 border-teal-600 shadow-md flex flex-col"> <h4 class="font-bold text-gray-900 mb-2 text-base">Potencial <span class="text-teal-600 font-normal text-sm ml-1">(Autonomía)</span></h4> <p class="text-sm text-gray-600 leading-relaxed flex-grow">Entregamos autonomía total. Escalas tus resultados sin depender de nosotros.</p> </div> </div> </div> </div> </section> <!-- ============================================ --> <!-- 7. CIERRE Y GARANTÍA (ACCIÓN)                --> <!-- ============================================ --> <section id="cta" class="py-20 px-4 bg-white border-t border-gray-100"> <div class="container mx-auto max-w-xl text-center"> <h2 class="text-2xl font-semibold text-gray-900 mb-3">¿Listo para trabajar mejor?</h2> <p class="text-sm text-gray-600 mb-8">
+No necesitas tener todo claro hoy. Solo necesitas dar el primer paso.
+</p> <!-- Garantía estilo Notion callout --> <div class="bg-gray-100 border-l-4 border-teal-500 p-4 rounded-r-lg mb-8 text-left max-w-md mx-auto"> <p class="text-xs text-gray-700"> <strong class="text-gray-900">Garantía de satisfacción:</strong> Pago flexible · Sin permanencia. Si en la primera sesión sientes que no es para ti, cerramos sin preguntas.
+</p> </div> <a href="https://calendar.app.google/k4iYmA42X9NNBb5t8" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md text-sm font-medium transition w-full sm:w-auto">
+Reservar mi Café de Estrategia →
+</a> <p class="mt-6 text-xs text-gray-500">
+Pablo Ríos · Fundador, LuciRMe Ai<br>
+✉️ pabloriospena@gmail.com · 🔗 linkedin.com/in/pabloriospena
+</p> </div> </section> <!-- FOOTER --> <footer class="bg-gray-50 border-t border-gray-200 py-10 px-4"> <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6"> <p class="text-[10px] text-gray-400">© 2026 LuciRMe Ai · IA práctica para profesionales</p> <div class="flex gap-6 text-xs"> <a href="https://linkedin.com/in/pabloriospena" target="_blank" class="text-gray-500 hover:text-gray-900">LinkedIn</a> <a href="mailto:pabloriospena@gmail.com" class="text-gray-500 hover:text-gray-900">Email</a> </div> </div> </footer> <!-- ============================================ --> <!-- TRIGGER BUTTON (El botón que abre el modal) --> <!-- ============================================ --> <div class="text-center"> <button onclick="openLeadMagnetModal()" class="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md text-sm font-medium transition shadow-sm">
+🎁 Descargar checklist gratis
+</button> </div> <!-- ============================================ --> <!-- MODAL LEAD MAGNET (Estructura completa) --> <!-- ============================================ --> <div id="leadmagnet-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm" aria-hidden="true" role="dialog"> <div class="relative mx-auto w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 transform transition-all"> <button onclick="closeLeadMagnetModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition" aria-label="Cerrar">✕</button> <div class="text-center mb-5"> <div class="text-3xl mb-2">📋</div> <h3 class="text-xl font-bold text-gray-900 mb-1">Descarga tu checklist gratis</h3> <p class="text-sm text-gray-600 mt-1">"5 tareas que puedes automatizar HOY con IA". Recibe el PDF al instante.</p> </div> <!-- ✅ Formulario simplificado: solo nombre + email --> <form id="leadmagnet-form" class="space-y-3" onsubmit="handleLeadMagnetSubmit(event)"> <input type="text" name="name" required placeholder="Nombre completo" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white text-sm"> <input type="email" name="email" required placeholder="tu@email.com" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white text-sm"> <button type="submit" id="leadmagnet-submit-btn" class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition">
+📥 Descargar ahora
+</button> </form> <div id="leadmagnet-status" class="hidden mt-3 text-center text-sm font-medium"></div> <p class="text-[10px] text-gray-400 text-center mt-3">🔒 Sin spam. Solo contenido práctico.</p> </div> </div> <!-- ============================================ --> <!-- LÓGICA JAVASCRIPT (Igual que CheckTomate) --> <!-- ============================================ --> <script>
+    // Abrir/Cerrar Modal Lead Magnet
+    function openLeadMagnetModal() {
+      const modal = document.getElementById('leadmagnet-modal');
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => modal.querySelector('input')?.focus(), 100);
+    }
+
+    function closeLeadMagnetModal() {
+      const modal = document.getElementById('leadmagnet-modal');
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => { 
+      if (e.key === 'Escape') closeLeadMagnetModal(); 
+    });
+
+    // ✅ Enviar formulario - MISMO PATRÓN QUE CHECKTOMATE
+    async function handleLeadMagnetSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('leadmagnet-submit-btn');
+      const status = document.getElementById('leadmagnet-status');
+      
+      btn.disabled = true;
+      btn.textContent = '⏳ Enviando...';
+      status.classList.add('hidden');
+
+      try {
+        const data = Object.fromEntries(new FormData(form));
+        
+        // ✅ Endpoint separado (no interfiere con CheckTomate)
+        const res = await fetch('/api/leadmagnet-access', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = '✅ ¡Listo! Revisa tu correo en minutos.';
+          status.className = 'mt-3 text-center text-sm font-medium text-teal-700';
+          status.classList.remove('hidden');
+          
+          setTimeout(() => {
+            closeLeadMagnetModal();
+            form.reset();
+            status.classList.add('hidden');
+            btn.disabled = false;
+            btn.textContent = '📥 Descargar ahora';
+          }, 3000);
+        } else {
+          throw new Error(result.error || 'Error en el servidor');
+        }
+      } catch (err) {
+        status.textContent = '⚠️ ' + err.message;
+        status.className = 'mt-3 text-center text-sm font-medium text-red-600';
+        status.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = '🔄 Intentar de nuevo';
+      }
+    }
+  <\/script> <!-- STICKY BAR (siempre visible) --> <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-4"> <div class="container mx-auto max-w-4xl flex flex-col sm:flex-row items-center justify-between gap-3"> <div class="text-sm"> <span class="font-semibold text-gray-900">🎁 ¿Pierdes horas compilando reportes manuales?</span> <span class="text-gray-600 ml-1">"De notas a reportes: tu guía con NotebookLM"<br>
+Convierte transcripciones y datos sueltos en decisiones claras. Sin herramientas complejas.</span> </div> <button onclick="openLeadMagnetModal()" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-md text-sm font-medium transition whitespace-nowrap">
+Descargar guía gratis
+</button> </div> </div> </div></section>`])), maybeRenderHead()) })}`;
+}, "C:/Users/pablo/OneDrive/Desktop/LuciRMe_Web/src/pages/soluciones/profesionales.astro", void 0);
+
+const $$file = "C:/Users/pablo/OneDrive/Desktop/LuciRMe_Web/src/pages/soluciones/profesionales.astro";
+const $$url = "/soluciones/profesionales";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Profesionales,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

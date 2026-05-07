@@ -1,0 +1,571 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="CheckTomate · Valida transferencias en segundos | AiTomate">
+
+  <!-- Design System Tokens + CheckTomate Module Accents -->
+  <style>
+    /* === AI TOMATE DESIGN SYSTEM v1.0 === */
+    :root {
+      /* Brand Core */
+      --at-color-primary: #E23D28;
+      --at-color-primary-hover: #C43222;
+      --at-color-primary-active: #A82A1C;
+
+      /* Backgrounds */
+      --at-bg-page: #F1F4F9;
+      --at-bg-surface: #FFFFFF;
+      --at-bg-surface-secondary: #FDF8F2;
+      --at-bg-dark: #1A1F2C;
+
+      /* Text */
+      --at-text-primary: #1A1F2C;
+      --at-text-secondary: #4A5568;
+      --at-text-muted: #718096;
+      --at-text-on-dark: #F1F4F9;
+      --at-text-inverse: #FFFFFF;
+
+      /* Functional */
+      --at-color-success: #2ECC71;
+      --at-color-info: #3498DB;
+      --at-color-warning: #F59E0B;
+      --at-color-error: #EF4444;
+
+      /* Borders & Focus */
+      --at-border-light: #E2E8F0;
+      --at-border-medium: #CBD5E1;
+      --at-border-focus: rgba(226, 61, 40, 0.4);
+
+      /* Shadows */
+      --at-shadow-sm: 0 1px 2px rgba(26, 31, 44, 0.05);
+      --at-shadow-md: 0 4px 12px rgba(26, 31, 44, 0.08);
+      --at-shadow-lg: 0 8px 24px rgba(26, 31, 44, 0.12);
+
+      /* Spacing (Base 8px) */
+      --at-space-xs: 4px; --at-space-sm: 8px; --at-space-md: 12px;
+      --at-space-lg: 16px; --at-space-xl: 24px; --at-space-2xl: 32px;
+      --at-space-3xl: 40px; --at-space-4xl: 48px; --at-space-5xl: 64px;
+
+      /* Radius */
+      --at-radius-sm: 4px; --at-radius-md: 8px; --at-radius-lg: 12px;
+      --at-radius-xl: 16px; --at-radius-2xl: 20px; --at-radius-pill: 9999px;
+
+      /* Motion */
+      --at-duration-fast: 150ms;
+      --at-duration-normal: 200ms;
+      --at-easing-out: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    /* Dark Mode */
+    [data-theme="dark"] {
+      --at-bg-page: var(--at-bg-dark);
+      --at-bg-surface: #252B3B;
+      --at-bg-surface-secondary: #2A3142;
+      --at-text-primary: var(--at-text-on-dark);
+      --at-text-secondary: #94A3B8;
+      --at-border-light: #334155;
+      --at-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* === CHECKTOMATE MODULE ACCENTS (Overrides) === */
+    /* Check Tomate module uses success green as accent, not primary red */
+    --ct-accent: #25D366; /* WhatsApp green for CTAs */
+    --ct-accent-hover: #128C7E;
+    --ct-alert-orange: #F59E0B;
+    --ct-alert-red: #EF4444;
+
+    /* === COMPONENTS (Design System + Module) === */
+    .btn-primary {
+      background: var(--ct-accent);
+      color: var(--at-text-inverse);
+      padding: 14px 28px;
+      border-radius: var(--at-radius-lg);
+      font: var(--at-text-btn);
+      font-weight: 600;
+      border: none;
+      transition: background var(--at-duration-fast) var(--at-easing-out);
+      box-shadow: var(--at-shadow-md);
+    }
+    .btn-primary:hover { background: var(--ct-accent-hover); }
+    .btn-primary:active { background: var(--at-color-primary-active); }
+    .btn-primary:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--at-border-focus);
+    }
+    .btn-primary:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--at-text-primary);
+      padding: 14px 28px;
+      border-radius: var(--at-radius-lg);
+      font: var(--at-text-btn);
+      font-weight: 600;
+      border: 2px solid var(--at-border-medium);
+      transition: all var(--at-duration-fast) var(--at-easing-out);
+    }
+    .btn-secondary:hover {
+      background: rgba(26, 31, 44, 0.05);
+      border-color: var(--at-text-primary);
+    }
+
+    .at-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--at-border-medium);
+      border-radius: var(--at-radius-lg);
+      background: var(--at-bg-surface);
+      font: var(--at-text-body);
+      color: var(--at-text-primary);
+      transition: border var(--at-duration-fast) var(--at-easing-out), box-shadow var(--at-duration-fast);
+    }
+    .at-input:focus {
+      outline: none;
+      border-color: var(--ct-accent);
+      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+    }
+    .at-input::placeholder { color: var(--at-text-muted); }
+
+    .at-card {
+      background: var(--at-bg-surface);
+      border: 1px solid var(--at-border-light);
+      border-radius: var(--at-radius-xl);
+      padding: var(--at-space-2xl);
+      box-shadow: var(--at-shadow-md);
+      transition: box-shadow var(--at-duration-fast);
+    }
+    .at-card:hover { box-shadow: var(--at-shadow-lg); }
+
+    .at-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--at-space-xs);
+      padding: 4px 12px;
+      border-radius: var(--at-radius-pill);
+      font: var(--at-text-body-sm);
+      font-weight: 500;
+    }
+    .at-badge.success {
+      background: rgba(46, 204, 113, 0.12);
+      color: var(--at-color-success);
+    }
+    .at-badge.warning {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--at-color-warning);
+    }
+    .at-badge.error {
+      background: rgba(239, 68, 68, 0.12);
+      color: var(--at-color-error);
+    }
+
+    .confidence-high { color: var(--at-color-success); font-weight: 600; }
+    .confidence-medium { color: var(--at-color-warning); font-weight: 600; }
+    .confidence-low { color: var(--at-color-error); font-weight: 600; }
+
+    .video-placeholder {
+      background: linear-gradient(135deg, rgba(46,204,113,0.08) 0%, rgba(37,211,102,0.08) 100%);
+      border: 2px dashed var(--ct-accent);
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--at-radius-lg);
+    }
+
+    .logo-placeholder {
+      background: var(--at-bg-surface-secondary);
+      border: 1px dashed var(--at-border-light);
+      border-radius: var(--at-radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--at-text-muted);
+      font: var(--at-text-body-sm);
+    }
+
+    /* Utilities */
+    .text-display { font: var(--at-text-display); color: var(--at-text-primary); }
+    .text-h1 { font: var(--at-text-h1); color: var(--at-text-primary); }
+    .text-h2 { font: var(--at-text-h2); color: var(--at-text-primary); }
+    .text-h3 { font: var(--at-text-h3); color: var(--at-text-primary); }
+    .text-body { font: var(--at-text-body); color: var(--at-text-secondary); }
+    .text-body-sm { font: var(--at-text-body-sm); color: var(--at-text-muted); }
+    .text-inverse { color: var(--at-text-inverse); }
+
+    .bg-surface { background: var(--at-bg-surface); }
+    .bg-page { background: var(--at-bg-page); }
+    .bg-dark { background: var(--at-bg-dark); }
+
+    .border-light { border-color: var(--at-border-light); }
+    .border-medium { border-color: var(--at-border-medium); }
+
+    .shadow-sm { box-shadow: var(--at-shadow-sm); }
+    .shadow-md { box-shadow: var(--at-shadow-md); }
+    .shadow-lg { box-shadow: var(--at-shadow-lg); }
+
+    .space-y-sm > * + * { margin-top: var(--at-space-sm); }
+    .space-y-md > * + * { margin-top: var(--at-space-md); }
+    .space-y-lg > * + * { margin-top: var(--at-space-lg); }
+    .space-y-xl > * + * { margin-top: var(--at-space-xl); }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fadeIn var(--at-duration-normal) var(--at-easing-out); }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-surface border-b border-light px-4 py-3">
+    <div class="container mx-auto max-w-5xl flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3">
+        <img src="/checktomate-logo40x40.png" alt="CheckTomate" class="h-10 w-auto" />
+        <span class="font-semibold text-h3 hidden sm:inline">CheckTomate</span>
+      </a>
+      
+      <button onclick="openCheckTomateModal()" class="btn-primary">
+        🟢 Probar 15 días gratis
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="py-20 px-4 bg-gradient-to-br from-green-50 to-white">
+    <div class="container mx-auto max-w-4xl text-center">
+      <div class="mb-8 flex justify-center">
+        <img src="/checktomate-logo.png" alt="CheckTomate" class="h-16 w-auto" />
+      </div>
+
+      <h1 class="text-h1 mb-6 leading-tight">
+        Valida transferencias en menos de 10 segundos.<br>
+        <span class="text-success">Sin estafas. Sin hojas de cálculo manuales.</span>
+      </h1>
+      
+      <p class="text-body mb-10 max-w-2xl mx-auto leading-relaxed">
+        CheckTomate recibe capturas por WhatsApp, verifica fecha, cuenta, duplicados y ediciones, y guarda todo automáticamente en tu Google Sheet. Configúralo en 3 minutos.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <button onclick="openCheckTomateModal()" class="btn-primary">
+          🟢 Probar 15 días gratis
+        </button>
+        <a href="#demo" class="btn-secondary">
+          ▶️ Ver demo en video
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 text-body-sm">
+        <span class="flex items-center gap-2"><span class="text-success">✅</span> Validación en tiempo real</span>
+        <span class="flex items-center gap-2"><span class="text-success">🔒</span> 0 fraudes por comprobante falso</span>
+        <span class="flex items-center gap-2"><span class="text-success">📊</span> Reporte automático</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- VIDEO DEMO -->
+  <section id="demo" class="py-20 px-4 bg-surface">
+    <div class="container mx-auto max-w-5xl">
+      <div class="text-center mb-12">
+        <h2 class="text-h2 mb-3">Mira cómo funciona en 40 segundos</h2>
+        <p class="text-body">Sin instalación. Sin configuraciones complejas. Solo WhatsApp + Google Sheet.</p>
+      </div>
+
+      <video controls class="w-full md:w-[600px] mx-auto rounded-xl shadow-lg">
+        <source src="/checktomate-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- D.R.A.M.A. -->
+  <section class="py-20 px-4 bg-page">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-h2 mb-10 text-center">¿No sabes cuánto vendiste hoy por transferencias?</h2>
+      
+      <div class="space-y-lg">
+        <div class="bg-red-50 border-l-4 border-error p-6 rounded-r-lg">
+          <p class="text-body leading-relaxed">
+            Pierdes horas revisando capturas una por una, mientras te arriesgas a estafas con comprobantes editados o pagos que nunca llegaron a tu cuenta.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-h3 mb-4">La realidad de hoy</h3>
+          <p class="text-body leading-relaxed">
+            Dependes de la revisión a ojo de tu cajero, cometes errores manuales y terminas perdiendo más tiempo pasando datos a una hoja de cálculo tipo Excel que cerrando caja o atendiendo nuevos clientes.
+          </p>
+        </div>
+
+        <div class="bg-green-50 border border-success/30 rounded-xl p-6">
+          <h3 class="text-h3 mb-4 flex items-center gap-3">
+            <span class="text-3xl">🤖</span> La automatización que necesitas
+          </h3>
+          <p class="text-body leading-relaxed">
+            Con CheckTomate, tu operador solo envía la captura por WhatsApp. En menos de 10 segundos validamos fecha, cuenta destino, duplicados y posibles ediciones. Si hay alerta, el bot pregunta en el chat. Todo se guarda automáticamente en tu Google Sheet, sin copiar ni pegar.
+          </p>
+        </div>
+
+        <div class="bg-dark text-inverse rounded-xl p-6">
+          <h3 class="text-h3 mb-4 flex items-center gap-3">
+            <span class="text-3xl">📊</span> La métrica que importa
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3"><span class="text-success mt-1">✓</span> Ahorra <strong>+10 horas semanales</strong> en conciliación</li>
+            <li class="flex items-start gap-3"><span class="text-success mt-1">✓</span> <strong>0 errores</strong> de validación</li>
+            <li class="flex items-start gap-3"><span class="text-success mt-1">✓</span> <strong>100% de trazabilidad</strong> por pago</li>
+          </ul>
+          <p class="text-body-sm mt-5 opacity-90 italic">Tu caja cierra en minutos, con confianza real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="py-20 px-4 bg-surface">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-h2 mb-12 text-center">De la captura al Sheet en 3 pasos simples</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="at-card text-center">
+          <div class="logo-placeholder w-full h-32 mb-6 text-xs">Screenshot WhatsApp</div>
+          <div class="w-14 h-14 bg-success/10 text-success rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="text-h3 mb-3">📸 Envía la captura</h3>
+          <p class="text-body-sm">Tu operador comparte la foto del comprobante por WhatsApp. Sin apps extra, sin logins.</p>
+        </div>
+
+        <div class="at-card text-center">
+          <div class="logo-placeholder w-full h-32 mb-6 text-xs">Screenshot Validación</div>
+          <div class="w-14 h-14 bg-success/10 text-success rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="text-h3 mb-3">🤖 Validación en &lt;10s</h3>
+          <p class="text-body-sm">CheckTomate analiza automáticamente: fecha, cuenta, código, legibilidad y ediciones.</p>
+        </div>
+
+        <div class="at-card text-center">
+          <div class="logo-placeholder w-full h-32 mb-6 text-xs">Screenshot Google Sheet</div>
+          <div class="w-14 h-14 bg-success/10 text-success rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="text-h3 mb-3">📊 Decisión y registro</h3>
+          <p class="text-body-sm">Si todo coincide → ✅ Validado. Si hay alerta → tu operador decide en el chat. Todo en tu Sheet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ DETECTA -->
+  <section class="py-20 px-4 bg-page">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-h2 mb-10 text-center">Protección inteligente contra fraudes</h2>
+      <p class="text-body text-center mb-12 max-w-2xl mx-auto">
+        Cada transacción recibe un <strong>% de Confianza</strong>. Si el bot detecta una anomalía, te alerta al instante.
+      </p>
+
+      <div class="overflow-x-auto rounded-xl border border-light">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-surface text-h3 font-semibold">
+            <tr>
+              <th class="px-6 py-4 border-b">Alerta</th>
+              <th class="px-6 py-4 border-b">Qué significa</th>
+              <th class="px-6 py-4 border-b text-right">Impacto</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-light">
+            <tr class="hover:bg-surface-secondary">
+              <td class="px-6 py-4 font-medium">📅 Fecha no coincide</td>
+              <td class="px-6 py-4 text-body">El comprobante no es de hoy</td>
+              <td class="px-6 py-4 text-right confidence-medium">-60%</td>
+            </tr>
+            <tr class="hover:bg-surface-secondary">
+              <td class="px-6 py-4 font-medium">🏦 Cuenta no registrada</td>
+              <td class="px-6 py-4 text-body">El pago no fue a tu cuenta oficial</td>
+              <td class="px-6 py-4 text-right confidence-low">-80%</td>
+            </tr>
+            <tr class="hover:bg-surface-secondary">
+              <td class="px-6 py-4 font-medium">🔁 Código duplicado</td>
+              <td class="px-6 py-4 text-body">Misma referencia usada antes</td>
+              <td class="px-6 py-4 text-right confidence-low">-80%</td>
+            </tr>
+            <tr class="hover:bg-surface-secondary">
+              <td class="px-6 py-4 font-medium">🖼️ Imagen ilegible</td>
+              <td class="px-6 py-4 text-body">No se pueden extraer datos clave</td>
+              <td class="px-6 py-4 text-right confidence-medium">-25%</td>
+            </tr>
+            <tr class="hover:bg-surface-secondary">
+              <td class="px-6 py-4 font-medium">✏️ Posible edición</td>
+              <td class="px-6 py-4 text-body">Metadatos o estructura manipulada</td>
+              <td class="px-6 py-4 text-right confidence-low">-90%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-center text-body-sm mt-6">
+        💡 <strong>Validación automática</strong> = 100% confianza | <strong>Aprobación manual</strong> = confianza reducida | <strong>Rechazado</strong> = 0%
+      </p>
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIR -->
+  <section class="py-20 px-4 bg-surface">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-h2 mb-12 text-center">Diseñado para negocios que venden por WhatsApp</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="at-card">
+          <h3 class="text-h3 mb-3">✅ Sin fricción para tu equipo</h3>
+          <p class="text-body-sm">Tus operadores ya usan WhatsApp. CheckTomate se integra en su flujo natural.</p>
+        </div>
+        <div class="at-card">
+          <h3 class="text-h3 mb-3">✅ Google Sheet siempre actualizado</h3>
+          <p class="text-body-sm">Cada validación se registra automáticamente con fecha, operador, monto y estado.</p>
+        </div>
+        <div class="at-card">
+          <h3 class="text-h3 mb-3">✅ Auditoría sin esfuerzo</h3>
+          <p class="text-body-sm">Filtra por confianza, motivo de alerta o estado. Si algo falla, sabes por qué.</p>
+        </div>
+        <div class="at-card">
+          <h3 class="text-h3 mb-3">✅ Configuración en 3 minutos</h3>
+          <p class="text-body-sm">Solo necesitas tu código, el email del admin y tus cuentas destino. Listo.</p>
+        </div>
+        <div class="at-card">
+          <h3 class="text-h3 mb-3">✅ Soporte multi-banco</h3>
+          <p class="text-body-sm">Valida cualquier comprobante de Bancolombia, Nequi, Daviplata y más.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="py-20 px-4 bg-page">
+    <div class="container mx-auto max-w-3xl text-center">
+      <h2 class="text-h2 mb-8">Prueba CheckTomate 15 días gratis</h2>
+      <p class="text-body mb-10">Sin tarjeta. Sin compromiso. Sin letra pequeña.</p>
+      
+      <div class="bg-green-50 border border-success/30 rounded-xl p-6 mb-10 text-left">
+        <ul class="space-y-4 text-body">
+          <li class="flex items-start gap-3"><span class="text-success text-xl">🟢</span> <strong>Acceso completo</strong> a validación, alertas, Sheet y soporte.</li>
+          <li class="flex items-start gap-3"><span class="text-success text-xl">🟢</span> <strong>Hasta 3 operadores</strong> incluidos en la prueba.</li>
+          <li class="flex items-start gap-3"><span class="text-success text-xl">🟢</span> <strong>Configuración guiada</strong> en menos de 3 minutos.</li>
+        </ul>
+      </div>
+
+      <button onclick="openCheckTomateModal()" class="btn-primary">
+        🟢 Activa tu prueba gratis
+      </button>
+
+      <p class="text-body-sm mt-6">*Después de los 15 días, elige el plan que se adapte a tu volumen.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-4 bg-surface">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-h2 mb-10 text-center">¿Tienes dudas? Respuestas rápidas</h2>
+      
+      <div class="space-y-4">
+        <details class="bg-page p-5 rounded-lg border border-light">
+          <summary class="font-semibold cursor-pointer">¿Qué pasa si el comprobante es falso?</summary>
+          <p class="text-body-sm mt-3">CheckTomate analiza metadatos y estructura. Si detecta manipulación, alerta con -90% en confianza.</p>
+        </details>
+        <details class="bg-page p-5 rounded-lg border border-light">
+          <summary class="font-semibold cursor-pointer">¿Necesito conocimientos técnicos?</summary>
+          <p class="text-body-sm mt-3">No. Te entregamos un código, ingresas tu email y cuentas destino. El resto es automático.</p>
+        </details>
+        <details class="bg-page p-5 rounded-lg border border-light">
+          <summary class="font-semibold cursor-pointer">¿Cómo accedo a los reportes?</summary>
+          <p class="text-body-sm mt-3">Todo se guarda en un Google Sheet compartido. Filtra, exporta o conecta a tu ERP.</p>
+        </details>
+        <details class="bg-page p-5 rounded-lg border border-light">
+          <summary class="font-semibold cursor-pointer">¿Qué pasa si mi operador no responde?</summary>
+          <p class="text-body-sm mt-3">Si no hay decisión en 2 min, se marca como <code class="bg-surface px-1 rounded">⏳ Pendiente</code>. Solo el admin puede resolver.</p>
+        </details>
+        <details class="bg-page p-5 rounded-lg border border-light">
+          <summary class="font-semibold cursor-pointer">¿Funciona con Nequi, Daviplata?</summary>
+          <p class="text-body-sm mt-3">Sí. Validamos la estructura del comprobante, no la marca del banco.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-24 px-4 bg-dark text-inverse">
+    <div class="container mx-auto max-w-3xl text-center">
+      <h2 class="text-h2 mb-8">Deja de perder ventas por no validar a tiempo</h2>
+      <p class="text-body opacity-90 mb-10">Activa tu validación inteligente hoy. Configura en 3 minutos. Prueba gratis 15 días.</p>
+      
+      <button onclick="openCheckTomateModal()" class="btn-primary">
+        🟢 Probar 15 días gratis
+      </button>
+      
+      <p class="text-body-sm mt-6 opacity-75">*Sin llamadas. Sin esperas.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface border-t border-light py-10 px-4">
+    <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6 text-body-sm">
+      <div class="flex items-center gap-3">
+        <div class="logo-placeholder w-8 h-8 text-[10px] rounded">🍅</div>
+        <span><strong>CheckTomate</strong> | Un producto de AiTomate</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="mailto:contacto@aitomate.com" class="hover:text-primary transition">📧 contacto@aitomate.com</a>
+        <a href="https://aitomate.com" target="_blank" class="hover:text-primary transition">🌐 aitomate.com</a>
+        <span>📍 Colombia</span>
+      </div>
+    </div>
+    <p class="text-center text-body-sm mt-6 opacity-60">© 2026 AiTomate. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- MODAL (Design System + Funcionalidad) -->
+  <div id="checktomate-modal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeCheckTomateModal()"></div>
+    
+    <div class="relative mx-auto mt-24 w-full max-w-md bg-surface rounded-2xl shadow-lg p-6 animate-fade-in">
+      <button onclick="closeCheckTomateModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-page hover:bg-border-light transition" aria-label="Cerrar">✕</button>
+      
+      <div class="text-center mb-6">
+        <div class="text-3xl mb-3">🍅</div>
+        <h3 id="modal-title" class="text-h3 mb-2">Activa tu prueba de 15 días</h3>
+        <p class="text-body-sm">Recibe tu código de acceso y guía de configuración al instante.</p>
+      </div>
+
+      <form id="checktomate-form" class="space-y-4" onsubmit="handleCheckTomateSubmit(event)">
+        <input type="text" name="name" required placeholder="Nombre completo" class="at-input" />
+        <input type="email" name="email" required placeholder="correo@negocio.com" class="at-input" />
+        <input type="tel" name="whatsapp" required placeholder="+57 300 000 0000" class="at-input" />
+        <input type="text" name="business" placeholder="Nombre del negocio (opcional)" class="at-input" />
+        
+        <button type="submit" id="submit-btn" class="btn-primary w-full">
+          🚀 Solicitar acceso
+        </button>
+      </form>
+
+      <div id="form-status" class="hidden mt-4 text-center text-body-sm font-medium"></div>
+      <p class="text-[10px] text-muted text-center mt-4">🔒 Tus datos están seguros. Solo se usan para enviarte tu acceso.</p>
+    </div>
+  </div>
+
+  <!-- SCRIPT (Sin cambios funcionales) -->
+  <script is:inline>
+    function openCheckTomateModal() {
+      const modal = document.getElementById('checktomate-modal');
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => modal.querySelector('input')?.focus(), 100);
+    }
+    function closeCheckTomateModal() {
+      const modal = document.getElementById('checktomate-modal');
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }

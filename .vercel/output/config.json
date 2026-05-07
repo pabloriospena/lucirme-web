@@ -1,0 +1,84 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"src": "^/_server-islands/([^/]+?)/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/_image/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/404/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/api/checktomate-access/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/api/leadmagnet-access/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/bitacora/([^/]+?)/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/bitacora/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/checktomate/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/checktomate2/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/recursos/guia-notebooklm/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/saluddrive/pitch-builder/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/saluddrive/shapeup-salud-drive/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/sobre-mi/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/soluciones/empresas-no-tech/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/soluciones/profesionales/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/.*$",
+			"dest": "_render",
+			"status": 404
+		}
+	]
+}
