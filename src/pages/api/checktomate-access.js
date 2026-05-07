@@ -12,6 +12,7 @@ export async function POST({ request }) {
       });
     }
     
+    
     const { name, email, whatsapp, business } = data;
     const apiKey = process.env.MAILERLITE_API_KEY;
     const groupId = process.env.MAILERLITE_CHECKTOMATE_GROUP_ID;
