@@ -1,24 +1,24 @@
-export const prerender = false;
+// ⚠️ IMPORTANTE: Este archivo debe estar en src/pages/api/
+// y NO debe tener frontmatter (---)
 
 export async function POST({ request }) {
   try {
     const data = await request.json();
     
-    // Validación básica
     if (!data || !data.email) {
-      return new Response(JSON.stringify({ error: 'Datos incompletos' }), { 
+      return new Response(JSON.stringify({ error: 'Email requerido' }), { 
         status: 400,
         headers: { 'Content-Type': 'application/json' }
       });
     }
     
     const { name, email, whatsapp, business } = data;
-    
-    const apiKey = import.meta.env.MAILERLITE_API_KEY;
-    const groupId = import.meta.env.MAILERLITE_CHECKTOMATE_GROUP_ID;
+    const apiKey = process.env.MAILERLITE_API_KEY;
+    const groupId = process.env.MAILERLITE_CHECKTOMATE_GROUP_ID;
 
     if (!apiKey || !groupId) {
-      return new Response(JSON.stringify({ error: 'Configuración incompleta' }), { 
+      console.error('❌ Faltan variables:', { hasKey: !!apiKey, hasGroupId: !!groupId });
+      return new Response(JSON.stringify({ error: 'Configuración' }), { 
         status: 500,
         headers: { 'Content-Type': 'application/json' }
       });
@@ -41,9 +41,9 @@ export async function POST({ request }) {
     });
 
     if (!res.ok) {
-      const err = await res.text();
-      console.error('MailerLite error:', err);
-      return new Response(JSON.stringify({ error: 'Error en MailerLite' }), { 
+      const err = await res.text().catch(() => 'error');
+      console.error('❌ MailerLite:', err);
+      return new Response(JSON.stringify({ error: 'Error externo' }), { 
         status: res.status,
         headers: { 'Content-Type': 'application/json' }
       });
@@ -55,8 +55,8 @@ export async function POST({ request }) {
     });
 
   } catch (error) {
-    console.error('API error:', error);
-    return new Response(JSON.stringify({ error: 'Error interno' }), { 
+    console.error('❌ API Error:', error);
+    return new Response(JSON.stringify({ error: error.message }), { 
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });

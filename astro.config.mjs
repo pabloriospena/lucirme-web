@@ -1,12 +1,12 @@
-// @ts-check
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import vercel from '@astrojs/vercel'; // 👈 Correcto: sin "/serverless"
+import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  output: 'server', // 👈 Habilita funciones serverless para API routes
-  adapter: vercel(), // 👈 Activa el adaptador de Vercel
+  output: 'static', // ← Cambia a 'static' en vez de 'server'
+  adapter: vercel(),
   vite: {
-    plugins: [tailwindcss()] // ✅ Tailwind se mantiene igual
+    plugins: [tailwindcss()]
   }
 });
