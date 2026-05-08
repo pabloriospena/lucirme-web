@@ -14,12 +14,21 @@ export async function POST({ request }) {
       });
     }
     
-    // ✅ Sin WhatsApp ni business: solo nombre y email
-    const { name, email } = data;
+    const { name, email, company, source = 'profesionales_leadmagnet' } = data;
     
     const apiKey = import.meta.env.MAILERLITE_API_KEY;
-    // 🔹 Nueva variable de entorno para este grupo específico
-    const groupId = import.meta.env.MAILERLITE_PROFESSIONALES_GROUP_ID;
+    
+    // 🔹 Seleccionar groupId según la fuente
+    let groupId;
+    let fields = { source };
+    
+    if (source === 'empresas_propuesta') {
+      groupId = import.meta.env.MAILERLITE_EMPRESAS_GROUP_ID;
+      if (company) fields.company = company;
+    } else {
+      // Default: profesionales
+      groupId = import.meta.env.MAILERLITE_PROFESSIONALES_GROUP_ID;
+    }
 
     if (!apiKey || !groupId) {
       return new Response(JSON.stringify({ error: 'Configuración incompleta' }), { 
@@ -39,8 +48,7 @@ export async function POST({ request }) {
       body: JSON.stringify({
         email,
         name,
-        // ✅ Sin campos phone/company → fields con source para identificar
-        fields: { source: 'profesionales_leadmagnet' },
+        fields,
         groups: [groupId],
         status: 'active'
       })
