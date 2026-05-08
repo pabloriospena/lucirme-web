@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   output: 'static',
+    trailingSlash: 'ignore', // ← Esto evita conflictos de rutas
   vite: {
     plugins: [tailwindcss()]
   }
