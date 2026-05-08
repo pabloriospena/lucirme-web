@@ -10,6 +10,6 @@
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wlu26c7jsf");
-</script><!-- End Microsoft Clarity --><link rel="stylesheet" href="/_astro/Layout.GVhH-2f0.css"></head> <body class="bg-white text-gray-900 font-sans antialiased">  <div class="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-center px-4"> <h1 class="text-6xl font-bold text-cyan-400 mb-4">404</h1> <p class="text-xl text-slate-300 mb-8">Oops. Esta página no existe o se movió.</p> <a href="/" class="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition">
+</script><!-- End Microsoft Clarity --><link rel="stylesheet" href="/_astro/Layout.BtJrYYBb.css"></head> <body class="bg-white text-gray-900 font-sans antialiased">  <div class="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-center px-4"> <h1 class="text-6xl font-bold text-cyan-400 mb-4">404</h1> <p class="text-xl text-slate-300 mb-8">Oops. Esta página no existe o se movió.</p> <a href="/" class="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition">
 Volver al Inicio
 </a> </div>  </body></html>
