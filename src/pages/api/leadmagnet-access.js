@@ -22,13 +22,15 @@ export async function POST({ request }) {
     let groupId;
     let fields = { source };
     
-    if (source === 'empresas_propuesta') {
-      groupId = import.meta.env.MAILERLITE_EMPRESAS_GROUP_ID;
-      if (company) fields.company = company;
-    } else {
-      // Default: profesionales
-      groupId = import.meta.env.MAILERLITE_PROFESSIONALES_GROUP_ID;
-    }
+if (source === 'empresas_propuesta') {
+  groupId = import.meta.env.MAILERLITE_EMPRESAS_GROUP_ID;
+  if (company) fields.company = company;
+} else if (source === 'startups_guide') {  // ← AGREGAR ESTE BLOQUE
+  groupId = import.meta.env.MAILERLITE_STARTUPS_GROUP_ID;
+} else {
+  // Default: profesionales
+  groupId = import.meta.env.MAILERLITE_PROFESSIONALES_GROUP_ID;
+}
 
     if (!apiKey || !groupId) {
       return new Response(JSON.stringify({ error: 'Configuración incompleta' }), { 
