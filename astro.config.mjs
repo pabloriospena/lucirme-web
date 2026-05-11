@@ -4,16 +4,8 @@ import tailwind from '@astrojs/tailwind'
 import vercel from '@astrojs/vercel'
 
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [tailwind()],  // ← Esta línea es crucial
   adapter: vercel(),
-  output: 'static', // o 'server' si usas APIs/SSR
+  output: 'static',
   site: 'https://lucirme-web.vercel.app',
-  vite: {
-    resolve: {
-      alias: {
-        // Alias seguros para Vercel
-        '@': '/src',
-      },
-    },
-  },
 })
