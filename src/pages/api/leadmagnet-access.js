@@ -1,5 +1,7 @@
 // src/pages/api/leadmagnet-access.js
 
+import 'piccolore'; // <--- AGREGA ESTA LÍNEA AL INICIO
+
 export const prerender = false;
 
 export async function POST({ request }) {
