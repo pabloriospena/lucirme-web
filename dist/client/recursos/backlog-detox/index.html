@@ -1,0 +1,468 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Conectar tecnología y personas para desbloquear el potencial y ganar velocidad."><title>Backlog Detox | LucirMe AI</title><!-- Enlace al Favicon para que se vea en la pestaña del navegador --><link rel="icon" type="image/png" href="/favicon.svg"><!-- ... otros tags del head ... --><!-- MailerLite Universal --><script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '2041884');
+</script><!-- End MailerLite Universal --><!-- ... tus otros meta tags y scripts ... --><script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wlu26c7jsf");
+</script><!-- End Microsoft Clarity --><link rel="stylesheet" href="/_astro/_slug_.DugkzoUc.css"></head> <body class="bg-white text-gray-900 font-sans antialiased">  <main class="py-16 px-4 bg-gray-50 min-h-screen"> <div class="container mx-auto max-w-6xl"> <!-- HERO --> <div class="text-center mb-8"> <span class="inline-block bg-orange-100 text-orange-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">🔒 Beta limitada</span> <h1 class="text-3xl md:text-4xl font-bold text-deep mb-3">Backlog Detox</h1> <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-4">Tu backlog está lleno de ruido. En 2 minutos te muestro qué mover, qué archivar y qué validar.</p> <p class="text-sm text-gray-500 bg-white inline-block px-4 py-2 rounded-lg border border-gray-200">
+💡 <strong>Tip:</strong> Pega desde Excel/Sheets. Separa columnas con comas o tabs.
+</p> </div> <!-- CUADRÍCULA --> <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden mb-6"> <div class="overflow-x-auto"> <table class="w-full text-sm border-collapse"> <thead class="bg-gray-50 border-b border-gray-200"> <tr> <th class="px-4 py-3 text-left font-medium text-gray-700 w-1/4">Definición / Nombre</th> <th class="px-3 py-3 text-left font-medium text-gray-700">Métricas<br><span class="text-xs font-normal text-gray-500">(selecciona múltiples)</span></th> <th class="px-3 py-3 text-left font-medium text-gray-700">Tamaño</th> <th class="px-3 py-3 text-left font-medium text-gray-700">Impacto</th> <th class="px-3 py-3 text-left font-medium text-gray-700">Validación<br><span class="text-xs font-normal text-gray-500">(selecciona múltiples)</span></th> <th class="px-2 py-3 w-10"></th> </tr> </thead> <tbody id="table-body" class="divide-y divide-gray-100"> <!-- Filas generadas por JS --> </tbody> </table> </div> <!-- CONTROLES --> <div class="flex flex-col sm:flex-row justify-between items-center gap-4 px-4 py-3 bg-gray-50 border-t border-gray-200"> <div class="flex items-center gap-3"> <button id="add-row-btn" class="text-sm text-teal-600 hover:text-teal-700 font-medium flex items-center gap-1 transition">+ Agregar fila</button> <button id="clear-btn" class="text-sm text-gray-500 hover:text-gray-700 font-medium transition">Limpiar todo</button> </div> <div class="flex items-center gap-4"> <span id="item-count" class="text-xs text-gray-400">0 ítems</span> <button id="prioritize-btn" class="bg-deep hover:bg-gray-800 text-white px-5 py-2 rounded-lg font-medium transition shadow-sm disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+Priorizar Backlog
+</button> </div> </div> </div> <!-- BANNER LÍMITE --> <div id="soft-limit-banner" class="hidden mb-6 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-700 text-center">
+💡 Consejo: Prioriza en lotes de 10-15 ítems para mayor claridad.
+</div> <!-- RESULTADOS --> <div id="results-section" class="hidden space-y-6 mt-10"> <h2 class="text-2xl font-bold text-deep text-center">Tu Backlog Clasificado</h2> <div class="grid md:grid-cols-3 gap-4"> <!-- HACER YA --> <div class="bg-green-50 border border-green-200 p-5 rounded-lg"> <h3 class="font-bold text-green-800 mb-3 flex items-center gap-2">✅ Hacer Ya</h3> <div id="list-do" class="space-y-3"></div> </div> <!-- VALIDAR PRIMERO --> <div class="bg-yellow-50 border border-yellow-200 p-5 rounded-lg"> <h3 class="font-bold text-yellow-800 mb-3 flex items-center gap-2">🔍 Validar Primero</h3> <div id="list-validate" class="space-y-3"></div> </div> <!-- ARCHIVAR --> <div class="bg-gray-50 border border-gray-200 p-5 rounded-lg"> <h3 class="font-bold text-gray-700 mb-3 flex items-center gap-2">🗃️ Archivar</h3> <div id="list-archive" class="space-y-3"></div> </div> </div> <!-- ACCIONES --> <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm"> <div class="flex flex-col sm:flex-row justify-center gap-3"> <button id="copy-results-btn" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-5 py-2.5 rounded-lg font-medium transition flex items-center justify-center gap-2">
+📋 Copiar resultados
+</button> <button id="explain-btn" class="bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 px-5 py-2.5 rounded-lg font-medium transition flex items-center justify-center gap-2">
+💡 Explicación
+</button> <a href="https://calendar.app.google/k4iYmA42X9NNBb5t8" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-lg font-medium transition">
+☕ Café Virtual (15 min)
+</a> </div> </div> </div> </div> <!-- MODAL EXPLICACIÓN FÓRMULAS --> <div id="explain-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/40 backdrop-blur-sm"> <div class="bg-white p-6 rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"> <button id="close-explain-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-lg">✕</button> <h3 class="text-2xl font-bold text-deep mb-4">¿Cómo clasificamos tu backlog?</h3> <p class="text-sm text-gray-600 mb-6">Sin magia. Sin bullshit. Solo lógica de producto basada en impacto, validación y esfuerzo.</p> <div class="space-y-5"> <!-- HACER YA --> <div class="bg-green-50 border-2 border-green-200 p-4 rounded-lg"> <div class="flex items-center gap-2 mb-2"> <span class="text-2xl">✅</span> <h4 class="font-bold text-green-800">HACER YA</h4> </div> <p class="text-sm text-gray-700 mb-2"><strong>Fórmula:</strong> ROI Inmediato</p> <ul class="text-sm text-gray-700 space-y-1 ml-4"> <li>✓ Impacto: <strong>Alto</strong> o <strong>Crítico</strong></li> <li>✓ Validación: <strong>Datos</strong> o <strong>Recurrente</strong> (evidencia real)</li> <li>✓ Tamaño: <strong>S</strong> o <strong>M</strong> (rápido de hacer)</li> </ul> <p class="text-xs text-gray-600 mt-2 italic">"Alto impacto + validado + esfuerzo contenido = Gana-gana. Hazlo ya."</p> </div> <!-- VALIDAR PRIMERO --> <div class="bg-yellow-50 border-2 border-yellow-200 p-4 rounded-lg"> <div class="flex items-center gap-2 mb-2"> <span class="text-2xl">🔍</span> <h4 class="font-bold text-yellow-800">VALIDAR PRIMERO</h4> </div> <p class="text-sm text-gray-700 mb-2"><strong>Fórmula:</strong> Potencial alto, pero falta certeza</p> <ul class="text-sm text-gray-700 space-y-1 ml-4"> <li>⚠️ Impacto alto PERO validación débil (Intuición / 1 cliente)</li> <li>⚠️ Tamaño L/XL → divide en features más pequeños</li> <li>⚠️ Impacto medio + validado → puede esperar</li> </ul> <p class="text-xs text-gray-600 mt-2 italic">"Habla con 3-5 clientes antes de construir. O parte el feature en trozos más pequeños."</p> </div> <!-- ARCHIVAR --> <div class="bg-gray-50 border-2 border-gray-200 p-4 rounded-lg"> <div class="flex items-center gap-2 mb-2"> <span class="text-2xl">🗃️</span> <h4 class="font-bold text-gray-700">ARCHIVAR</h4> </div> <p class="text-sm text-gray-700 mb-2"><strong>Fórmula:</strong> No es prioridad ahora</p> <ul class="text-sm text-gray-700 space-y-1 ml-4"> <li>✗ Impacto <strong>Bajo</strong> → no mueve la aguja</li> <li>✗ Sin validación + esfuerzo alto → riesgo de desperdicio</li> <li>✗ Tamaño XL + impacto bajo/medio → no justifica el esfuerzo</li> </ul> <p class="text-xs text-gray-600 mt-2 italic">"Enfócate en lo que realmente importa. Esto puede esperar (o eliminarse)."</p> </div> </div> <div class="mt-6 p-4 bg-teal-50 border border-teal-200 rounded-lg"> <p class="text-sm text-teal-800"> <strong>💡 Consejo:</strong> Las métricas que seleccionas (Activación, MRR, Retención, etc.) ayudan a priorizar features transversales. Un feature que impacta múltiples métricas tiene mayor peso.
+</p> </div> </div> </div> </main>  <div id="email-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/40 backdrop-blur-sm"> <div class="bg-white p-6 rounded-xl shadow-2xl max-w-md w-full relative"> <h3 class="text-xl font-bold text-deep mb-2">Descarga el reporte completo</h3> <p class="text-sm text-gray-600 mb-4">Plantilla Notion, prompts de priorización y guía de roadmap. Sin spam.</p> <form id="gate-form" class="space-y-3"> <input type="text" name="name" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 outline-none text-sm"> <input type="email" name="email" required placeholder="tu@email.com" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 outline-none text-sm"> <button type="submit" id="gate-btn" class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2.5 rounded-lg font-medium transition">Enviar reporte</button> </form> <p id="gate-status" class="hidden mt-3 text-center text-sm font-medium"></p> <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-lg">✕</button> </div> </div> <script>
+    // === ESTADO TIPADO ===
+    /** @type {{id: number, name: string, metrics: string[], size: string, impact: string, validations: string[]}[]} */
+    let items = [];
+    const MAX_SOFT = 25;
+    const MAX_HARD = 50;
+
+    // === DOM ELEMENTS ===
+    const tbody = /** @type {HTMLTableSectionElement} */ (document.getElementById('table-body'));
+    const addRowBtn = document.getElementById('add-row-btn');
+    const clearBtn = document.getElementById('clear-btn');
+    const prioritizeBtn = /** @type {HTMLButtonElement} */ (document.getElementById('prioritize-btn'));
+    const itemCount = document.getElementById('item-count');
+    const softBanner = document.getElementById('soft-limit-banner');
+    const resultsSection = document.getElementById('results-section');
+    const listDo = document.getElementById('list-do');
+    const listValidate = document.getElementById('list-validate');
+    const listArchive = document.getElementById('list-archive');
+    const copyBtn = document.getElementById('copy-results-btn');
+    const modal = document.getElementById('email-modal');
+    const gateForm = /** @type {HTMLFormElement} */ (document.getElementById('gate-form'));
+    const gateBtn = /** @type {HTMLButtonElement} */ (document.getElementById('gate-btn'));
+    const gateStatus = document.getElementById('gate-status');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    // === OPCIONES ===
+    const METRICS = ['Activación', 'Retención', 'MRR', 'CAC', 'Soporte'];
+    const SIZES = ['S', 'M', 'L', 'XL'];
+    const IMPACTS = ['Bajo', 'Medio', 'Alto', 'Crítico'];
+    const VALIDATIONS = ['Intuición', '1 cliente', 'Recurrente', 'Datos'];
+
+    // === RENDER TABLE ===
+    function renderTable() {
+      if (!tbody) return;
+      tbody.innerHTML = '';
+      
+      if (items.length === 0) {
+        tbody.innerHTML = `
+          <tr class="text-center text-gray-400 py-8">
+            <td colspan="6" class="py-8">Pega tu tabla aquí o haz clic en "+ Agregar fila"</td>
+          </tr>`;
+      } else {
+        items.forEach(item => {
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-gray-50 transition';
+          
+          // Checkboxes para métricas
+          const metricsHtml = METRICS.map(m => `
+            <label class="inline-flex items-center mr-2 mb-1">
+              <input type="checkbox" data-field="metric" data-value="${m}" data-id="${item.id}" 
+                ${item.metrics.includes(m) ? 'checked' : ''}
+                class="item-checkbox w-4 h-4 text-teal-600 rounded border-gray-300 focus:ring-teal-500">
+              <span class="ml-1 text-xs">${m}</span>
+            </label>
+          `).join('');
+          
+          // Checkboxes para validación
+          const validationsHtml = VALIDATIONS.map(v => `
+            <label class="inline-flex items-center mr-2 mb-1">
+              <input type="checkbox" data-field="validation" data-value="${v}" data-id="${item.id}" 
+                ${item.validations.includes(v) ? 'checked' : ''}
+                class="item-checkbox w-4 h-4 text-teal-600 rounded border-gray-300 focus:ring-teal-500">
+              <span class="ml-1 text-xs">${v}</span>
+            </label>
+          `).join('');
+          
+          tr.innerHTML = `
+            <td class="p-2"><input type="text" value="${item.name}" data-field="name" data-id="${item.id}" class="w-full px-2 py-1.5 rounded border border-gray-200 text-sm focus:ring-1 focus:ring-teal-500 outline-none bg-transparent"></td>
+            <td class="p-2"><div class="flex flex-wrap gap-1">${metricsHtml}</div></td>
+            <td class="p-2">
+              <select data-field="size" data-id="${item.id}" class="w-full px-2 py-1.5 rounded border border-gray-200 text-sm focus:ring-1 focus:ring-teal-500 outline-none bg-transparent">
+                <option value="">-</option>
+                ${SIZES.map(s => `<option value="${s}" ${item.size === s ? 'selected' : ''}>${s}</option>`).join('')}
+              </select>
+            </td>
+            <td class="p-2">
+              <select data-field="impact" data-id="${item.id}" class="w-full px-2 py-1.5 rounded border border-gray-200 text-sm focus:ring-1 focus:ring-teal-500 outline-none bg-transparent">
+                <option value="">-</option>
+                ${IMPACTS.map(i => `<option value="${i}" ${item.impact === i ? 'selected' : ''}>${i}</option>`).join('')}
+              </select>
+            </td>
+            <td class="p-2"><div class="flex flex-wrap gap-1">${validationsHtml}</div></td>
+            <td class="p-2 text-center"><button data-remove-id="${item.id}" class="remove-btn text-gray-400 hover:text-red-500 transition text-lg">✕</button></td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+      updateUI();
+    }
+
+    function updateUI() {
+      if (!itemCount || !prioritizeBtn) return;
+      itemCount.textContent = `${items.length} ítems`;
+      prioritizeBtn.disabled = items.length === 0;
+      if (softBanner) softBanner.classList.toggle('hidden', items.length <= MAX_SOFT);
+    }
+
+    // === STATE MANAGEMENT ===
+    function addItem() {
+      if (items.length >= MAX_HARD) return alert('Límite máximo: 50 ítems. Prioriza en lotes.');
+      items.push({ id: Date.now(), name: '', metrics: [], size: '', impact: '', validations: [] });
+      renderTable();
+    }
+
+    function removeItem(id) {
+      items = items.filter(i => i.id !== id);
+      renderTable();
+    }
+
+    function updateItem(id, field, value) {
+      const item = items.find(i => i.id === id);
+      if (!item) return;
+      
+      if (field === 'name') {
+        item.name = value;
+      } else if (field === 'size') {
+        item.size = value;
+      } else if (field === 'impact') {
+        item.impact = value;
+      } else if (field === 'metric') {
+        // Toggle checkbox
+        if (item.metrics.includes(value)) {
+          item.metrics = item.metrics.filter(m => m !== value);
+        } else {
+          item.metrics.push(value);
+        }
+      } else if (field === 'validation') {
+        // Toggle checkbox
+        if (item.validations.includes(value)) {
+          item.validations = item.validations.filter(v => v !== value);
+        } else {
+          item.validations.push(value);
+        }
+      }
+    }
+
+    function clearAll() {
+      if (items.length === 0) return;
+      if (confirm('¿Limpiar toda la tabla?')) {
+        items = [];
+        renderTable();
+        if (resultsSection) resultsSection.classList.add('hidden');
+      }
+    }
+
+    // === PASTE HANDLER ===
+    function handlePaste(e) {
+      e.preventDefault();
+      const text = e.clipboardData.getData('text/plain');
+      if (!text.trim()) return;
+
+      const rows = text.split(/\r?\n/).filter(r => r.trim());
+      const newItems = rows.map((row, i) => {
+        let delimiter = '\t';
+        if (row.includes(',')) delimiter = ',';
+        else if (row.includes('|')) delimiter = '|';
+        
+        const cols = row.split(delimiter).map(c => c.trim());
+        return {
+          id: Date.now() + i + Math.random(),
+          name: cols[0] || '',
+          metrics: cols[1] ? cols[1].split(';').map(m => m.trim()).filter(m => m) : [],
+          size: cols[2] || '',
+          impact: cols[3] || '',
+          validations: cols[4] ? cols[4].split(';').map(v => v.trim()).filter(v => v) : []
+        };
+      }).filter(item => item.name);
+
+      if (items.length + newItems.length > MAX_HARD) {
+        alert(`Límite máximo: ${MAX_HARD} ítems.`);
+        return;
+      }
+
+      items = [...items, ...newItems];
+      renderTable();
+    }
+
+    // === CLASSIFICATION LOGIC ===
+    function getClassificationReason(item) {
+      const reasons = [];
+      const isHighImpact = ['Alto', 'Crítico'].includes(item.impact);
+      const isValidated = item.validations.some(v => ['Recurrente', 'Datos'].includes(v));
+      const isSmall = ['S', 'M'].includes(item.size);
+      const hasMetrics = item.metrics.length > 0;
+
+      if (isHighImpact && isValidated && isSmall) {
+        reasons.push('✅ Alto impacto + Validado con datos/clientes + Tamaño pequeño = ROI inmediato');
+        if (hasMetrics) reasons.push(`📊 Impacta: ${item.metrics.join(', ')}`);
+      } else if (item.impact === 'Bajo' || (!isHighImpact && !isValidated)) {
+        if (item.impact === 'Bajo') reasons.push('❌ Bajo impacto = No mueve la aguja del negocio');
+        if (!isValidated && !isHighImpact) reasons.push('⚠️ Sin validación suficiente = Riesgo alto de construir algo que nadie usa');
+        if (!hasMetrics) reasons.push('📭 Sin métricas definidas = No sabrás si funcionó');
+      } else {
+        if (!isValidated) reasons.push('🔍 Impacto alto pero sin validación → Habla con 3-5 clientes antes de construir');
+        if (!isSmall) reasons.push(`⏱️ Tamaño ${item.size} → Divide en features más pequeños (S o M)`);
+        if (hasMetrics) reasons.push(`📊 Podría impactar: ${item.metrics.join(', ')}`);
+      }
+
+      return reasons;
+    }
+
+    function classifyItems() {
+  if (!listDo || !listValidate || !listArchive) return;
+  listDo.innerHTML = ''; listValidate.innerHTML = ''; listArchive.innerHTML = '';
+
+  items.forEach(item => {
+    const isHighImpact = ['Alto', 'Crítico'].includes(item.impact);
+    const isValidated = item.validations.some(v => ['Recurrente', 'Datos'].includes(v));
+    const isSmall = ['S', 'M'].includes(item.size);
+    const hasMetrics = item.metrics.length > 0;
+
+    // Crear tarjeta con razón PRINCIPAL visible
+    const card = document.createElement('div');
+    card.className = 'bg-white p-4 rounded-lg border-2 shadow-sm';
+    
+    // Determinar categoría y estilo
+    let category, borderColor, icon, mainReason, details = [];
+    
+    if (isHighImpact && isValidated && isSmall) {
+      // ✅ HACER YA
+      category = 'do';
+      borderColor = 'border-green-500';
+      icon = '<span class="text-2xl">✅</span>';
+      mainReason = '<span class="font-bold text-green-700">ROI INMEDIATO</span>';
+      
+      details.push(`✓ Impacto <strong>${item.impact}</strong> en el negocio`);
+      details.push(`✓ Validado con <strong>${item.validations.join(', ')}</strong>`);
+      details.push(`✓ Tamaño <strong>${item.size}</strong> = rápido de implementar`);
+      if (hasMetrics) details.push(`📊 Métricas: ${item.metrics.join(', ')}`);
+      
+    } else if (item.impact === 'Bajo' || (!isHighImpact && !isValidated)) {
+      // 🗃️ ARCHIVAR
+      category = 'archive';
+      borderColor = 'border-gray-400';
+      icon = '<span class="text-2xl">🗃️</span>';
+      mainReason = '<span class="font-bold text-gray-700">NO ES PRIORIDAD AHORA</span>';
+      
+      if (item.impact === 'Bajo') {
+        details.push(`✗ Impacto <strong>Bajo</strong> = no mueve la aguja del negocio`);
+      }
+      if (!isValidated && item.impact !== 'Bajo') {
+        details.push(`⚠️ Sin validación sólida = alto riesgo de construir algo que nadie usa`);
+      }
+      if (!hasMetrics) {
+        details.push(`📭 Sin métricas definidas = no sabrás si funcionó`);
+      }
+      if (['L', 'XL'].includes(item.size) && item.impact !== 'Alto' && item.impact !== 'Crítico') {
+        details.push(`⏱️ Tamaño ${item.size} con impacto limitado = no justifica el esfuerzo`);
+      }
+      
+    } else {
+      // 🔍 VALIDAR PRIMERO
+      category = 'validate';
+      borderColor = 'border-yellow-500';
+      icon = '<span class="text-2xl">🔍</span>';
+      mainReason = '<span class="font-bold text-yellow-700">NECESITA VALIDACIÓN</span>';
+      
+      if (!isValidated && isHighImpact) {
+        details.push(`🎯 Impacto <strong>${item.impact}</strong> pero sin validación`);
+        details.push(`💡 Acción: Habla con 3-5 clientes antes de construir`);
+      }
+      if (!isSmall && isHighImpact) {
+        details.push(`⏱️ Tamaño <strong>${item.size}</strong> = divide en features más pequeños (S o M)`);
+      }
+      if (isHighImpact && !isValidated) {
+        details.push(`⚡ Alto potencial pero requiere certeza antes de invertir`);
+      }
+      if (hasMetrics) {
+        details.push(`📊 Podría impactar: ${item.metrics.join(', ')}`);
+      }
+    }
+
+    // Construir HTML con razones MUY visibles
+    const detailsHtml = details.map(d => `<li class="text-sm text-gray-700 mb-1">${d}</li>`).join('');
+    
+    card.innerHTML = `
+      <div class="flex items-start gap-3 mb-3">
+        ${icon}
+        <div class="flex-1">
+          <h4 class="font-bold text-gray-900 text-base mb-1">${item.name || 'Sin nombre'}</h4>
+          <div class="inline-block px-2 py-1 rounded text-xs font-semibold ${category === 'do' ? 'bg-green-100 text-green-800' : category === 'validate' ? 'bg-yellow-100 text-yellow-800' : 'bg-gray-100 text-gray-700'}">
+            ${mainReason}
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-3 mt-2">
+        <p class="text-xs font-semibold text-gray-500 uppercase mb-2">RAZONES:</p>
+        <ul class="space-y-1">
+          ${detailsHtml}
+        </ul>
+      </div>
+    `;
+    
+    card.classList.add(borderColor);
+    
+    // Agregar a la lista correspondiente
+    if (category === 'do') listDo.appendChild(card);
+    else if (category === 'validate') listValidate.appendChild(card);
+    else listArchive.appendChild(card);
+  });
+
+  if (resultsSection) {
+    resultsSection.classList.remove('hidden');
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+    // === COPY RESULTS ===
+    function copyResults() {
+      const doItems = Array.from(listDo?.querySelectorAll('strong') || []).map(el => `- ${el.textContent}`).join('\n');
+      const valItems = Array.from(listValidate?.querySelectorAll('strong') || []).map(el => `- ${el.textContent}`).join('\n');
+      const arcItems = Array.from(listArchive?.querySelectorAll('strong') || []).map(el => `- ${el.textContent}`).join('\n');
+
+      const text = `✅ HACER YA:\n${doItems || '(vacío)'}\n\n🔍 VALIDAR PRIMERO:\n${valItems || '(vacío)'}\n\n🗃️ ARCHIVAR:\n${arcItems || '(vacío)'}`;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        const original = copyBtn?.textContent;
+        if (copyBtn) copyBtn.textContent = '✅ Copiado';
+        setTimeout(() => { if (copyBtn) copyBtn.textContent = original; }, 2000);
+      });
+    }
+
+    // === MODAL ===
+    function openModal() {
+      if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); }
+    }
+    function closeModal() {
+      if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+      if (gateStatus) gateStatus.classList.add('hidden');
+      if (gateBtn) { gateBtn.disabled = false; gateBtn.textContent = 'Enviar reporte'; }
+    }
+
+    async function handleGateSubmit(e) {
+      e.preventDefault();
+      if (!gateBtn || !gateStatus || !gateForm) return;
+      gateBtn.disabled = true;
+      gateBtn.textContent = '⏳ Enviando...';
+      gateStatus.classList.add('hidden');
+
+      const formData = new FormData(gateForm);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const res = await fetch('/api/backlog-access', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...data, source: 'backlog_detox' })
+        });
+        if (res.ok) {
+          gateStatus.textContent = '✅ ¡Listo! Revisa tu correo.';
+          gateStatus.className = 'mt-3 text-center text-sm font-medium text-teal-700';
+          gateStatus.classList.remove('hidden');
+          setTimeout(closeModal, 2000);
+        } else {
+          throw new Error('Error en el servidor');
+        }
+      } catch (err) {
+        const message = err instanceof Error ? err.message : 'Error desconocido';
+        gateStatus.textContent = '⚠️ ' + message;
+        gateStatus.className = 'mt-3 text-center text-sm font-medium text-red-600';
+        gateStatus.classList.remove('hidden');
+        gateBtn.disabled = false;
+        gateBtn.textContent = '🔄 Intentar de nuevo';
+      }
+    }
+
+
+        // === MODAL EXPLICACIÓN ===
+    const explainBtn = document.getElementById('explain-btn');
+    const explainModal = document.getElementById('explain-modal');
+    const closeExplainBtn = document.getElementById('close-explain-btn');
+
+    function openExplainModal() {
+      if (explainModal) {
+        explainModal.classList.remove('hidden');
+        explainModal.classList.add('flex');
+      }
+    }
+
+    function closeExplainModal() {
+      if (explainModal) {
+        explainModal.classList.add('hidden');
+        explainModal.classList.remove('flex');
+      }
+    }
+
+    if (explainBtn) explainBtn.addEventListener('click', openExplainModal);
+    if (closeExplainBtn) closeExplainBtn.addEventListener('click', closeExplainModal);
+    
+    // Cerrar modal explicación con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeExplainModal();
+        closeModal();
+      }
+    });
+
+    // Cerrar al hacer click fuera
+    if (explainModal) {
+      explainModal.addEventListener('click', (e) => {
+        if (e.target === explainModal) closeExplainModal();
+      });
+    }
+    // === EVENT LISTENERS ===
+    if (addRowBtn) addRowBtn.addEventListener('click', addItem);
+    if (clearBtn) clearBtn.addEventListener('click', clearAll);
+    if (prioritizeBtn) prioritizeBtn.addEventListener('click', classifyItems);
+    if (copyBtn) copyBtn.addEventListener('click', copyResults);
+    if (gateForm) gateForm.addEventListener('submit', handleGateSubmit);
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    
+    if (tbody) {
+      tbody.addEventListener('paste', handlePaste);
+      
+      // Delegación para inputs y checkboxes
+      tbody.addEventListener('input', (e) => {
+        const target = /** @type {HTMLInputElement|HTMLSelectElement} */ (e.target);
+        if (target.dataset.field && target.dataset.id) {
+          updateItem(Number(target.dataset.id), target.dataset.field, target.value);
+        }
+      });
+      
+      tbody.addEventListener('change', (e) => {
+        const target = /** @type {HTMLInputElement} */ (e.target);
+        if (target.classList.contains('item-checkbox') && target.dataset.field && target.dataset.id) {
+          updateItem(Number(target.dataset.id), target.dataset.field, target.dataset.value);
+        }
+      });
+      
+      tbody.addEventListener('click', (e) => {
+        const target = /** @type {HTMLElement} */ (e.target);
+        const btn = target.closest('.remove-btn');
+        if (btn) removeItem(Number(btn.dataset.removeId));
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Iniciar
+    renderTable();
+  </script>  </body></html>

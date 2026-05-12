@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnpm/
+
+# Astro
+.dist/
+.astro/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env*.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# PostCSS config (handled by @astrojs/tailwind)
+postcss.config.*
