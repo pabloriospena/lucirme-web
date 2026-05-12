@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "src/pages/api/**/*.js": {
+      "includeFiles": "node_modules/piccolore/**"
+    }
+  },
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "astro",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
